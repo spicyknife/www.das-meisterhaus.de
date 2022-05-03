@@ -1,0 +1,85 @@
+/*************************/
+/* REFERENCES - FILTER */
+.references-filter-wrapper {
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: baseline;
+  .references-filter {
+    margin: 0 1em;
+    .filter {
+      label {
+        cursor: pointer;
+        .icon-filter {
+          width: 3.2em;
+          height: 3.2em;
+          fill: #3d3d3d;
+          display: block;
+          margin: 0.5em auto;
+        }
+      }
+    }
+    .filter.disabled {
+      label {
+        cursor: not-allowed;
+        .icon-filter {
+          fill: #ebeaea;
+        }
+        span {
+          color: #ebeaea;
+          // transition: 0.35s;
+        }
+      }
+    }
+  }
+  .references-filter:hover {
+    .filter.disabled {
+      label {
+        .icon-filter {
+          fill: #ebeaea !important;
+        }
+        span {
+          color: #ebeaea !important;
+        }
+      }
+    }
+    // .filter {
+    //   label {
+    //     .icon-filter {
+    //       fill: #f38800;
+    //       transition: 0.35s;
+    //     }
+    //     span {
+    //       color: #f38800;
+    //       transition: 0.35s;
+    //     }
+    //   }
+    // }
+  }
+  input.filter-radio[type='radio'] {
+    display: none;
+  }
+  input.filter-radio[type='radio']:checked  + label > svg.icon-filter {
+    fill: #f38800;
+    transition: 0.35s;
+  }
+  input.filter-radio[type='radio']:checked + label > .filter-name {
+    color: #f38800;
+    transition: 0.35s;
+  }
+  .filter.disabled
+    > input.filter-radio[type='radio']:checked 
+    + label
+    > svg.icon-filter {
+    fill: #ebeaea !important;
+    transition: 0 !important;
+  }
+  .filter.disabled
+    > input.filter-radio[type='radio']:checked
+    + label
+    > .filter-name {
+    color: #ebeaea !important;
+    transition: 0 !important;
+  }
+}

@@ -1,0 +1,78 @@
+<div class="container-max-2000">
+  <!-- TESTIMONIAL-SLIDER -->
+  <div class="testimonial-slider-wrapper">
+    <div id="testimonial-slider" class="carousel slide" data-ride="carousel">
+      <img class="rating-stars" src="../../../assets/img/rating-stars.png" />
+      <h1>Das sagen unsere Kunden</h1>
+      <div class="carousel-inner">
+        <!-- TESTIMONIAL 1 -->
+        <a class="carousel-item active">
+          <div class="carousel-caption d-md-block">
+            <p>{{ testimonial1Text }}</p>
+            <strong>{{ testimonial1Author }}</strong>
+          </div>
+        </a>
+        <!-- TESTIMONIAL 2 -->
+        <a class="carousel-item" *ngIf="testimonial2Text">
+          <div class="carousel-caption d-md-block">
+            <p>{{ testimonial2Text }}</p>
+            <strong>{{ testimonial2Author }}</strong>
+          </div>
+        </a>
+        <!-- TESTIMONIAL 3 -->
+        <a class="carousel-item" *ngIf="testimonial3Text">
+          <div class="carousel-caption d-md-block">
+            <p>{{ testimonial3Text }}</p>
+            <strong>{{ testimonial3Author }}</strong>
+          </div>
+        </a>
+        <!-- TESTIMONIAL 4 -->
+        <a class="carousel-item" *ngIf="testimonial3Text">
+          <div class="carousel-caption d-md-block">
+            <p>{{ testimonial4Text }}</p>
+            <strong>{{ testimonial4Author }}</strong>
+          </div>
+        </a>
+        <!-- TESTIMONIAL 5 -->
+        <a class="carousel-item" *ngIf="testimonial3Text">
+          <div class="carousel-caption d-md-block">
+            <p>{{ testimonial5Text }}</p>
+            <strong>{{ testimonial5Author }}</strong>
+          </div>
+        </a>
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#testimonial-slider"
+        role="button"
+        data-slide="prev"
+        *ngIf="testimonial2Text"
+      >
+        <div class="slide-prev-control-wrapper">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </div>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#testimonial-slider"
+        role="button"
+        data-slide="next"
+        *ngIf="testimonial2Text"
+      >
+        <div class="slide-next-control-wrapper">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </div>
+      </a>
+    </div>
+    <!-- BUTTON-BAR -->
+    <div class="button-bar">
+      <!-- <a href="#">Mehr erfahren</a> -->
+      <a
+        href="https://www.google.com/search?rlz=das-meisterhaus&source=hp&ei=BBTdXdrHIYyyrgSq34RA&q=das+meisterhaus"
+        target="_blank"
+        class="btn btn-primary"
+        >Alle Bewertungen</a
+      >
+    </div>
+  </div>
+</div>

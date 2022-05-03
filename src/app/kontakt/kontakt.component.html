@@ -1,0 +1,485 @@
+<!-- HEAD / NAVIGATION -->
+<app-navigation></app-navigation>
+<div id="formular" style="height: 3em"></div>
+<!-- </div> -->
+<!-- CONTACT-FORM -->
+<div class="container">
+  <section class="contact-section">
+    <div class="contact-frog">
+      <img src="../../assets/img/contact.png" />
+    </div>
+    <div class="text-align-center">
+      <svg class="icon-arrow-down" viewBox="0 0 306 306">
+        <polygon
+          points="306 94.35 270.3 58.65 153 175.95 35.7 58.65 0 94.35 153 247.35 306 94.35"
+        />
+      </svg>
+      <h1>Wir freuen uns auf Sie!</h1>
+    </div>
+    <!-- CONTACT-FORM -->
+    <div class="contact-form-wrapper">
+      <!-- SENDEN / ACTION / PHP -->
+      <form [formGroup]="form" id="contact-form" method="post" action="">
+        <!-- ********************************************** -->
+        <!-- ANREDE-->
+        <div class="input-wrapper col-12">
+          <label for="anrede" class="col-3">Anrede:</label>
+          <select
+            formControlName="anrede"
+            id="anrede"
+            class="form-control col-3"
+            name="anrede"
+          >
+            <option value="">Bitte wählen</option>
+            <option value="herr">Herr</option>
+            <option value="frau">Frau</option>
+          </select>
+        </div>
+        <!-- ********************************************** -->
+        <!-- NACHNAME -->
+        <div class="input-wrapper col-12">
+          <label for="nachname" class="col-3">Nachname: *</label>
+          <input
+            formControlName="nachname"
+            id="nachnamedada"
+            name="nachnamedada"
+            type="text"
+            class="form-control col-6"
+            placeholder=""
+          />
+        </div>
+        <div class="input-wrapper col-12 repeat">
+          <label for="name" class="col-3">Nachname:</label>
+          <input
+            formControlName="surname"
+            id="surname"
+            name="surname"
+            type="text"
+            class="form-control col-6"
+            placeholder=""
+          />
+        </div>
+        <!-- ********************************************** -->
+        <!-- VORNAME -->
+        <div class="input-wrapper col-12">
+          <label for="vornaxyme" class="col-3">Vorname: *</label>
+          <input
+            formControlName="vorname"
+            id="vornaxyme"
+            name="vornaxyme"
+            type="text"
+            class="form-control col-6"
+            placeholder=""
+          />
+        </div>
+        <div class="input-wrapper col-12 repeat">
+          <label for="name" class="col-3">Vorname:</label>
+          <input
+            formControlName="name"
+            id="name"
+            name="name"
+            type="text"
+            class="form-control col-6"
+            placeholder=""
+          />
+        </div>
+        <!-- ********************************************** -->
+        <!-- STRASSE / HAUSNUMMER -->
+        <div class="input-wrapper col-12">
+          <label for="strasse" class="col-3">Straße, Nr:</label>
+          <input
+            formControlName="strasse"
+            id="strasse"
+            name="strasse"
+            type="text"
+            class="form-control col-6"
+            placeholder=""
+          />
+        </div>
+        <!-- ********************************************** -->
+        <!-- PLZ -->
+        <div class="input-wrapper col-12">
+          <label for="plz" class="col-3">PLZ:</label>
+          <input
+            formControlName="plz"
+            id="plz"
+            name="plz"
+            type="text"
+            class="form-control col-6"
+            placeholder=""
+          />
+        </div>
+        <!-- ********************************************** -->
+        <!-- ORT -->
+        <div class="input-wrapper col-12">
+          <label for="ort" class="col-3">Ort:</label>
+          <input
+            formControlName="ort"
+            id="ort"
+            name="ort"
+            type="text"
+            class="form-control col-6"
+            placeholder=""
+          />
+        </div>
+        <!-- ********************************************** -->
+        <!-- EMAIL -->
+        <div class="input-wrapper col-12">
+          <label for="email" class="col-3">Email: *</label>
+          <input
+            formControlName="email"
+            id="emaildkada"
+            name="emaildasda"
+            type="email"
+            class="form-control col-6"
+            placeholder=""
+          />
+        </div>
+        <div class="input-wrapper col-12 repeat">
+          <label for="repeatMail" class="col-3">Email Wiederholen:</label>
+          <input
+            formControlName="repeatMail"
+            id="email"
+            name="email"
+            type="email"
+            class="form-control col-6"
+            placeholder=""
+          />
+        </div>
+        <!-- ********************************************** -->
+        <!-- TELEFON -->
+        <div class="input-wrapper col-12">
+          <label for="telefon" class="col-3">Telefon: *</label>
+          <input
+            formControlName="telefon"
+            id="telefon"
+            name="telefon"
+            type="text"
+            class="form-control col-6"
+            placeholder=""
+          />
+        </div>
+        <!-- ********************************************** -->
+        <!-- ********************************************** -->
+        <!-- BAUDETAILS -->
+        <div class="baudetails-1">
+          <!-- ********************************************** -->
+          <!-- ********************************************** -->
+          <!-- ********************************************** -->
+          <!-- AKTIONSHAUS / CLEVER BAUEN -->
+          <div class="input-wrapper col-12">
+            <a href="/clever-bauen" class="headline"> Clever bauen </a>
+          </div>
+          <div class="input-wrapper no-margin col-12">
+            <label for="aktionshaus" class="col-3">Aktionshaus:</label>
+            <select
+              formControlName="aktionshaus"
+              id="aktionshaus"
+              class="form-control col-3"
+              name="aktionshaus"
+            >
+              <option value="">Bitte wählen</option>
+              <option value="true">Ja</option>
+              <option value="false">Nein</option>
+            </select>
+          </div>
+          <div
+            *ngIf="form.value.aktionshaus === 'true'"
+            class="input-wrapper no-margin col-12"
+          >
+            <!-- ********************************************** -->
+            <!-- DACHFORM -->
+            <label for="ahDachform" class="col-3 mobile-label">Dachform:</label>
+            <select
+              formControlName="ahDachform"
+              id="ahDachform"
+              class="form-control col-3"
+              name="ahDachform"
+            >
+              <option value="">Bitte wählen</option>
+              <option value="attikadach">Attikadach</option>
+              <option value="flachdach">Flachdach</option>
+              <option value="krueppelwalmdach">Krüppelwalmdach</option>
+              <option value="pultdach">Pultdach</option>
+              <option value="pultdach_versetzt">Pultdach, versetzt</option>
+              <option value="satteldach">Satteldach</option>
+              <option value="walmdach">Walmdach</option>
+            </select>
+            <!-- ********************************************** -->
+            <!-- KELLER -->
+            <label for="ahKeller" class="col-3 mobile-label">Keller:</label>
+            <select
+              formControlName="ahKeller"
+              id="ahKeller"
+              class="form-control col-3"
+              name="ahKeller"
+            >
+              <option value="">Bitte wählen</option>
+              <option value="true">Ja</option>
+              <option value="false">Nein</option>
+            </select>
+          </div>
+          <div
+            *ngIf="form.value.aktionshaus === 'true'"
+            class="input-wrapper col-12"
+          >
+            <!-- ********************************************** -->
+            <!-- ERDGESCHOSS -->
+            <label for="erdgeschoss" class="col-3 mobile-label"
+              >Erdgeschoss:</label
+            >
+            <select
+              formControlName="erdgeschoss"
+              id="erdgeschoss"
+              class="form-control col-3"
+              name="erdgeschoss"
+            >
+              <option value="">Bitte wählen</option>
+              <option value="erdgeschoss1">Erdgeschoss 1</option>
+              <option value="erdgeschoss2">Erdgeschoss 2</option>
+              <option value="erdgeschoss3">Erdgeschoss 3</option>
+              <option value="erdgeschoss4">Erdgeschoss 4</option>
+              <option value="erdgeschoss5">Erdgeschoss 5</option>
+              <option value="erdgeschoss6">Erdgeschoss 6</option>
+              <option value="erdgeschoss7">Erdgeschoss 7</option>
+              <option value="erdgeschoss8">Erdgeschoss 8</option>
+            </select>
+            <!-- ********************************************** -->
+            <!-- DACHGESCHOSS -->
+            <label for="dachgeschoss" class="col-3 mobile-label"
+              >Dachgeschoss:</label
+            >
+            <select
+              formControlName="dachgeschoss"
+              id="dachgeschoss"
+              class="form-control col-3"
+              name="dachgeschoss"
+            >
+              <option value="">Bitte wählen</option>
+              <option value="dachgeschoss1">Dachgeschoss 1</option>
+              <option value="dachgeschoss2">Dachgeschoss 2</option>
+              <option value="dachgeschoss3">Dachgeschoss 3</option>
+              <option value="dachgeschoss4">Dachgeschoss 4</option>
+              <option value="dachgeschoss5">Dachgeschoss 5</option>
+              <option value="dachgeschoss6">Dachgeschoss 6</option>
+              <option value="dachgeschoss7">Dachgeschoss 7</option>
+              <option value="dachgeschoss8">Dachgeschoss 8</option>
+            </select>
+          </div>
+        </div>
+        <!-- ********************************************** -->
+        <!-- ********************************************** -->
+        <!-- ********************************************** -->
+        <!-- INDIVIDUELL BAUEN -->
+        <div class="baudetails-2">
+          <div class="input-wrapper col-12">
+            <a href="/individuell-bauen" class="headline">
+              Individuell bauen
+            </a>
+          </div>
+          <div class="input-wrapper col-12">
+            <label for="individuellerBau" class="col-3"
+              >Individuell Bauen?</label
+            >
+            <select
+              formControlName="individuellerBau"
+              id="individuellerBau"
+              name="individuellerBau"
+              class="form-control col-3"
+            >
+              <option value="">Bitte wählen</option>
+              <option value="true">Ja</option>
+              <option value="false">Nein</option>
+            </select>
+          </div>
+          <!-- ********************************************** -->
+          <!-- BAUFORM -->
+          <div
+            *ngIf="form.value.individuellerBau == 'true'"
+            class="input-wrapper no-margin col-12"
+          >
+            <label for="bauform" class="col-3">Bauform:</label>
+            <select
+              formControlName="bauform"
+              id="bauform"
+              name="bauform"
+              class="form-control col-3"
+            >
+              <option value="">Bitte wählen</option>
+              <option value="einfamilienhaus">Freistehendes EFH</option>
+              <option value="bungalow">Bungalow</option>
+              <option value="doppelhaus">Doppelhaus</option>
+              <option value="sonstiges">sonstiges</option>
+            </select>
+            <!-- ********************************************** -->
+            <!-- GRÖSSE -->
+            <label for="groesse" class="col-3 mobile-label">Größe:</label>
+            <select
+              formControlName="groesse"
+              id="groesse"
+              name="groesse"
+              class="form-control col-3"
+            >
+              <option value="">Bitte wählen</option>
+              <option value="groesse1">90 - 110 qm</option>
+              <option value="groesse2">110 - 140 qm</option>
+              <option value="groesse3">140 - 170 qm</option>
+              <option value="groesse4">über 170 qm</option>
+            </select>
+          </div>
+          <!-- ********************************************** -->
+          <!-- DACHFORM -->
+          <div
+            *ngIf="form.value.individuellerBau == 'true'"
+            class="input-wrapper col-12"
+          >
+            <label for="dachform" class="col-3 mobile-label">Dachform:</label>
+            <select
+              formControlName="dachform"
+              id="dachform"
+              name="dachform"
+              class="form-control col-3"
+            >
+              <option value="">Bitte wählen</option>
+              <option value="attikadach">Attikadach</option>
+              <option value="flachdach">Flachdach</option>
+              <option value="krueppelwalmdach">Krüppelwalmdach</option>
+              <option value="pultdach">Pultdach</option>
+              <option value="pultdach_versetzt">Pultdach, versetzt</option>
+              <option value="satteldach">Satteldach</option>
+              <option value="walmdach">Walmdach</option>
+            </select>
+
+            <!-- ********************************************** -->
+            <!-- KELLER -->
+            <label for="keller" class="col-3 mobile-label">Keller:</label>
+            <select
+              id="keller"
+              formControlName="keller"
+              name="keller"
+              class="form-control col-3"
+            >
+              <option value="">Bitte wählen</option>
+              <option value="kellerJa">Ja</option>
+              <option value="kellerNein">Nein</option>
+            </select>
+          </div>
+        </div>
+        <!-- ********************************************** -->
+        <!-- BAUPLATZ-->
+        <div id="bauplatz-form">
+          <div class="input-wrapper col-12">
+            <label for="bauplatz" class="col-3"
+              >Haben Sie einen Bauplatz?</label
+            >
+            <select
+              id="bauplatz"
+              formControlName="bauplatz"
+              name="bauplatz"
+              class="form-control col-3"
+              ng-model="bauplatzVorhanden"
+            >
+              <option value="">Bitte wählen</option>
+              <option value="">Nein</option>
+              <option value="bauplatzJa">Ja</option>
+            </select>
+            <label ng-show="bauplatzVorhanden" for="bauplatzWo" class="col-1"
+              >Wo?</label
+            >
+            <input
+              id="bauplatzWo"
+              formControlName="bauplatzWo"
+              name="bauplatzWo"
+              type="text"
+              class="form-control col-5"
+              ng-show="bauplatzVorhanden"
+              placeholder=""
+            />
+          </div>
+        </div>
+        <!-- ********************************************** -->
+        <!-- EINZUGSTERMIN -->
+        <div class="input-wrapper col-12">
+          <label for="einzugstermin" class="col-3"
+            >Geplanter Einzugstermin:</label
+          >
+          <input
+            id="einzugstermin"
+            formControlName="einzugstermin"
+            name="einzugstermin"
+            type="date"
+            class="form-control col-3"
+            placeholder=""
+          />
+        </div>
+        <!-- ********************************************** -->
+        <!-- ********************************************** -->
+        <!-- ********************************************** -->
+        <!-- IHRE NACHRICHT -->
+        <div class="input-wrapper col-12">
+          <label for="message" class="col-3">Ihre Nachricht:</label>
+          <textarea
+            id="message"
+            formControlName="message"
+            name="message"
+            class="form-control col-9"
+            placeholder=""
+            rows="4"
+          ></textarea>
+        </div>
+        <!-- ********************************************** -->
+        <!-- PFLICHTFELDER HINT -->
+        <p class="strong text-align-center">
+          Bitte füllen Sie die mit * gekennzeichneten Pflichtfelder aus, um Ihre
+          Anfrage erfolgreich abzuschicken.
+        </p>
+        <!-- ********************************************** -->
+        <!-- DATENSCHUTZ HINT -->
+        <p class="text-align-center">
+          Mit dem Absenden dieses Formulars akzeptieren Sie die Verarbeitung
+          Ihrer Daten ​gemäß den
+          <a href="/datenschutz">Datenschutzbestimmungen</a>.
+        </p>
+        <!-- ********************************************** -->
+        <!-- SUBMIT -->
+        <button
+          type="submit"
+          (click)="submit(form.value)"
+          class="btn btn-primary"
+        >
+          Senden
+        </button>
+      </form>
+    </div>
+    <!-- TOAST -->
+    <div class="toast-wrapper" *ngIf="show">
+      <ngb-toast *ngIf="show" id="success-toast" [autohide]="false">
+        <h1 class="toast-color">Vielen Dank!</h1>
+        <p class="toast-color">
+          Ihre Kontaktanfrage wurde erfolgreich verschickt!
+        </p>
+        <a href="/home" class="btn btn-primary">zurück zur Startseite</a>
+      </ngb-toast>
+    </div>
+    <!-- MAPS -->
+    <div class="text-align-center">
+      <svg class="icon-arrow-down" viewBox="0 0 306 306">
+        <polygon
+          points="306 94.35 270.3 58.65 153 175.95 35.7 58.65 0 94.35 153 247.35 306 94.35"
+        />
+      </svg>
+      <h1>Hier finden Sie uns</h1>
+    </div>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2586.8699474486493!2d10.634612051900408!3d49.58134210577579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a2097ad372f5bb%3A0x4a7903a762bfc25b!2sRobert-Bosch-Stra%C3%9Fe+3%2C+91413+Neustadt+an+der+Aisch!5e0!3m2!1sde!2sde!4v1516281466266"
+      width="100%"
+      height="450"
+      frameborder="0"
+      style="border: 0"
+      allowfullscreen=""
+      class="google-maps"
+    ></iframe>
+  </section>
+</div>
+<!-- FOOTER -->
+<app-footer></app-footer>

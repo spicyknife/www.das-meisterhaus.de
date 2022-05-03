@@ -1,0 +1,45 @@
+/********************/
+/* IMPRESSUM */
+/********************/
+.imprint-section {
+  margin-top: 6.2em;
+  margin-bottom: 4em;
+  h3 {
+    margin-top: 1em;
+  }
+  .subline {
+    margin-top: 0.75em;
+    font-size: 1.25em;
+  }
+}
+.imprint-headline {
+  margin-top: 3em;
+}
+svg#spicyknife {
+  width: 7em;
+  height: 1.5em;
+  fill: #3d3d3d;
+  margin: 0.8em 0 0.6em 0;
+}
+/*************************/
+/*************************/
+/*************************/
+/* MEDIUM */
+@media (max-width: 992px) {
+  .imprint-section {
+    margin-top: 6.2em;
+  }
+}
+/*************************/
+/* SMALL */
+@media (max-width: 767px) {
+  .imprint-section {
+    h3 {
+      font-size: 1.2em;
+    }
+    .subline {
+      margin-top: 0.75em;
+      font-size: 1em;
+    }
+  }
+}

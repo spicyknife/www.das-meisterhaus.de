@@ -1,0 +1,23 @@
+/*************************/
+/* REFERENCE-VIEW */
+.reference-views-wrapper {
+  display: flex;
+  margin-top: 6.2em;
+  justify-content: center;
+}
+/*************************/
+/*************************/
+/* MEDIUM - 920px */
+// @media (max-width: 812px) {
+//   .reference-views-wrapper {
+//     margin-top: 4.25em;
+//   }
+// }
+/*************************/
+/* SMALL */
+@media (max-width: 860px) {
+  .reference-views-wrapper {
+    display: block;
+    margin-top: 4.25em;
+  }
+}

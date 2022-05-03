@@ -1,0 +1,108 @@
+/*************************/
+/* SLIDER */
+.slide-prev-control-wrapper,
+.slide-next-control-wrapper {
+  background-color: #000;
+  width: 2.2em;
+  height: 2.5em;
+}
+.slide-prev-control-wrapper {
+  padding: 0.6em 2em 0.5em 0.5em;
+}
+.slide-next-control-wrapper {
+  padding: 0.6em 1.9em 0.5em 0.6em;
+}
+.carousel-caption.caption-right {
+  // right: 0;
+  left: 55%;
+  padding-left: 3em;
+}
+/*************************/
+/* OVERWRITES (Bootstrap,...) */
+/*************************/
+.carousel {
+  margin-top: 0.25em;
+}
+// .carousel {
+//   margin-top: 6.9em;
+// }
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.85);
+  font-family: open-sans-condensed, sans-serif;
+  bottom: 2em;
+  & h1 {
+    font-weight: 700;
+    font-size: 2em;
+    margin-bottom: 0;
+  }
+  & h2 {
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1.6em;
+    margin-bottom: 0;
+  }
+}
+/*************************/
+/*************************/
+/*************************/
+/*************************/
+/* MEDIUM */
+@media (max-width: 992px) {
+  .carousel-caption {
+    bottom: 0.5em;
+    & h1 {
+      font-size: 1.4em;
+    }
+    & h2 {
+      font-size: 1.2em;
+    }
+  }
+  .carousel-caption.caption-right {
+    left: 25%;
+    padding-left: 1.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+}
+@media (max-width: 992px) {
+  .carousel {
+    margin-top: 0.25em;
+  }
+  // .carousel {
+  //   margin-top: 4.2em;
+  // }
+}
+/*************************/
+/*************************/
+/*************************/
+/*************************/
+/* MEDIUM */
+@media (max-width: 767px) {
+  .carousel-caption {
+    bottom: 0.5em;
+    & h1 {
+      font-size: 1.4em;
+    }
+    & h2 {
+      font-size: 1em;
+    }
+  }
+  .carousel-control-next,
+  .carousel-control-prev {
+    width: 10%;
+  }
+  .slide-prev-control-wrapper {
+    padding: 0.65em 0.3em 0.3em 0.2em;
+    .carousel-control-prev-icon {
+      width: 16.5px;
+      height: 16.5px;
+    }
+  }
+  .slide-next-control-wrapper {
+    padding: 0.7em 0.3em 0.3em 0.4em;
+    .carousel-control-next-icon {
+      width: 16.5px;
+      height: 16.5px;
+    }
+  }
+}

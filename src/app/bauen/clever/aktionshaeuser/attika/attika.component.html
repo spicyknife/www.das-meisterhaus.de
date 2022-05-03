@@ -1,0 +1,334 @@
+<!-- ********************************* -->
+<!-- ********** ATTIKADACH *********** -->
+<!-- ********************************* -->
+<form>
+  <div class="aktionshaus animated fadeIn">
+    <h2>Attikadach</h2>
+    <div class="aktionshaus-details-wrapper">
+      <img
+        src="../../../../../assets/img/aktionshaeuser/attika/aktionshaus-attika.jpg"
+      />
+      <div class="aktionshaus-details">
+        <h3>Fakten</h3>
+        <ul>
+          <li>Gesamtwohnfläche ca. 119 m²</li>
+          <li>auf Wunsch auch mit Keller (zzgl. 55.000 €)</li>
+        </ul>
+        <!-- <p class="price-request">Preis auf Anfrage</p> -->
+        <p>ab <span class="price-tag">345.000 € *</span><br />* zzgl. Keller</p>
+      </div>
+    </div>
+    <!-- *********************** -->
+    <!-- KELLER -->
+    <div class="keller-option">
+      <h3>Keller:</h3>
+      <div class="input-wrapper col-12">
+        <select
+          #keller
+          (change)="kellerOutput(keller.value)"
+          class="form-control col-2"
+          name="keller"
+        >
+          <option value="">Bitte wählen</option>
+          <option value="true">Ja</option>
+          <option value="false">Nein</option>
+        </select>
+      </div>
+    </div>
+    <!-- ********************************* -->
+    <!-- ÜBERSICHT DER GRUNDRISSE - ATTIKADACH -->
+    <div class="grundrisse-container">
+      <div class="grundriss-uebersicht">
+        <!-- ********************************* -->
+        <!-- ERDGESCHOSS -->
+        <div class="display-flex">
+          <h3>Erdgeschoss:</h3>
+          <span class="choose-hint">(Bitte wählen)</span>
+        </div>
+        <div class="grundrisse">
+          <!-- GRUNDRISS: ERDGESCHOSS_ATTIKADACH_1 -->
+          <div class="grundrisse-filter">
+            <div class="grundriss-filter">
+              <input
+                #erdgeschoss1
+                (click)="erdgeschossOutput(erdgeschoss1.value)"
+                class="grundriss-radio"
+                name="grundriss_erdgeschoss_filter"
+                id="erdgeschoss1"
+                type="radio"
+                value="erdgeschoss1"
+              />
+              <label for="erdgeschoss1">
+                <img
+                  src="../../../../../assets/img/aktionshaeuser/attika/erdgeschoss/attika-erdgeschoss-1.jpg"
+                />
+              </label>
+            </div>
+          </div>
+          <!-- GRUNDRISS: ERDGESCHOSS_ATTIKADACH_2 -->
+          <div class="grundrisse-filter">
+            <div class="grundriss-filter">
+              <input
+                #erdgeschoss2
+                (click)="erdgeschossOutput(erdgeschoss2.value)"
+                class="grundriss-radio"
+                name="grundriss_erdgeschoss_filter"
+                id="erdgeschoss2"
+                type="radio"
+                value="erdgeschoss2"
+              />
+              <label for="erdgeschoss2">
+                <img
+                  src="../../../../../assets/img/aktionshaeuser/attika/erdgeschoss/attika-erdgeschoss-2.jpg"
+                />
+              </label>
+            </div>
+          </div>
+          <!-- GRUNDRISS: ERDGESCHOSS_ATTIKADACH_3 -->
+          <div class="grundrisse-filter">
+            <div class="grundriss-filter">
+              <input
+                #erdgeschoss3
+                (click)="erdgeschossOutput(erdgeschoss3.value)"
+                class="grundriss-radio"
+                name="grundriss_erdgeschoss_filter"
+                id="erdgeschoss3"
+                type="radio"
+                value="erdgeschoss3"
+              />
+              <label for="erdgeschoss3">
+                <img
+                  src="../../../../../assets/img/aktionshaeuser/attika/erdgeschoss/attika-erdgeschoss-3.jpg"
+                />
+              </label>
+            </div>
+          </div>
+          <!-- GRUNDRISS: ERDGESCHOSS_ATTIKADACH_4 -->
+          <div class="grundrisse-filter">
+            <div class="grundriss-filter">
+              <input
+                #erdgeschoss4
+                (click)="erdgeschossOutput(erdgeschoss4.value)"
+                class="grundriss-radio"
+                name="grundriss_erdgeschoss_filter"
+                id="erdgeschoss4"
+                type="radio"
+                value="erdgeschoss4"
+              />
+              <label for="erdgeschoss4">
+                <img
+                  src="../../../../../assets/img/aktionshaeuser/attika/erdgeschoss/attika-erdgeschoss-4.jpg"
+                />
+              </label>
+            </div>
+          </div>
+          <!-- GRUNDRISS: ERDGESCHOSS_ATTIKADACH_5 -->
+          <div class="grundrisse-filter">
+            <div class="grundriss-filter">
+              <input
+                #erdgeschoss5
+                (click)="erdgeschossOutput(erdgeschoss5.value)"
+                class="grundriss-radio"
+                name="grundriss_erdgeschoss_filter"
+                id="erdgeschoss5"
+                type="radio"
+                value="erdgeschoss5"
+              />
+              <label for="erdgeschoss5">
+                <img
+                  src="../../../../../assets/img/aktionshaeuser/attika/erdgeschoss/attika-erdgeschoss-5.jpg"
+                />
+              </label>
+            </div>
+          </div>
+          <!-- GRUNDRISS: ERDGESCHOSS_ATTIKADACH_6 -->
+          <div class="grundrisse-filter">
+            <div class="grundriss-filter">
+              <input
+                #erdgeschoss6
+                (click)="erdgeschossOutput(erdgeschoss6.value)"
+                class="grundriss-radio"
+                name="grundriss_erdgeschoss_filter"
+                id="erdgeschoss6"
+                type="radio"
+                value="erdgeschoss6"
+              />
+              <label for="erdgeschoss6">
+                <img
+                  src="../../../../../assets/img/aktionshaeuser/attika/erdgeschoss/attika-erdgeschoss-6.jpg"
+                />
+              </label>
+            </div>
+          </div>
+          <!-- GRUNDRISS: ERDGESCHOSS_ATTIKADACH_7 -->
+          <div class="grundrisse-filter">
+            <div class="grundriss-filter">
+              <input
+                #erdgeschoss7
+                (click)="erdgeschossOutput(erdgeschoss7.value)"
+                class="grundriss-radio"
+                name="grundriss_erdgeschoss_filter"
+                id="erdgeschoss7"
+                type="radio"
+                value="erdgeschoss7"
+              />
+              <label for="erdgeschoss7">
+                <img
+                  src="../../../../../assets/img/aktionshaeuser/attika/erdgeschoss/attika-erdgeschoss-7.jpg"
+                />
+              </label>
+            </div>
+          </div>
+          <!-- ENDE -->
+        </div>
+        <!-- ********************************* -->
+        <!-- DACHGESCHOSS -->
+        <div class="display-flex">
+          <h3>Dachgeschoss:</h3>
+          <span class="choose-hint">(Bitte wählen)</span>
+        </div>
+        <div class="grundrisse">
+          <!-- GRUNDRISS: DACHGESCHOSS_ATTIKADACH_1 -->
+          <div class="grundrisse-filter">
+            <div class="grundriss-filter">
+              <input
+                #dachgeschoss1
+                (click)="dachgeschossOutput(dachgeschoss1.value)"
+                class="grundriss-radio"
+                name="grundriss_dachgeschoss_filter"
+                id="dachgeschoss1"
+                type="radio"
+                value="dachgeschoss1"
+              />
+              <label for="dachgeschoss1">
+                <img
+                  src="../../../../../assets/img/aktionshaeuser/attika/dachgeschoss/attika-dachgeschoss-1.jpg"
+                />
+              </label>
+            </div>
+          </div>
+          <!-- GRUNDRISS: DACHGESCHOSS_ATTIKADACH_2 -->
+          <div class="grundrisse-filter">
+            <div class="grundriss-filter">
+              <input
+                #dachgeschoss2
+                (click)="dachgeschossOutput(dachgeschoss2.value)"
+                class="grundriss-radio"
+                name="grundriss_dachgeschoss_filter"
+                id="dachgeschoss2"
+                type="radio"
+                value="dachgeschoss2"
+              />
+              <label for="dachgeschoss2">
+                <img
+                  src="../../../../../assets/img/aktionshaeuser/attika/dachgeschoss/attika-dachgeschoss-2.jpg"
+                />
+              </label>
+            </div>
+          </div>
+          <!-- GRUNDRISS: DACHGESCHOSS_ATTIKADACH_3 -->
+          <div class="grundrisse-filter">
+            <div class="grundriss-filter">
+              <input
+                #dachgeschoss3
+                (click)="dachgeschossOutput(dachgeschoss3.value)"
+                class="grundriss-radio"
+                name="grundriss_dachgeschoss_filter"
+                id="dachgeschoss3"
+                type="radio"
+                value="dachgeschoss3"
+              />
+              <label for="dachgeschoss3">
+                <img
+                  src="../../../../../assets/img/aktionshaeuser/attika/dachgeschoss/attika-dachgeschoss-3.jpg"
+                />
+              </label>
+            </div>
+          </div>
+          <!-- GRUNDRISS: DACHGESCHOSS_ATTIKADACH_4 -->
+          <div class="grundrisse-filter">
+            <div class="grundriss-filter">
+              <input
+                #dachgeschoss4
+                (click)="dachgeschossOutput(dachgeschoss4.value)"
+                class="grundriss-radio"
+                name="grundriss_dachgeschoss_filter"
+                id="dachgeschoss4"
+                type="radio"
+                value="dachgeschoss4"
+              />
+              <label for="dachgeschoss4">
+                <img
+                  src="../../../../../assets/img/aktionshaeuser/attika/dachgeschoss/attika-dachgeschoss-4.jpg"
+                />
+              </label>
+            </div>
+          </div>
+          <!-- GRUNDRISS: DACHGESCHOSS_ATTIKADACH_5 -->
+          <div class="grundrisse-filter">
+            <div class="grundriss-filter">
+              <input
+                #dachgeschoss5
+                (click)="dachgeschossOutput(dachgeschoss5.value)"
+                class="grundriss-radio"
+                name="grundriss_dachgeschoss_filter"
+                id="dachgeschoss5"
+                type="radio"
+                value="dachgeschoss5"
+              />
+              <label for="dachgeschoss5">
+                <img
+                  src="../../../../../assets/img/aktionshaeuser/attika/dachgeschoss/attika-dachgeschoss-5.jpg"
+                />
+              </label>
+            </div>
+          </div>
+          <!-- GRUNDRISS: DACHGESCHOSS_ATTIKADACH_6 -->
+          <div class="grundrisse-filter">
+            <div class="grundriss-filter">
+              <input
+                #dachgeschoss6
+                (click)="dachgeschossOutput(dachgeschoss6.value)"
+                class="grundriss-radio"
+                name="grundriss_dachgeschoss_filter"
+                id="dachgeschoss6"
+                type="radio"
+                value="dachgeschoss6"
+              />
+              <label for="dachgeschoss6">
+                <img
+                  src="../../../../../assets/img/aktionshaeuser/attika/dachgeschoss/attika-dachgeschoss-6.jpg"
+                />
+              </label>
+            </div>
+          </div>
+          <!-- GRUNDRISS: DACHGESCHOSS_ATTIKADACH_7 -->
+          <div class="grundrisse-filter">
+            <div class="grundriss-filter">
+              <input
+                #dachgeschoss7
+                (click)="dachgeschossOutput(dachgeschoss7.value)"
+                class="grundriss-radio"
+                name="grundriss_dachgeschoss_filter"
+                id="dachgeschoss7"
+                type="radio"
+                value="dachgeschoss7"
+              />
+              <label for="dachgeschoss7">
+                <img
+                  src="../../../../../assets/img/aktionshaeuser/attika/dachgeschoss/attika-dachgeschoss-7.jpg"
+                />
+              </label>
+            </div>
+          </div>
+          <!-- ENDE -->
+        </div>
+      </div>
+    </div>
+    <!-- ********************************************** -->
+    <!-- SUBMIT -->
+    <a href="/kontakt#formular" (click)="submit()" class="btn btn-primary">
+      Gleich Wunschhaus anfragen
+    </a>
+  </div>
+</form>

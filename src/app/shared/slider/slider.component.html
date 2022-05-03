@@ -1,0 +1,89 @@
+<div class="container-max-2000">
+  <!-- SLIDER -->
+  <div id="slider" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <!-- SLIDER 1 -->
+      <a href="{{ slide1Url }}" class="carousel-item active">
+        <img
+          class="d-block w-100"
+          src="{{ slide1ImageSrc }}"
+          alt="{{ slide1Headline }}"
+        />
+        <div class="carousel-caption d-md-block caption-right text-align-left ">
+          <h1>{{ slide1Headline }}</h1>
+          <h2>{{ slide1Subline }}</h2>
+        </div>
+      </a>
+      <!-- SLIDER 2 -->
+      <a href="{{ slide2Url }}" class="carousel-item" *ngIf="slide2ImageSrc">
+        <img
+          class="d-block w-100"
+          src="{{ slide2ImageSrc }}"
+          alt="{{ slide2Headline }}"
+        />
+        <div class="carousel-caption d-md-block caption-right text-align-left">
+          <h1>{{ slide2Headline }}</h1>
+          <h2>{{ slide2Subline }}</h2>
+        </div>
+      </a>
+      <!-- SLIDER 3 -->
+      <a href="{{ slide3Url }}" class="carousel-item" *ngIf="slide3ImageSrc">
+        <img
+          class="d-block w-100"
+          src="{{ slide3ImageSrc }}"
+          alt="{{ slide3Headline }}"
+        />
+        <div class="carousel-caption d-md-block caption-right text-align-left">
+          <h1>{{ slide3Headline }}</h1>
+          <h2>{{ slide3Subline }}</h2>
+        </div>
+      </a>
+      <!-- SLIDER 4 -->
+      <a href="{{ slide4Url }}" class="carousel-item" *ngIf="slide4ImageSrc">
+        <img
+          class="d-block w-100"
+          src="{{ slide4ImageSrc }}"
+          alt="{{ slide4Headline }}"
+        />
+        <div class="carousel-caption d-md-block caption-right text-align-left">
+          <h1>{{ slide4Headline }}</h1>
+          <h2>{{ slide4Subline }}</h2>
+        </div>
+      </a>
+      <!-- SLIDER 5 -->
+      <a href="{{ slide5Url }}" class="carousel-item" *ngIf="slide5ImageSrc">
+        <img
+          class="d-block w-100"
+          src="{{ slide5ImageSrc }}"
+          alt="{{ slide5Headline }}"
+        />
+        <div class="carousel-caption d-md-block caption-right text-align-left">
+          <h1>{{ slide5Headline }}</h1>
+          <h2>{{ slide5Subline }}</h2>
+        </div>
+      </a>
+    </div>
+    <a
+      class="carousel-control-prev"
+      href="#slider"
+      role="button"
+      data-slide="prev"
+      *ngIf="slide2ImageSrc"
+    >
+      <div class="slide-prev-control-wrapper">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </div>
+    </a>
+    <a
+      class="carousel-control-next"
+      href="#slider"
+      role="button"
+      data-slide="next"
+      *ngIf="slide2ImageSrc"
+    >
+      <div class="slide-next-control-wrapper">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </div>
+    </a>
+  </div>
+</div>

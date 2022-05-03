@@ -1,0 +1,35 @@
+<!-- *************** -->
+<!-- REFERENZ-SLIDER -->
+<div class="reference-slider-wrapper">
+  <div id="reference-slider" class="carousel slide" data-ride="carousel">
+    <div
+      class="carousel-item"
+      *ngFor="let slide of slides; let i = index"
+      [ngClass]="{ active: i === 0 }"
+    >
+      <img class="d-block w-100" src="{{ slide }}" alt="Test" />
+    </div>
+    <a
+      class="carousel-control-prev"
+      href="#reference-slider"
+      role="button"
+      data-slide="prev"
+      *ngIf="slides.length > 1"
+    >
+      <div class="slide-prev-control-wrapper">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </div>
+    </a>
+    <a
+      class="carousel-control-next"
+      href="#reference-slider"
+      role="button"
+      data-slide="next"
+      *ngIf="slides.length > 1"
+    >
+      <div class="slide-next-control-wrapper">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </div>
+    </a>
+  </div>
+</div>

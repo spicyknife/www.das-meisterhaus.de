@@ -1,0 +1,35 @@
+<!-- HEAD / NAVIGATION -->
+<app-navigation></app-navigation>
+
+<!-- *********************************** -->
+<!-- REFERENZ-VIEW -->
+<div class="reference-views-wrapper">
+  <!-- REFERENZ-SLIDER -->
+  <app-referenz-slider [slides]="view.images"></app-referenz-slider>
+  <!-- REFERENZ-DETAILS -->
+  <app-referenz-details
+    [referenceDetails]="view.details"
+  ></app-referenz-details>
+</div>
+
+<!-- *********************************** -->
+<!-- CTA-CONTACT-->
+<app-cta-contact></app-cta-contact>
+<!-- TESTIMONIAL-SLIDER -->
+<app-testimonial-slider
+  [testimonial1Text]="testimonial1Text"
+  [testimonial1Author]="testimonial1Author"
+  [testimonial2Text]="testimonial2Text"
+  [testimonial2Author]="testimonial2Author"
+  [testimonial3Text]="testimonial3Text"
+  [testimonial3Author]="testimonial3Author"
+  [testimonial4Text]="testimonial4Text"
+  [testimonial4Author]="testimonial4Author"
+  [testimonial5Text]="testimonial5Text"
+  [testimonial5Author]="testimonial5Author"
+></app-testimonial-slider>
+
+<!-- FOOTER -->
+<app-footer></app-footer>
+
+<!-- [referenceDetails]="['Weisendorf', 'Versetztes Pultdach', '114 m²', '2', 'Ja']" -->

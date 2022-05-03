@@ -1,0 +1,29 @@
+<!-- ************************************ -->
+<!-- ALLE AKTIONSHÄUSER -->
+<div class="aktionshaus-container">
+  <!-- ******************* -->
+  <!-- ATTIKADACH -->
+  <app-attika *ngIf="filter === 'attika'"></app-attika>
+  <!-- ******************* -->
+  <!-- FLACHDACH -->
+  <app-flachdach *ngIf="filter === 'flachdach'"></app-flachdach>
+  <!-- ******************* -->
+  <!-- KRÜPPELWALMDACH -->
+  <app-krueppelwalmdach
+    *ngIf="filter === 'krueppelwalmdach'"
+  ></app-krueppelwalmdach>
+  <!-- ******************* -->
+  <!-- PULTDACH -->
+  <app-pultdach *ngIf="filter === 'pultdach'"></app-pultdach>
+  <!-- ******************* -->
+  <!-- PULTDACH VERSETZT -->
+  <app-pultdach-versetzt
+    *ngIf="filter === 'pultdach_versetzt'"
+  ></app-pultdach-versetzt>
+  <!-- ******************* -->
+  <!-- SATTELDACH -->
+  <app-satteldach *ngIf="filter === 'satteldach'"></app-satteldach>
+  <!-- ******************* -->
+  <!-- WALMDACH -->
+  <app-walmdach *ngIf="filter === 'walmdach'"></app-walmdach>
+</div>

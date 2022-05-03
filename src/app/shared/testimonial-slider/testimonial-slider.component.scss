@@ -1,0 +1,127 @@
+/*************************/
+/* TESTIMONIAL-SLIDER */
+.testimonial-slider-wrapper {
+  text-align: center;
+  padding: 3em 0 0 0;
+  .rating-stars {
+    width: 18em;
+    margin-bottom: 1em;
+  }
+  h1 {
+    font-weight: 700 !important;
+  }
+}
+#testimonial-slider {
+  align-items: center;
+  justify-content: center;
+  padding: 0 11em;
+  min-height: 20em;
+  .carousel-inner {
+    .carousel-item {
+      .carousel-caption {
+        color: #000000;
+        position: relative;
+        right: 0;
+        left: 0;
+        padding-top: 2em;
+        p {
+          font-style: italic;
+        }
+      }
+    }
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+  }
+  .slide-next-control-wrapper,
+  .slide-prev-control-wrapper {
+    padding: 0.6em 1.9em 0.5em 0.6em;
+    width: 2.2em;
+    height: 2.5em;
+    background-color: #000000;
+  }
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+.button-bar {
+  background-color: #f38800;
+  // background-color: #3d3d3d;
+  display: flex;
+
+  a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    color: #fff;
+    // font-style: italic;
+    height: 3em;
+    font-weight: 700;
+  }
+  a:first-child {
+    border-right: 1px solid #ffffff;
+  }
+  a:hover {
+    background-color: #ea6e09;
+    // background-color: #f38800;
+    transition: 0.35s;
+  }
+}
+/*************************/
+/*************************/
+/*************************/
+/*************************/
+/* MEDIUM */
+@media (max-width: 992px) {
+  .testimonial-slider-wrapper {
+    padding: 1em 0;
+    .rating-stars {
+      width: 12em;
+      margin-bottom: 0.5em;
+    }
+    h1 {
+      font-size: 1.6em;
+    }
+  }
+  #testimonial-slider {
+    min-height: 16em;
+  }
+}
+/*************************/
+/* SMALL */
+@media (max-width: 767px) {
+  .testimonial-slider-wrapper {
+    h1 {
+      font-size: 1.4em;
+    }
+  }
+  #testimonial-slider {
+    padding: 0 6em;
+    .carousel-control-next,
+    .carousel-control-prev {
+      width: 10%;
+    }
+    .slide-prev-control-wrapper {
+      padding: 0.65em 0.3em 0.3em 0.2em;
+      .carousel-control-prev-icon {
+        width: 16.5px;
+        height: 16.5px;
+      }
+    }
+    .slide-next-control-wrapper {
+      padding: 0.7em 0.3em 0.3em 0.4em;
+      .carousel-control-next-icon {
+        width: 16.5px;
+        height: 16.5px;
+      }
+    }
+  }
+}

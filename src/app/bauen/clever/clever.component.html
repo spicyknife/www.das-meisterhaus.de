@@ -1,0 +1,40 @@
+<!-- HEAD / NAVIGATION -->
+<app-navigation></app-navigation>
+<!-- SLIDER -->
+<app-slider
+  [slide1ImageSrc]="slide1ImageSrc"
+  [slide1Headline]="slide1Headline"
+  [slide1Subline]="slide1Subline"
+  [slide1Url]="slide1Url"
+></app-slider>
+<!-- CONTENT -->
+<div class="container content text-align-center">
+  <h1>Schöner wohnen, clever sparen</h1>
+  <h3>Mit dem Aktionshaus einfach und günsitg bauen</h3>
+  <p>
+    Wählen Sie Ihren bevorzugten Dachtyp und die Grundrisse und profitieren Sie
+    von standardisierten Planungen. So reduzieren wir die Kosten auf ein Minimum
+    – und geben diesen Kostenvorteil an Sie weiter!
+    <!-- Jetzt besonders günstig ab<strong>229.900 €</strong>! -->
+  </p>
+  <p>
+    Trotz einheitlicher Pläne haben Sie bei den Aktionshäusern
+    selbstverständlich größtmöglichen Gestaltungsfreiraum. Machen Sie sich
+    selbst ein Bild – mit unseren <a href="/referenzen">Referenzhäusern</a>.
+  </p>
+  <br />
+  <h3>Welche Dachform gefällt Ihnen am besten?</h3>
+  <p class="filter-label">Wählen Sie eine Dachform:</p>
+  <!-- ************************************ -->
+  <!-- AKTIONSHAUS-FILTER -->
+  <app-aktionshaus-filter
+    (activeFilter)="onActiveFilter($event)"
+  ></app-aktionshaus-filter>
+</div>
+
+<!-- ************************************ -->
+<!-- ALLE AKTIONSHÄUSER -->
+<app-aktionshaeuser [filter]="filter"></app-aktionshaeuser>
+
+<!-- FOOTER -->
+<app-footer></app-footer>

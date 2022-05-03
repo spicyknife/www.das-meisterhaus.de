@@ -1,0 +1,16 @@
+/* CTA-CONTACT */
+.cta-contact-wrapper {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #dadada;
+  border-bottom: 1px solid #dadada;
+  margin: 3em 0;
+  .cta-contact {
+    padding: 3em 0;
+    text-align: center;
+    h1 {
+      font-weight: 700;
+      margin-bottom: 1em;
+    }
+  }
+}

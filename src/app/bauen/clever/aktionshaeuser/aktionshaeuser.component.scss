@@ -1,0 +1,192 @@
+/**********************************/
+/* AKTIONSHÄUSER / AKTIONSHAUS */
+/********************************/
+.aktionshaus-container {
+  margin: 0 0 3em 0;
+  display: flex;
+  justify-content: center;
+  .aktionshaus {
+    max-width: 90em;
+    padding: 2em;
+    background-color: #f6f6f6;
+    border-radius: 0.75em;
+    h2 {
+      margin-bottom: 0.8em;
+      color: #f38800;
+    }
+    .aktionshaus-details-wrapper {
+      display: flex;
+      margin-bottom: 2em;
+      img {
+        max-width: 36em;
+      }
+      .aktionshaus-details {
+        margin-left: 1.5em;
+        .price-tag {
+          font-size: 2.2em;
+          font-family: open-sans-condensed, sans-serif;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+        .price-request {
+          font-size: 1.4em;
+          font-family: open-sans-condensed, sans-serif;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+      }
+    }
+    .grundrisse-container {
+      margin-top: 1em;
+      .grundriss-uebersicht {
+        margin-top: 2em;
+        h3 {
+          font-size: 1.4em;
+          margin-bottom: 1em;
+        }
+        .grundrisse {
+          display: flex;
+          flex-wrap: wrap;
+          img {
+            width: 12.8em;
+          }
+          img:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    .keller-option {
+      h3 {
+        font-size: 1.4em;
+        margin-bottom: 0.6em;
+      }
+      .input-wrapper.col-12 {
+        padding: 0;
+      }
+    }
+  }
+  button,
+  a.btn {
+    width: 100%;
+    margin-top: 2em;
+  }
+}
+.choose-hint {
+  margin-left: 0.5em;
+}
+/*************************/
+/* GRUNDRISSE - FILTER */
+.grundrisse-filter {
+  margin-right: 1.5em;
+  margin-bottom: 1.5em;
+  .grundriss-filter {
+    label {
+      cursor: pointer;
+      .icon-filter {
+        width: 3.2em;
+        fill: #3d3d3d;
+        display: block;
+        margin: 0.5em auto;
+      }
+    }
+  }
+  .grundriss-filter .disabled {
+    label {
+      cursor: not-allowed;
+      .icon-filter {
+        fill: #ebeaea;
+      }
+      span {
+        color: #ebeaea;
+        // transition: 0.35s;
+      }
+    }
+  }
+}
+.grundrisse-filter:hover {
+  .filter.disabled {
+    label {
+      .icon-filter {
+        fill: #ebeaea !important;
+      }
+      span {
+        color: #ebeaea !important;
+      }
+    }
+  }
+}
+input.grundriss-radio[type='radio'] {
+  display: none;
+}
+input.grundriss-radio[type='radio']:checked  + label > img {
+  border: 5px solid #f38800;
+  padding: 0.5em;
+  transition: 0.35s;
+}
+
+/*************************/
+/*************************/
+/*************************/
+/* SMALL */
+@media (max-width: 767px) {
+  .aktionshaus-container {
+    .aktionshaus {
+      h2 {
+        font-size: 1.4em;
+      }
+      .aktionshaus-details-wrapper {
+        display: block;
+        margin-bottom: 2em;
+
+        img {
+          max-width: 100%;
+          width: 100%;
+        }
+        .aktionshaus-details {
+          margin-left: 0;
+          margin-top: 1em;
+          h3 {
+            font-size: 1.4em;
+          }
+          .price-tag {
+            font-size: 1.8em;
+          }
+        }
+      }
+      .grundrisse-container {
+        margin-top: 1em;
+        .grundriss-uebersicht {
+          margin-top: 2em;
+          h3 {
+            font-size: 1.4em;
+            margin-bottom: 1em;
+          }
+          .grundrisse {
+            img {
+              width: 6.7em;
+            }
+            img:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .grundrisse-filter {
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  .keller-option {
+    select.form-control.col-2 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  input.grundriss-radio[type='radio']:checked  + label > img {
+    border: 3px solid #f38800;
+    padding: 0.25em;
+    transition: 0.35s;
+  }
+}
