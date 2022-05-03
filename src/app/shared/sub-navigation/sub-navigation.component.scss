@@ -104,21 +104,21 @@ a.sub-nav-item:hover {
       .col-8 {
         padding-right: 0;
         padding-left: 0;
-        flex: 0 0 100%;
-        max-width: 100%;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
         margin-right: 0.2em;
       }
       .col-4 {
         padding-right: 0;
         padding-left: 0;
-        flex: 0 0 100%;
-        max-width: 100%;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
       }
       .col-6 {
         padding-right: 0;
         padding-left: 0;
-        flex: 0 0 100%;
-        max-width: 100%;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
       }
     }
   }
@@ -135,17 +135,17 @@ a.sub-nav-item:hover {
       }
     }
   }
+  #referenzen,
+  #unternehmen,
+  #clever-bauen,
+  #individuell-bauen,
+  #bauen {
+    width: 100%;
+  }
 }
 /*************************/
 /* SMALL */
 @media (max-width: 767px) {
-  // .sub-nav-wrapper {
-  //   .display-flex {
-  //     .col-6 {
-  //       margin-right: 0 !important;
-  //     }
-  //   }
-  // }
   a.sub-nav-item {
     margin-bottom: 0.2em;
     height: 16em;

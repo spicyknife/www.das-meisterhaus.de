@@ -13,6 +13,11 @@
         }
         .footer-link {
           margin-left: 1em;
+          text-decoration: none !important;
+          color: #f38800;
+            &:hover {
+              color: #ea6e09;
+            }
         }
         .signet {
           width: 7em;

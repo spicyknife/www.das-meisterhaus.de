@@ -175,7 +175,7 @@ a.phone-link > #phone-icon {
       flex: 0 0 76%;
       display: flex;
       justify-content: center;
-      order: 2;
+      order: 2 !important;
       .logo {
         width: 10em;
       }
@@ -184,7 +184,7 @@ a.phone-link > #phone-icon {
     .col-2.order-4.contact-icon-wrapper {
       max-width: 12%;
       flex: 0 0 12%;
-      order: 3;
+      order: 3 !important;
     }
     /* NAVIGATION */
     .mobile-nav-item {
@@ -201,7 +201,7 @@ a.phone-link > #phone-icon {
     .col-8.order-3.navigation-wrapper {
       max-width: 12%;
       flex: 0 0 12%;
-      order: 1;
+      order: 1 !important;
       & .navigation {
         max-height: 0;
         transition: max-height 0.3s ease-out;
@@ -266,7 +266,7 @@ a.phone-link > #phone-icon {
       .menu-btn:checked ~ .navigation {
         max-height: 100vh;
         background: rgba(255, 255, 255, 0.95);
-        top: 2.85em;
+        top: 3em;
         width: 100vw;
         height: 100vh;
         overflow: hidden;
