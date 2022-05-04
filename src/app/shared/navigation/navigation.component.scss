@@ -35,8 +35,8 @@ ul.navigation {
   cursor: pointer;
   padding-left: 5em;
   margin-bottom: 0;
-  overflow: hidden;
-  height: 18em;
+  // overflow: hidden;
+  // height: 18em;
   width: 100%;
   /* IE11 - FIX */
   position: absolute;
@@ -98,6 +98,7 @@ a.phone-link > #phone-icon {
 /* UPDATE 10-2021 */
 .dropdown {
   margin-right: 1.5em;
+  // height: 18em;
   a {
     color: #3d3d3d;
     font-weight: 500;
