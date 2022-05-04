@@ -26,6 +26,7 @@ a {
 }
 a:hover {
   color: #ea6e09;
+  text-decoration: none;
 }
 .italic {
   font-style: italic;
@@ -48,7 +49,6 @@ a:hover {
 }
 .btn-primary:hover {
   background-color: #ea6e09;
-  // background-color: #f38800;
   transition: 0.35s;
 }
 .carousel-control-next,
