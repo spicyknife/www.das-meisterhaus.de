@@ -453,13 +453,15 @@
     </div>
     <!-- TOAST -->
     <div class="toast-wrapper" *ngIf="show">
-      <ngb-toast *ngIf="show" id="success-toast" [autohide]="false">
+      <!-- <ngb-toast *ngIf="show" id="success-toast" [autohide]="false"> -->
+      <div id="success-toast" *ngIf="show">
         <h1 class="toast-color">Vielen Dank!</h1>
         <p class="toast-color">
           Ihre Kontaktanfrage wurde erfolgreich verschickt!
         </p>
         <a href="/home" class="btn btn-primary">zurück zur Startseite</a>
-      </ngb-toast>
+      </div>
+      <!-- </ngb-toast> -->
     </div>
     <!-- MAPS -->
     <div class="text-align-center">

@@ -93,6 +93,10 @@ a.headline {
   right: 0;
   top: 0;
   z-index: 123124;
+  background-color: #fff;
+  opacity: 0.95;
+  text-align: center;
+  height: 100vh;
 }
 .toast {
   width: 100%;
@@ -105,6 +109,9 @@ a.headline {
 }
 .toast-color {
   color: #f38800 !important;
+}
+#success-toast {
+  padding-top: 5em;
 }
 /*************************/
 /*************************/
