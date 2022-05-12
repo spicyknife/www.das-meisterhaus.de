@@ -119,7 +119,7 @@
 input.grundriss-radio[type='radio'] {
   display: none;
 }
-input.grundriss-radio[type='radio']:checked  + label > img {
+input.grundriss-radio[type='radio']:checked + label > img {
   border: 5px solid #f38800;
   padding: 0.5em;
   transition: 0.35s;

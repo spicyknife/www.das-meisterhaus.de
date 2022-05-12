@@ -48,7 +48,7 @@
   input.filter-radio[type='radio'] {
     display: none;
   }
-  input.filter-radio[type='radio']:checked  + label > svg.icon-filter {
+  input.filter-radio[type='radio']:checked + label > svg.icon-filter {
     fill: #f38800;
     transition: 0.35s;
   }
