@@ -1,18 +1,134 @@
 
 #modal-banner {
   background-color: #f6f6f6;
-  background-color: rgba(246, 246, 246, 0.95);
-  height: 20em;
+  background-color: rgba(255, 255, 255, 0.95);
   z-index: 100000;
   position: fixed;
   margin-top: 0.9em;
   border-radius: 0;
-  padding : 2em 3em;
-  min-width: 40em;
+  padding : 0 !important;
+  top: 20%;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(44,44,44,0.17);
+  box-shadow: 5px 5px 15px 5px rgba(44,44,44,0.17);
   .modal-banner-content {
-    .logo {
-      width: 10em;
+    .begin {
+      text-align: center;
+      // margin-bottom: 1em;
+      .intro-flex {
+        display: flex;
+        justify-content: space-between;
+        .headline-wrapper {
+          text-align: left;
+          .headline {
+            padding-left: 1em;
+            h2 {
+              font-size: 2.5em;
+            }
+          }
+
+          .marked {
+            background-color: #f38800;
+            color: #ffffff;
+            padding: 0.5em;
+            margin: 1em 0 0 0;
+            font-size: 1.25em;
+            margin-bottom: 1em;
+          }
+        }
+        .frog-wrapper {
+          .frog {
+            width: 18em;
+            position: absolute;
+            right: -89px;
+            top: 3em;
+          }
+        }
+      }
+      .logo-wrapper {
+        padding : 1em 0 0.25em 0;
+        .logo {
+          width: 15em;
+          margin-bottom: 1em;
+        }
+      }
+
     }
+    .vortraege {
+      text-align: center;
+      background-color: #e6e6e6;
+      padding: 1em 0;
+      .vortrag-flex {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1em;
+      }
+      .vortrag-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .vortrag {
+        margin-bottom: 1em;
+        &:first-child {
+          margin-left: 1em;
+          margin-right: 0.5em;
+        }
+        &:last-child {
+          margin-left: 0.5em;
+          margin-right: 1em;
+        }
+
+        .baufi-vortrag {
+          color: #c99f69;
+          margin-bottom: 0.5em;
+          display: block;
+        }
+        .enersol-vortrag {
+          color: #95c22c;
+          margin-bottom: 0.5em;
+          display: block;
+        }
+        p {
+          // font-size: 0.8em;
+          height: 5em;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &.enersol-marked {
+            background-color: #95c22c;
+            color: #ffffff;
+            padding: 1em;
+          }
+          &.baufi-marked {
+            background-color: #c99f69;
+            color: #ffffff;
+            padding: 1em 1.5em;
+
+          }
+        }
+        img {
+          &.enersol {
+            width: 10em;
+          }
+          &.baufi {
+            width: 15em;
+            margin-top: 0.6em ;
+          }
+
+        }
+      }
+
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.6em;
+    }
+
   }
 }
 .slide-right {
@@ -175,4 +291,134 @@
       }
     }
   }
+
+  /* BANNER */
+  #modal-banner {
+    margin-top: 0.9em;
+    top: 15%;
+    width: 100%;
+    .modal-banner-content {
+      .begin {
+        .intro-flex {
+          display: block;
+          .headline-wrapper {
+            text-align: center;
+            .headline {
+              padding-left: 1em;
+              h1 {
+                font-size: 1.3em;
+              }
+              h2 {
+                font-size: 1.6em;
+              }
+            }
+
+            .marked {
+              padding: 0.5em;
+              margin: 1em 0 0 0;
+              font-size: 1em;
+              width: 100%;
+              display: block;
+            }
+          }
+          .frog-wrapper {
+            .frog {
+              width: 6em;
+              right: -31px;
+              top: 4em;
+            }
+          }
+        }
+        .logo-wrapper {
+          padding : 1em 0 0.25em 0;
+          .logo {
+            width: 8em;
+            margin-bottom: 0.5em;
+          }
+        }
+
+      }
+      .vortraege {
+        text-align: center;
+        background-color: #e6e6e6;
+        padding: 1em 0 0 0;
+        .vortrag-flex {
+          display: block;
+          justify-content: space-between;
+          margin-top: 1em;
+        }
+        .vortrag-img {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .vortrag {
+          margin-bottom: 1em;
+          &:first-child {
+            margin-left: 0;
+            margin-right: 0;
+          }
+          &:last-child {
+            margin-left: 0;
+            margin-right: 0;
+          }
+
+          .baufi-vortrag {
+            color: #c99f69;
+            margin-bottom: 0.5em;
+            display: block;
+          }
+          .enersol-vortrag {
+            color: #95c22c;
+            margin-bottom: 0.5em;
+            display: block;
+          }
+          p {
+            // font-size: 0.8em;
+            height: 3.25em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0;
+            &.enersol-marked {
+              background-color: #95c22c;
+              color: #ffffff;
+              padding: 1em;
+            }
+            &.baufi-marked {
+              background-color: #c99f69;
+              color: #ffffff;
+              padding: 1em 1.5em;
+
+            }
+          }
+          img {
+            &.enersol {
+              width: 7em;
+              margin-top: 0.6em ;
+            }
+            &.baufi {
+              width: 11em;
+              margin-top: 0.6em ;
+            }
+
+          }
+        }
+
+      }
+
+      h1,
+      h2,
+      h3 {
+        line-height: 1;
+      }
+      h1 {
+        font-size: 1.6em;
+      }
+      h4 {
+        font-size: 1.25em;
+      }
+    }
+  }
+
 }
