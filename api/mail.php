@@ -1,6 +1,8 @@
 <?php
     $postdata = file_get_contents("php://input");
-    $mail = 'verkauf@das-meisterhaus.de';
+    $mail1 = 'verkauf@das-meisterhaus.de';
+    $mail2 = 'info@das-meisterhaus.de';
+    $mail3 = 'julian.willner@das-meisterhaus.de';
     $subject = 'Kontaktanfrage';
     $from = "From: Meisterhaus Website <kontaktanfrage@das-meisterhaus.de>\r\n";
     $from .= "Content-Type: text/html\r\n";
@@ -16,7 +18,8 @@ if(isset($postdata) && !empty($postdata))
     foreach ($request as $key => $value) {
       $result .= "$key: $value <br>";
     }
-    mail($mail,$subject, $result, $from);
-
+    mail($mail1, $subject, $result, $from);
+    mail($mail2, $subject, $result, $from);
+    mail($mail3, $subject, $result, $from);
 }
 ?>
