@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-step-b',
-  templateUrl: './step-b.component.html',
-  styleUrls: ['./step-b.component.scss',
+  selector: 'app-head',
+  templateUrl: './head.component.html',
+  styleUrls: ['./head.component.scss',
   './../konfigurator.component.scss'
   ]
 })
-export class StepBComponent implements OnInit {
+export class HeadComponent implements OnInit {
 
   constructor() { }
 

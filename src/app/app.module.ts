@@ -33,6 +33,7 @@ import { TilgungsrechnerComponent } from './service/tilgungsrechner/tilgungsrech
 import { KonfiguratorComponent } from './bauen/konfigurator/konfigurator.component';
 import { StepAComponent } from './bauen/konfigurator/step-a/step-a.component';
 import { StepBComponent } from './bauen/konfigurator/step-b/step-b.component';
+import { HeadComponent } from './bauen/konfigurator/head/head.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { StepBComponent } from './bauen/konfigurator/step-b/step-b.component';
     TilgungsrechnerComponent,
     KonfiguratorComponent,
     StepAComponent,
-    StepBComponent
+    StepBComponent,
+    HeadComponent
   ],
   imports: [
     BrowserModule,

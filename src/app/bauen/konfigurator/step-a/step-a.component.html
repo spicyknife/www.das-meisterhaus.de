@@ -2,24 +2,11 @@
 <app-navigation></app-navigation>
 
 <div class="konfigurator-container content text-align-center">
-  <div class="konfigurator-summary-bar">
-    <div class="summary-section">
-      <label>Typ: </label>
-      <span>Haustyp A</span>
-    </div>
-    <div class="summary-section">
-      <label>Größe: </label>
-      <span>128 m2</span>
-    </div>
-    <div class="summary-section">
-      <label>Preis: </label>
-      <span>328.310,00€</span>
-    </div>
-  </div>
+  <app-head></app-head>
 
   <div class="konfigurator-step-wrapper">
     <div class="step-headline">
-      <h1>Schritt 1: X</h1>
+      <h1>Schritt 1: Bauweise</h1>
     </div>
 
     <nav aria-label="Page navigation example">
@@ -42,8 +29,43 @@
 
   <div class="konfigurator-wrapper">
     <div class="konfigurator">
-      <div class="showcase"></div>
-      <div class="control-panel"></div>
+      <!-- SHOWCASE -->
+      <div class="showcase">
+        <img src="../../../../../assets/konfigurator/step-a/img.1.jpg" />
+      </div>
+
+      <!-- OPTIONS -->
+      <div class="control-panel">
+        <!-- BAUWEISE: HOLZ -->
+        <div class="option">
+          <input
+            class="konfigurator-option"
+            name="konfigurator_bauweise"
+            id="bauweiseHolz"
+            type="radio"
+            value="bauweiseHolz"
+          />
+          <label for="bauweiseHolz">
+            <img src="../../../../../assets/konfigurator/step-a/img.1.jpg" />
+            <span>Holz</span>
+          </label>
+        </div>
+
+        <!-- BAUWEISE: MASSIV -->
+        <div class="option">
+          <input
+            class="konfigurator-option"
+            name="konfigurator_bauweise"
+            id="bauweiseMassiv"
+            type="radio"
+            value="bauweiseMassiv"
+          />
+          <label for="bauweiseMassiv">
+            <img src="../../../../../assets/konfigurator/step-a/img.2.jpg" />
+            <span>Massiv</span>
+          </label>
+        </div>
+      </div>
     </div>
   </div>
 </div>

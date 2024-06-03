@@ -1,0 +1,101 @@
+/*****************************/
+/* KONFIGURATOR */
+/***************************/
+.konfigurator-container {
+  margin-top: 4em;
+
+  .konfigurator-step-wrapper {
+    display: flex;
+    padding: 0 2em;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1680px;
+    margin: 0 auto;
+    .step-headline {
+      h1 {
+        margin-bottom: 0;
+        font-size: 2em;
+        color: #848484;
+      }
+    }
+    .pagination {
+      margin-bottom: 0;
+
+      .page-item {
+        font-size: 1.15em;
+        margin-right: 0.5em;
+        &:last-child {
+          margin-right: 0;
+        }
+        &:active {
+          background-color: #ea6e09;
+        }
+      }
+      .page-link {
+        border-radius: 0;
+        color: #fff;
+        font-size: 1.15em;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .konfigurator-wrapper {
+    padding: 2em;
+    max-width: 1680px;
+    margin: 0 auto;
+    .konfigurator {
+      display: flex;
+      .showcase {
+        width: 75%;
+        // height: 50em;
+        background-color: #a2a2a2;
+        padding: 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 100%;
+        }
+      }
+      .control-panel {
+        width: 25%;
+        max-height: 50em;
+        overflow: auto;
+        // height: 50em;
+        background-color: #f6f6f6;
+        padding: 1em;
+        .option {
+          margin-bottom: 1em;
+          input.konfigurator-option[type='radio'] {
+            display: none;
+          }
+          input.konfigurator-option[type='radio']:checked + label > img {
+            border-left: 5px solid #f38800;
+            border-right: 5px solid #f38800;
+            border-top: 5px solid #f38800;
+            transition: 0.35s;
+          }
+          input.konfigurator-option[type='radio']:checked + label > span {
+            background-color: #f38800;
+            transition: 0.35s;
+          }
+          label {
+            width: 90%;
+            margin-bottom: 0;
+            img {
+              width: 100%;
+            }
+            span {
+              display: block;
+              padding: 0.25em;
+              background-color: #000;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
