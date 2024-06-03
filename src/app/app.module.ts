@@ -30,6 +30,9 @@ import { BudgetrechnerComponent } from './service/budgetrechner/budgetrechner.co
 import { ZinsrechnerComponent } from './service/zinsrechner/zinsrechner.component';
 import { ZinsbindungComponent } from './service/zinsbindung/zinsbindung.component';
 import { TilgungsrechnerComponent } from './service/tilgungsrechner/tilgungsrechner.component';
+import { KonfiguratorComponent } from './bauen/konfigurator/konfigurator.component';
+import { StepAComponent } from './bauen/konfigurator/step-a/step-a.component';
+import { StepBComponent } from './bauen/konfigurator/step-b/step-b.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +63,10 @@ import { TilgungsrechnerComponent } from './service/tilgungsrechner/tilgungsrech
     BudgetrechnerComponent,
     ZinsrechnerComponent,
     ZinsbindungComponent,
-    TilgungsrechnerComponent
+    TilgungsrechnerComponent,
+    KonfiguratorComponent,
+    StepAComponent,
+    StepBComponent
   ],
   imports: [
     BrowserModule,
