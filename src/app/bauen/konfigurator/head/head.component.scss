@@ -26,6 +26,28 @@
         font-weight: bold;
       }
     }
+    .pagination {
+      margin-bottom: 0;
+
+      .page-item {
+        font-size: 1.15em;
+        margin-right: 0.5em;
+        &:last-child {
+          margin-right: 0;
+        }
+        &:active {
+          background-color: #ea6e09;
+        }
+      }
+      .page-link {
+        border-radius: 0;
+        color: #fff;
+        font-size: 1.15em;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
   }
 
 }
