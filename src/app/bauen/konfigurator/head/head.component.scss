@@ -4,7 +4,7 @@
   padding: 2em 2em;
   background-color: #f6f6f6;
   .konfigurator-summary {
-    max-width: 1620px;
+    max-width: 1645px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,6 +45,12 @@
         font-size: 1.15em;
         &:hover {
           color: #fff;
+        }
+        &.disabled {
+          background-color: #ea6e09;
+          opacity: 50%;
+          cursor: not-allowed;
+
         }
       }
     }
