@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StepBComponent } from './schritt-2-aktionshaus.component';
+import { SchrittCDachformComponent } from './step-c-dachform.component';
 
-describe('StepBComponent', () => {
-  let component: StepBComponent;
-  let fixture: ComponentFixture<StepBComponent>;
+describe('SchrittCDachformComponent', () => {
+  let component: SchrittCDachformComponent;
+  let fixture: ComponentFixture<SchrittCDachformComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StepBComponent ]
+      declarations: [ SchrittCDachformComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StepBComponent);
+    fixture = TestBed.createComponent(SchrittCDachformComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

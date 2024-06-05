@@ -31,9 +31,10 @@ import { ZinsrechnerComponent } from './service/zinsrechner/zinsrechner.componen
 import { ZinsbindungComponent } from './service/zinsbindung/zinsbindung.component';
 import { TilgungsrechnerComponent } from './service/tilgungsrechner/tilgungsrechner.component';
 import { KonfiguratorComponent } from './bauen/konfigurator/konfigurator.component';
-import { Schritt1Bauweise } from './bauen/konfigurator/schritt-1-bauweise/schritt-1-bauweise.component';
-import { Schritt2Aktionshaus } from './bauen/konfigurator/schritt-2-aktionshaus/schritt-2-aktionshaus.component';
+import { StepABauweise } from './bauen/konfigurator/step-a-bauweise/step-a-bauweise.component';
+import { StepBAktionshaus } from './bauen/konfigurator/step-b-aktionshaus/step-b-aktionshaus.component';
 import { KonfiguratorHeadComponent } from './bauen/konfigurator/konfigurator-head/konfigurator-head.component';
+import { StepCDachform } from './bauen/konfigurator/step-c-dachform/step-c-dachform.component';
 
 @NgModule({
   declarations: [
@@ -66,9 +67,10 @@ import { KonfiguratorHeadComponent } from './bauen/konfigurator/konfigurator-hea
     ZinsbindungComponent,
     TilgungsrechnerComponent,
     KonfiguratorComponent,
-    Schritt1Bauweise,
-    Schritt2Aktionshaus,
-    KonfiguratorHeadComponent
+    KonfiguratorHeadComponent,
+    StepABauweise,
+    StepBAktionshaus,
+    StepCDachform,
   ],
   imports: [
     BrowserModule,

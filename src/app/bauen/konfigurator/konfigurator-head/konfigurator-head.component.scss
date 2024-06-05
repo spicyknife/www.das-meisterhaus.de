@@ -35,8 +35,9 @@
         &:last-child {
           margin-right: 0;
         }
-        &:active {
-          background-color: #ea6e09;
+        &:active,
+        &:focus {
+          background-color: #ea6e09 !important;
         }
       }
       .page-link {
@@ -50,7 +51,6 @@
           background-color: #ea6e09;
           opacity: 50%;
           cursor: not-allowed;
-
         }
       }
     }
