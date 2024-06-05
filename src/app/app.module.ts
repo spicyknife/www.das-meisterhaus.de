@@ -31,14 +31,14 @@ import { ZinsrechnerComponent } from './service/zinsrechner/zinsrechner.componen
 import { ZinsbindungComponent } from './service/zinsbindung/zinsbindung.component';
 import { TilgungsrechnerComponent } from './service/tilgungsrechner/tilgungsrechner.component';
 import { KonfiguratorComponent } from './bauen/konfigurator/konfigurator.component';
-import { StepABauweise } from './bauen/konfigurator/step-a-bauweise/step-a-bauweise.component';
-import { StepBAktionshaus } from './bauen/konfigurator/step-b-aktionshaus/step-b-aktionshaus.component';
 import { KonfiguratorHeadComponent } from './bauen/konfigurator/konfigurator-head/konfigurator-head.component';
-import { StepCDachform } from './bauen/konfigurator/step-c-dachform/step-c-dachform.component';
-import { StepDDachfarbe } from './bauen/konfigurator/step-d-dachfarbe/step-d-dachfarbe.component';
-import { StepEFensterfarbe } from './bauen/konfigurator/step-e-fensterfarbe/step-e-fensterfarbe.component';
-import { StepFSchornstein } from './bauen/konfigurator/step-f-schornstein/step-f-schornstein.component';
-import { StepGAusstattung } from './bauen/konfigurator/step-g-ausstattung/step-g-ausstattung.component';
+import { StepBauweise } from './bauen/konfigurator/step-bauweise/step-bauweise.component';
+import { StepAktionshaus } from './bauen/konfigurator/step-aktionshaus/step-aktionshaus.component';
+import { StepDachform } from './bauen/konfigurator/step-dachform/step-dachform.component';
+import { StepDachfarbe } from './bauen/konfigurator/step-dachfarbe/step-dachfarbe.component';
+import { StepFensterfarbe } from './bauen/konfigurator/step-fensterfarbe/step-fensterfarbe.component';
+import { StepSchornstein } from './bauen/konfigurator/step-schornstein/step-schornstein.component';
+import { StepAusstattung } from './bauen/konfigurator/step-ausstattung/step-ausstattung.component';
 
 @NgModule({
   declarations: [
@@ -72,13 +72,13 @@ import { StepGAusstattung } from './bauen/konfigurator/step-g-ausstattung/step-g
     TilgungsrechnerComponent,
     KonfiguratorComponent,
     KonfiguratorHeadComponent,
-    StepABauweise,
-    StepBAktionshaus,
-    StepCDachform,
-    StepDDachfarbe,
-    StepEFensterfarbe,
-    StepFSchornstein,
-    StepGAusstattung,
+    StepBauweise,
+    StepAktionshaus,
+    StepDachform,
+    StepDachfarbe,
+    StepFensterfarbe,
+    StepSchornstein,
+    StepAusstattung,
   ],
   imports: [
     BrowserModule,

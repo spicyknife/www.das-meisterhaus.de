@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StepAComponent } from './step-a-bauweise.component';
+import { StepEFensterfarbeComponent } from './step-fensterfarbe.component';
 
-describe('StepAComponent', () => {
-  let component: StepAComponent;
-  let fixture: ComponentFixture<StepAComponent>;
+describe('StepEFensterfarbeComponent', () => {
+  let component: StepEFensterfarbeComponent;
+  let fixture: ComponentFixture<StepEFensterfarbeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StepAComponent ]
+      declarations: [ StepEFensterfarbeComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StepAComponent);
+    fixture = TestBed.createComponent(StepEFensterfarbeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

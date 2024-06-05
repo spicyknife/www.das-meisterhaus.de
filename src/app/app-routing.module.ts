@@ -15,13 +15,13 @@ import { ZinsbindungComponent} from './service/zinsbindung/zinsbindung.component
 import { TilgungsrechnerComponent } from './service/tilgungsrechner/tilgungsrechner.component';
 import { FinanzierungsanfrageComponent } from './service/finanzierungsanfrage/finanzierungsanfrage.component';
 import { KonfiguratorComponent } from './bauen/konfigurator/konfigurator.component';
-import { StepABauweise } from './bauen/konfigurator/step-a-bauweise/step-a-bauweise.component';
-import { StepBAktionshaus } from './bauen/konfigurator/step-b-aktionshaus/step-b-aktionshaus.component';
-import { StepCDachform } from './bauen/konfigurator/step-c-dachform/step-c-dachform.component';
-import { StepDDachfarbe } from './bauen/konfigurator/step-d-dachfarbe/step-d-dachfarbe.component';
-import { StepEFensterfarbe } from './bauen/konfigurator/step-e-fensterfarbe/step-e-fensterfarbe.component';
-import { StepFSchornstein } from './bauen/konfigurator/step-f-schornstein/step-f-schornstein.component';
-import { StepGAusstattung } from './bauen/konfigurator/step-g-ausstattung/step-g-ausstattung.component';
+import { StepBauweise } from './bauen/konfigurator/step-bauweise/step-bauweise.component';
+import { StepAktionshaus } from './bauen/konfigurator/step-aktionshaus/step-aktionshaus.component';
+import { StepDachform } from './bauen/konfigurator/step-dachform/step-dachform.component';
+import { StepDachfarbe } from './bauen/konfigurator/step-dachfarbe/step-dachfarbe.component';
+import { StepFensterfarbe } from './bauen/konfigurator/step-fensterfarbe/step-fensterfarbe.component';
+import { StepSchornstein } from './bauen/konfigurator/step-schornstein/step-schornstein.component';
+import { StepAusstattung } from './bauen/konfigurator/step-ausstattung/step-ausstattung.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -40,13 +40,13 @@ const routes: Routes = [
   { path: 'tilgungsrechner', component: TilgungsrechnerComponent},
   { path: 'finanzierungsanfrage', component: FinanzierungsanfrageComponent},
   { path: 'konfigurator', component: KonfiguratorComponent},
-  { path: 'konfigurator/schritt-1', component: StepABauweise},
-  { path: 'konfigurator/schritt-2', component: StepBAktionshaus},
-  { path: 'konfigurator/schritt-3', component: StepCDachform},
-  { path: 'konfigurator/schritt-4', component: StepDDachfarbe},
-  { path: 'konfigurator/schritt-5', component: StepEFensterfarbe},
-  { path: 'konfigurator/schritt-6', component: StepFSchornstein},
-  { path: 'konfigurator/schritt-7', component: StepGAusstattung}
+  { path: 'konfigurator/schritt-1', component: StepBauweise},
+  { path: 'konfigurator/schritt-2', component: StepAktionshaus},
+  { path: 'konfigurator/schritt-3', component: StepDachform},
+  { path: 'konfigurator/schritt-4', component: StepDachfarbe},
+  { path: 'konfigurator/schritt-5', component: StepFensterfarbe},
+  { path: 'konfigurator/schritt-6', component: StepSchornstein},
+  { path: 'konfigurator/schritt-7', component: StepAusstattung}
 ];
 
 @NgModule({
@@ -71,11 +71,11 @@ export const routingComponents = [
   TilgungsrechnerComponent,
   FinanzierungsanfrageComponent,
   KonfiguratorComponent,
-  StepABauweise,
-  StepBAktionshaus,
-  StepCDachform,
-  StepDDachfarbe,
-  StepEFensterfarbe,
-  StepFSchornstein,
-  StepGAusstattung,
+  StepBauweise,
+  StepAktionshaus,
+  StepDachform,
+  StepDachfarbe,
+  StepFensterfarbe,
+  StepSchornstein,
+  StepAusstattung,
 ];

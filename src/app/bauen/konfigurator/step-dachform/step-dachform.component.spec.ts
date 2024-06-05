@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SchrittCDachformComponent } from './step-c-dachform.component';
+import { SchrittCDachformComponent } from './step-dachform.component';
 
 describe('SchrittCDachformComponent', () => {
   let component: SchrittCDachformComponent;

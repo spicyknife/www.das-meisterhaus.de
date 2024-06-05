@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StepGAusstattungComponent } from './step-g-ausstattung.component';
+import { StepFSchornsteinComponent } from './step-schornstein.component';
 
-describe('StepGAusstattungComponent', () => {
-  let component: StepGAusstattungComponent;
-  let fixture: ComponentFixture<StepGAusstattungComponent>;
+describe('StepFSchornsteinComponent', () => {
+  let component: StepFSchornsteinComponent;
+  let fixture: ComponentFixture<StepFSchornsteinComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StepGAusstattungComponent ]
+      declarations: [ StepFSchornsteinComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StepGAusstattungComponent);
+    fixture = TestBed.createComponent(StepFSchornsteinComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
