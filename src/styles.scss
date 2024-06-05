@@ -158,7 +158,40 @@ input.ng-invalid.ng-touched {
 }
 
 
-
+/*************************/
+/*************************/
+/*************************/
+/*************************/
+/* KONFIGURATOR OPTIONS */
+.option {
+  margin-bottom: 1em;
+  input.konfigurator-option[type='radio'] {
+    display: none;
+  }
+  input.konfigurator-option[type='radio']:checked + label > img {
+    border-left: 5px solid #f38800;
+    border-right: 5px solid #f38800;
+    border-top: 5px solid #f38800;
+    transition: 0.35s;
+  }
+  input.konfigurator-option[type='radio']:checked + label > span {
+    background-color: #f38800;
+    transition: 0.35s;
+  }
+  label {
+    width: 100%;
+    margin-bottom: 0;
+    img {
+      width: 100%;
+    }
+    span {
+      display: block;
+      padding: 0.25em;
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}
 
 
 

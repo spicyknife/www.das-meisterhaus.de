@@ -30,6 +30,7 @@ import { BudgetrechnerComponent } from './service/budgetrechner/budgetrechner.co
 import { ZinsrechnerComponent } from './service/zinsrechner/zinsrechner.component';
 import { ZinsbindungComponent } from './service/zinsbindung/zinsbindung.component';
 import { TilgungsrechnerComponent } from './service/tilgungsrechner/tilgungsrechner.component';
+import { KonfigStartComponent } from './bauen/konfigurator/start/start.component';
 import { KonfiguratorComponent } from './bauen/konfigurator/konfigurator.component';
 import { KonfiguratorHeadComponent } from './bauen/konfigurator/konfigurator-head/konfigurator-head.component';
 import { StepBauweise } from './bauen/konfigurator/step-bauweise/step-bauweise.component';
@@ -39,6 +40,7 @@ import { StepDachfarbe } from './bauen/konfigurator/step-dachfarbe/step-dachfarb
 import { StepFensterfarbe } from './bauen/konfigurator/step-fensterfarbe/step-fensterfarbe.component';
 import { StepSchornstein } from './bauen/konfigurator/step-schornstein/step-schornstein.component';
 import { StepAusstattung } from './bauen/konfigurator/step-ausstattung/step-ausstattung.component';
+
 
 @NgModule({
   declarations: [
@@ -70,6 +72,7 @@ import { StepAusstattung } from './bauen/konfigurator/step-ausstattung/step-auss
     ZinsrechnerComponent,
     ZinsbindungComponent,
     TilgungsrechnerComponent,
+    KonfigStartComponent,
     KonfiguratorComponent,
     KonfiguratorHeadComponent,
     StepBauweise,

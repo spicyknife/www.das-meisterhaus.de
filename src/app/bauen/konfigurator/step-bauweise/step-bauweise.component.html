@@ -1,63 +1,28 @@
-<!-- HEAD / NAVIGATION -->
-<app-navigation></app-navigation>
-
-<div class="konfigurator-container content text-align-center">
-  <app-konfigurator-head></app-konfigurator-head>
-
-  <div class="konfigurator-step-wrapper">
-    <div class="step-headline">
-      <h1>Schritt 1: Bauweise</h1>
-    </div>
-  </div>
-
-  <div class="konfigurator-wrapper">
-    <div class="konfigurator">
-      <!-- SHOWCASE -->
-      <div class="showcase">
-        <img
-          class="animate__animated animate__fadeIn"
-          src="../../../../../assets/konfigurator/step-bauweise/img.1.jpg"
-        />
-      </div>
-
-      <!-- OPTIONS -->
-      <div class="control-panel">
-        <!-- BAUWEISE: HOLZ -->
-        <div class="option animate__animated animate__fadeIn">
-          <input
-            class="konfigurator-option"
-            name="konfigurator_bauweise"
-            id="bauweiseHolz"
-            type="radio"
-            value="bauweiseHolz"
-          />
-          <label for="bauweiseHolz">
-            <img
-              src="../../../../../assets/konfigurator/step-bauweise/img.1.jpg"
-            />
-            <span>Holz</span>
-          </label>
-        </div>
-
-        <!-- BAUWEISE: MASSIV -->
-        <div class="option animate__animated animate__fadeIn">
-          <input
-            class="konfigurator-option"
-            name="konfigurator_bauweise"
-            id="bauweiseMassiv"
-            type="radio"
-            value="bauweiseMassiv"
-          />
-          <label for="bauweiseMassiv">
-            <img
-              src="../../../../../assets/konfigurator/step-bauweise/img.1.jpg"
-            />
-            <span>Massiv</span>
-          </label>
-        </div>
-      </div>
-    </div>
-  </div>
+<!-- BAUWEISE: HOLZ -->
+<div class="option animate__animated animate__fadeIn">
+  <input
+    class="konfigurator-option"
+    name="konfigurator_bauweise"
+    id="bauweiseHolz"
+    type="radio"
+    value="bauweiseHolz"
+  />
+  <label for="bauweiseHolz">
+    <img src="../../../../../assets/konfigurator/step-bauweise/img.1.jpg" />
+    <span>Holz</span>
+  </label>
 </div>
-<!-- FOOTER -->
-<app-footer></app-footer>
+<!-- BAUWEISE: MASSIV -->
+<div class="option animate__animated animate__fadeIn">
+  <input
+    class="konfigurator-option"
+    name="konfigurator_bauweise"
+    id="bauweiseMassiv"
+    type="radio"
+    value="bauweiseMassiv"
+  />
+  <label for="bauweiseMassiv">
+    <img src="../../../../../assets/konfigurator/step-bauweise/img.1.jpg" />
+    <span>Massiv</span>
+  </label>
+</div>

@@ -22,6 +22,7 @@ import { StepDachfarbe } from './bauen/konfigurator/step-dachfarbe/step-dachfarb
 import { StepFensterfarbe } from './bauen/konfigurator/step-fensterfarbe/step-fensterfarbe.component';
 import { StepSchornstein } from './bauen/konfigurator/step-schornstein/step-schornstein.component';
 import { StepAusstattung } from './bauen/konfigurator/step-ausstattung/step-ausstattung.component';
+import { KonfigStartComponent } from './bauen/konfigurator/start/start.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -39,6 +40,7 @@ const routes: Routes = [
   { path: 'vergleich-zinsbindung', component: ZinsbindungComponent},
   { path: 'tilgungsrechner', component: TilgungsrechnerComponent},
   { path: 'finanzierungsanfrage', component: FinanzierungsanfrageComponent},
+  { path: 'konfigurator-home', component: KonfigStartComponent},
   { path: 'konfigurator', component: KonfiguratorComponent},
   { path: 'konfigurator/schritt-1', component: StepBauweise},
   { path: 'konfigurator/schritt-2', component: StepAktionshaus},
