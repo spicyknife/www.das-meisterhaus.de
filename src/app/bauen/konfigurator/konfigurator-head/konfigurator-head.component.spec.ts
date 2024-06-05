@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeadComponent } from './head.component';
+import { HeadComponent } from './konfigurator-head.component';
 
 describe('HeadComponent', () => {
   let component: HeadComponent;
