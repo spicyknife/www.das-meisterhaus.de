@@ -35,6 +35,10 @@ import { StepABauweise } from './bauen/konfigurator/step-a-bauweise/step-a-bauwe
 import { StepBAktionshaus } from './bauen/konfigurator/step-b-aktionshaus/step-b-aktionshaus.component';
 import { KonfiguratorHeadComponent } from './bauen/konfigurator/konfigurator-head/konfigurator-head.component';
 import { StepCDachform } from './bauen/konfigurator/step-c-dachform/step-c-dachform.component';
+import { StepDDachfarbe } from './bauen/konfigurator/step-d-dachfarbe/step-d-dachfarbe.component';
+import { StepEFensterfarbe } from './bauen/konfigurator/step-e-fensterfarbe/step-e-fensterfarbe.component';
+import { StepFSchornstein } from './bauen/konfigurator/step-f-schornstein/step-f-schornstein.component';
+import { StepGAusstattung } from './bauen/konfigurator/step-g-ausstattung/step-g-ausstattung.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +75,10 @@ import { StepCDachform } from './bauen/konfigurator/step-c-dachform/step-c-dachf
     StepABauweise,
     StepBAktionshaus,
     StepCDachform,
+    StepDDachfarbe,
+    StepEFensterfarbe,
+    StepFSchornstein,
+    StepGAusstattung,
   ],
   imports: [
     BrowserModule,

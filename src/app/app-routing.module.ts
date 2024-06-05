@@ -18,6 +18,10 @@ import { KonfiguratorComponent } from './bauen/konfigurator/konfigurator.compone
 import { StepABauweise } from './bauen/konfigurator/step-a-bauweise/step-a-bauweise.component';
 import { StepBAktionshaus } from './bauen/konfigurator/step-b-aktionshaus/step-b-aktionshaus.component';
 import { StepCDachform } from './bauen/konfigurator/step-c-dachform/step-c-dachform.component';
+import { StepDDachfarbe } from './bauen/konfigurator/step-d-dachfarbe/step-d-dachfarbe.component';
+import { StepEFensterfarbe } from './bauen/konfigurator/step-e-fensterfarbe/step-e-fensterfarbe.component';
+import { StepFSchornstein } from './bauen/konfigurator/step-f-schornstein/step-f-schornstein.component';
+import { StepGAusstattung } from './bauen/konfigurator/step-g-ausstattung/step-g-ausstattung.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -38,7 +42,11 @@ const routes: Routes = [
   { path: 'konfigurator', component: KonfiguratorComponent},
   { path: 'konfigurator/schritt-1', component: StepABauweise},
   { path: 'konfigurator/schritt-2', component: StepBAktionshaus},
-  { path: 'konfigurator/schritt-3', component: StepCDachform}
+  { path: 'konfigurator/schritt-3', component: StepCDachform},
+  { path: 'konfigurator/schritt-4', component: StepDDachfarbe},
+  { path: 'konfigurator/schritt-5', component: StepEFensterfarbe},
+  { path: 'konfigurator/schritt-6', component: StepFSchornstein},
+  { path: 'konfigurator/schritt-7', component: StepGAusstattung}
 ];
 
 @NgModule({
@@ -65,5 +73,9 @@ export const routingComponents = [
   KonfiguratorComponent,
   StepABauweise,
   StepBAktionshaus,
-  StepCDachform
+  StepCDachform,
+  StepDDachfarbe,
+  StepEFensterfarbe,
+  StepFSchornstein,
+  StepGAusstattung,
 ];
