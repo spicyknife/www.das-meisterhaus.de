@@ -28,6 +28,11 @@ a:hover {
   color: #ea6e09;
   text-decoration: none;
 }
+.btn-primary.focus,
+.btn-primary:focus {
+  background-color: #ea6e09;
+  text-decoration: none;
+}
 .italic {
   font-style: italic;
 }

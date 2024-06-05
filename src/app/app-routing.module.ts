@@ -40,7 +40,7 @@ const routes: Routes = [
   { path: 'vergleich-zinsbindung', component: ZinsbindungComponent},
   { path: 'tilgungsrechner', component: TilgungsrechnerComponent},
   { path: 'finanzierungsanfrage', component: FinanzierungsanfrageComponent},
-  { path: 'konfigurator-home', component: KonfigStartComponent},
+  { path: 'starte-konfigurator', component: KonfigStartComponent},
   { path: 'konfigurator', component: KonfiguratorComponent},
   { path: 'konfigurator/schritt-1', component: StepBauweise},
   { path: 'konfigurator/schritt-2', component: StepAktionshaus},
