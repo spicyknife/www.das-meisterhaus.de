@@ -31,8 +31,8 @@ import { ZinsrechnerComponent } from './service/zinsrechner/zinsrechner.componen
 import { ZinsbindungComponent } from './service/zinsbindung/zinsbindung.component';
 import { TilgungsrechnerComponent } from './service/tilgungsrechner/tilgungsrechner.component';
 import { KonfiguratorComponent } from './bauen/konfigurator/konfigurator.component';
-import { StepAComponent } from './bauen/konfigurator/step-a/step-a.component';
-import { StepBComponent } from './bauen/konfigurator/step-b/step-b.component';
+import { Schritt1Bauweise } from './bauen/konfigurator/schritt-1-bauweise/schritt-1-bauweise.component';
+import { Schritt2Aktionshaus } from './bauen/konfigurator/schritt-2-aktionshaus/schritt-2-aktionshaus.component';
 import { HeadComponent } from './bauen/konfigurator/head/head.component';
 
 @NgModule({
@@ -66,8 +66,8 @@ import { HeadComponent } from './bauen/konfigurator/head/head.component';
     ZinsbindungComponent,
     TilgungsrechnerComponent,
     KonfiguratorComponent,
-    StepAComponent,
-    StepBComponent,
+    Schritt1Bauweise,
+    Schritt2Aktionshaus,
     HeadComponent
   ],
   imports: [

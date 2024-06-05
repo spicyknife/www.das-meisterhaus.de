@@ -15,8 +15,8 @@ import { ZinsbindungComponent} from './service/zinsbindung/zinsbindung.component
 import { TilgungsrechnerComponent } from './service/tilgungsrechner/tilgungsrechner.component';
 import { FinanzierungsanfrageComponent } from './service/finanzierungsanfrage/finanzierungsanfrage.component';
 import { KonfiguratorComponent } from './bauen/konfigurator/konfigurator.component';
-import { StepAComponent } from './bauen/konfigurator/step-a/step-a.component';
-import { StepBComponent } from './bauen/konfigurator/step-b/step-b.component';
+import { Schritt1Bauweise } from './bauen/konfigurator/schritt-1-bauweise/schritt-1-bauweise.component';
+import { Schritt2Aktionshaus } from './bauen/konfigurator/schritt-2-aktionshaus/schritt-2-aktionshaus.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -35,8 +35,8 @@ const routes: Routes = [
   { path: 'tilgungsrechner', component: TilgungsrechnerComponent},
   { path: 'finanzierungsanfrage', component: FinanzierungsanfrageComponent},
   { path: 'konfigurator', component: KonfiguratorComponent},
-  { path: 'konfigurator/schritt-1', component: StepAComponent},
-  { path: 'konfigurator/schritt-2', component: StepBComponent}
+  { path: 'konfigurator/schritt-1', component: Schritt1Bauweise},
+  { path: 'konfigurator/schritt-2', component: Schritt2Aktionshaus}
 ];
 
 @NgModule({
@@ -61,6 +61,6 @@ export const routingComponents = [
   TilgungsrechnerComponent,
   FinanzierungsanfrageComponent,
   KonfiguratorComponent,
-  StepAComponent,
-  StepBComponent
+  Schritt1Bauweise,
+  Schritt2Aktionshaus
 ];
