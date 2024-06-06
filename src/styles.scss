@@ -198,7 +198,32 @@ input.ng-invalid.ng-touched {
   }
 }
 
+@media (max-width: 1280px) {
+  .option {
+    margin-bottom: 1em;
+    label {
+      width: 90%;
+    }
+  }
+}
 
+@media (max-width: 812px) {
+  .option-wrapper {
+    display: flex;
+    justify-content: center;
+    .option {
+      margin-bottom: 0;
+      margin-right: 0.5em;
+      width: 10.9em;
+      &:last-child {
+        margin-right: 0;
+      }
+      label {
+        width: 100%;
+      }
+    }
+  }
+}
 
 
 
@@ -250,3 +275,32 @@ input.ng-invalid.ng-touched {
   }
 }
 
+.layout-border {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  .layout-border-top-left {
+    border-left: 1px solid #a2a2a2;
+    border-top: 1px solid #a2a2a2;
+    width: 3em;
+  height: 3em;
+  }
+  .layout-border-top-right {
+    border-right: 1px solid #a2a2a2;
+    border-top: 1px solid #a2a2a2;
+    width: 3em;
+  height: 3em;
+  }
+  .layout-border-bottom-left {
+    border-left: 1px solid #a2a2a2;
+    border-bottom: 1px solid #a2a2a2;
+    width: 3em;
+  height: 3em;
+  }
+  .layout-border-bottom-right {
+    border-right: 1px solid #a2a2a2;
+    border-bottom: 1px solid #a2a2a2;
+    width: 3em;
+  height: 3em;
+  }
+}

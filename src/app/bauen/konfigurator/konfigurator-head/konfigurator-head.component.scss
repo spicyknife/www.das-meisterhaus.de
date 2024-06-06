@@ -1,5 +1,4 @@
 .konfigurator-summary-bar {
-
   margin-bottom: 2em;
   padding: 2em 2em;
   background-color: #f6f6f6;
@@ -14,12 +13,9 @@
       font-size: 2em;
     }
     .summary-section {
-      // margin: 0 1.5em;
       label {
-        // font-weight: bold;
         margin-right: 0.75em;
         margin-bottom: 0;
-        // font-size: 2em;
       }
       span {
         font-size: 2em;
@@ -55,5 +51,121 @@
       }
     }
   }
+}
 
+@media (max-width: 1280px) {
+  .konfigurator-summary-bar {
+    margin-bottom: 2em;
+    padding: 2em 2em;
+    .konfigurator-summary {
+      max-width: 1645px;
+      margin: 0 auto;
+      h1 {
+        font-size: 1.75em;
+      }
+      .summary-section {
+        label {
+          margin-right: 0.75em;
+          margin-bottom: 0;
+        }
+        span {
+          font-size: 1.75em;
+        }
+      }
+      .pagination {
+        margin-bottom: 0;
+
+        .page-item {
+          font-size: 1.05em;
+          margin-right: 0.5em;
+        }
+        .page-link {
+          font-size: 1.05em;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 812px) {
+  .konfigurator-summary-bar {
+    margin-bottom: 2em;
+    padding: 1.5em 1em;
+    .konfigurator-summary {
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      h1 {
+        font-size: 1.75em;
+      }
+      div {
+        width: 50%;
+        text-align: left;
+      }
+      .summary-section {
+        width: 50%;
+        text-align: right;
+        label {
+          margin-right: 0.75em;
+          margin-bottom: 0;
+        }
+        span {
+          font-size: 1.75em;
+        }
+      }
+      .pagination {
+        width: 100%;
+        margin-bottom: 0;
+        margin-top: 0.5em;
+        .page-item {
+          font-size: 1.05em;
+          margin-right: 0.5em;
+        }
+        .page-link {
+          font-size: 1.05em;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .konfigurator-summary-bar {
+    margin-bottom: 1em;
+    padding: 1.5em 1em;
+    .konfigurator-summary {
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      h1 {
+        font-size: 1.5em;
+      }
+      div {
+        width: 50%;
+        text-align: left;
+      }
+      .summary-section {
+        width: 50%;
+        text-align: right;
+        label {
+          margin-right: 0.75em;
+          margin-bottom: 0;
+          font-size: 0.8em;
+        }
+        span {
+          font-size: 1.25em;
+        }
+      }
+      .pagination {
+        width: 100%;
+        margin-bottom: 0;
+        margin-top: 1em;
+        .page-item {
+          font-size: 1em;
+          margin-right: 0.5em;
+        }
+        .page-link {
+          font-size: 1em;
+        }
+      }
+    }
+  }
 }
