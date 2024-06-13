@@ -73,13 +73,35 @@ export class KonfiguratorService {
     }
   }
 
-  bauweise? : Bauweise;
-  aktionshaus? : Aktionshaus;
-  dachform? : Dachform;
-  dachfarbe? : Dachfarbe;
-  fensterfarbe? : Fensterfarbe;
-  kamin? : Kamin;
-  ausstattung? : Ausstattung;
+  // bauweise? : Bauweise;
+  // aktionshaus? : Aktionshaus;
+  // dachform? : Dachform;
+  // dachfarbe? : Dachfarbe;
+  // fensterfarbe? : Fensterfarbe;
+  // kamin? : Kamin;
+  // ausstattung? : Ausstattung;
+
+  get bauweise() {
+    return this.formular.get('bauweise')!.value as Bauweise;
+  }
+  get aktionshaus() {
+    return this.formular.get('aktionshaus')!.value as Aktionshaus;
+  }
+  get dachform() {
+    return this.formular.get('dachform')!.value as Dachform;
+  }
+  get dachfarbe() {
+    return this.formular.get('dachfarbe')!.value as Dachfarbe;
+  }
+  get fensterfarbe() {
+    return this.formular.get('fensterfarbe')!.value as Fensterfarbe;
+  }
+  get kamin() {
+    return this.formular.get('kamin')!.value as Kamin;
+  }
+  get ausstattung() {
+    return this.formular.get('ausstattung')!.value as Ausstattung;
+  }
 
   get urlZumBild() {
     let bild: string = "img.1";
@@ -90,16 +112,62 @@ export class KonfiguratorService {
       bild = "img.3";
     }
     if (this.dachform === Dachform.erker) {
-        bild +='Erker';
+        bild +='.Erker';
     }
     if (this.dachform === Dachform.vollgeschoss) {
-        bild += 'VG';
+        bild += '.VG';
+    }
+    if (this.dachfarbe === Dachfarbe.rot) {
+      bild +='.DR';
+    }
+    if (this.fensterfarbe === Fensterfarbe.schwarz) {
+      bild +='.AF';
+    }
+    if (this.kamin === Kamin.ja) {
+      bild +='.Kamin';
     }
     bild += '.jpg'
     return bild;
   }
 
+  step2UrlTeil(aktionshaus: Aktionshaus) {
+    switch (aktionshaus) {
+      case Aktionshaus.aktionshaus113:
+        return ".2";
+      case Aktionshaus.aktionshaus114:
+        return ".3";
+      default:
+        return ".1";
+    }
+  }
+
+  step3UrlTeil(dachform: Dachform) {
+    switch (dachform) {
+      case Dachform.erker:
+        return ".Erker";
+      case Dachform.vollgeschoss:
+        return ".VG";
+      default:
+        return "";
+    }
+  }
+
+  stepUrl(step: number, ersatzwert: Aktionshaus | Dachform | Dachfarbe) {
+    const formulardaten = this.formular.value;
+    switch (step) {
+      case 2:
+        formulardaten.aktionshaus = ersatzwert;
+        break;
+      case 3:
+        formulardaten.dachform = ersatzwert;
+    }
+    return `img${this.step2UrlTeil(
+      formulardaten.aktionshaus
+    )}${this.step3UrlTeil(formulardaten.dachform)}.jpg`;
+  }
+
 }
+
 
 export enum Bauweise {
   massiv = 'massiv',
