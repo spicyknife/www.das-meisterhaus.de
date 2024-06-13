@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { KonfiguratorService } from '../konfigurator.service';
+import { Bauweise, KonfiguratorService } from '../konfigurator.service';
 
 @Component({
   selector: 'step-bauweise',
@@ -9,6 +9,10 @@ import { KonfiguratorService } from '../konfigurator.service';
   ]
 })
 export class StepBauweise implements OnInit {
+
+  bauweise = Bauweise;
+
+
 
   constructor( public konfiguratorService : KonfiguratorService) {
 

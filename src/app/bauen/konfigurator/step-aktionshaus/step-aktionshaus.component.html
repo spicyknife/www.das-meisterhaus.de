@@ -1,14 +1,14 @@
-<div class="option-wrapper">
+<div class="option-wrapper" [formGroup]="konfiguratorService.formular">
   <!-- AKTIONSHAUS 112 -->
   <div class="option animate__animated animate__fadeIn">
     <input
       class="konfigurator-option"
-      name="konfigurator_aktionshaus"
-      id="aktionshaus_112_1"
+      formControlName="aktionshaus"
+      id="aktionshaus_112"
       type="radio"
-      value="aktionshaus_112_1"
+      [value]="aktionshaus.aktionshaus112"
     />
-    <label for="aktionshaus_112_1">
+    <label for="aktionshaus_112">
       <img src="../../../../../assets/konfigurator/img.1.jpg" />
       <span>Aktionshaus 112</span>
     </label>
@@ -18,12 +18,12 @@
   <div class="option animate__animated animate__fadeIn">
     <input
       class="konfigurator-option"
-      name="konfigurator_aktionshaus"
-      id="aktionshaus_113_2"
+      formControlName="aktionshaus"
+      id="aktionshaus_113"
       type="radio"
-      value="aktionshaus_113_2"
+      [value]="aktionshaus.aktionshaus113"
     />
-    <label for="aktionshaus_113_2">
+    <label for="aktionshaus_113">
       <img src="../../../../../assets/konfigurator/img.2.jpg" />
       <span>Aktionshaus 113</span>
     </label>
@@ -33,12 +33,12 @@
   <div class="option animate__animated animate__fadeIn">
     <input
       class="konfigurator-option"
-      name="konfigurator_aktionshaus"
-      id="aktionshaus_114_3"
+      formControlName="aktionshaus"
+      id="aktionshaus_114"
       type="radio"
-      value="aktionshaus_114_3"
+      [value]="aktionshaus.aktionshaus114"
     />
-    <label for="aktionshaus_114_3">
+    <label for="aktionshaus_114">
       <img src="../../../../../assets/konfigurator/img.3.jpg" />
       <span>Aktionshaus 114</span>
     </label>

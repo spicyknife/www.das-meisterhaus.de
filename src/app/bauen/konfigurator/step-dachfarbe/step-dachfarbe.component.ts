@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Dachfarbe, KonfiguratorService } from '../konfigurator.service';
 
 @Component({
   selector: 'step-dachfarbe',
@@ -9,7 +10,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StepDachfarbe implements OnInit {
 
-  constructor() { }
+  dachfarbe = Dachfarbe;
+
+  constructor(public konfiguratorService : KonfiguratorService) { }
 
   ngOnInit(): void {
   }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Aktionshaus, KonfiguratorService } from '../konfigurator.service';
 
 @Component({
   selector: 'step-aktionshaus',
@@ -9,7 +10,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StepAktionshaus implements OnInit {
 
-  constructor() { }
+  aktionshaus = Aktionshaus;
+
+  constructor(public konfiguratorService : KonfiguratorService) { }
 
   ngOnInit(): void {
   }

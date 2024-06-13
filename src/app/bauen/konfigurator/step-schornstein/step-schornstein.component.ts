@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Kamin, KonfiguratorService } from '../konfigurator.service';
 
 @Component({
   selector: 'step-schornstein',
@@ -9,7 +10,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StepSchornstein implements OnInit {
 
-  constructor() { }
+  kamin = Kamin;
+
+  constructor(public konfiguratorService : KonfiguratorService) { }
 
   ngOnInit(): void {
   }

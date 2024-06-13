@@ -1,15 +1,15 @@
-<div class="option-wrapper">
+<div class="option-wrapper" [formGroup]="konfiguratorService.formular">
   <!-- SATTELDACH -->
   <div class="option animate__animated animate__fadeIn">
     <input
       class="konfigurator-option"
-      name="konfigurator_dachform"
+      formControlName="dachform"
       id="satteldach"
       type="radio"
-      value="satteldach"
+      [value]="dachform.satteldach"
     />
     <label for="satteldach">
-      <img src="../../../../../assets/konfigurator/step-a/img.1.jpg" />
+      <img src="" />
       <span>Satteldach</span>
     </label>
   </div>
@@ -18,13 +18,13 @@
   <div class="option animate__animated animate__fadeIn">
     <input
       class="konfigurator-option"
-      name="konfigurator_dachform"
+      formControlName="dachform"
       id="erker"
       type="radio"
-      value="erker"
+      [value]="dachform.erker"
     />
     <label for="erker">
-      <img src="../../../../../assets/konfigurator/step-a/img.1.jpg" />
+      <img src="" />
       <span>Erker</span>
     </label>
   </div>
@@ -33,13 +33,13 @@
   <div class="option animate__animated animate__fadeIn">
     <input
       class="konfigurator-option"
-      name="konfigurator_dachform"
+      formControlName="dachform"
       id="vollgeschoss"
       type="radio"
-      value="vollgeschoss"
+      [value]="dachform.vollgeschoss"
     />
     <label for="vollgeschoss">
-      <img src="../../../../../assets/konfigurator/step-a/img.1.jpg" />
+      <img src="" />
       <span>Vollgeschoss</span>
     </label>
   </div>

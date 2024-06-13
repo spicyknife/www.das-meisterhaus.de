@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Dachform, KonfiguratorService } from '../konfigurator.service';
 
 @Component({
   selector: 'step-dachform',
@@ -9,7 +10,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StepDachform implements OnInit {
 
-  constructor() { }
+  dachform = Dachform;
+
+  constructor(public konfiguratorService : KonfiguratorService) { }
 
   ngOnInit(): void {
   }

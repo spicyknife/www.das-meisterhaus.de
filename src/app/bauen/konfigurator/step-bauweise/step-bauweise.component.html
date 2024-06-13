@@ -4,11 +4,11 @@
     <input
       class="konfigurator-option"
       formControlName="bauweise"
-      id="bauweiseHolz"
+      id="holz"
       type="radio"
-      value="bauweiseHolz"
+      [value]="bauweise.holz"
     />
-    <label for="bauweiseHolz">
+    <label for="holz">
       <img src="../../../../../assets/konfigurator/img.1.jpg" />
       <span>Holz</span>
     </label>
@@ -18,11 +18,11 @@
     <input
       class="konfigurator-option"
       formControlName="bauweise"
-      id="bauweiseMassiv"
+      id="massiv"
       type="radio"
-      value="bauweiseMassiv"
+      [value]="bauweise.massiv"
     />
-    <label for="bauweiseMassiv">
+    <label for="massiv">
       <img src="../../../../../assets/konfigurator/img.1.jpg" />
       <span>Massiv</span>
     </label>

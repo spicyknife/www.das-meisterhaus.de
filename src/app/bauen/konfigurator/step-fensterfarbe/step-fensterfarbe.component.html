@@ -1,16 +1,30 @@
-<div class="option-wrapper">
+<div class="option-wrapper" [formGroup]="konfiguratorService.formular">
   <!-- SATTELDACH -->
   <div class="option animate__animated animate__fadeIn">
     <input
       class="konfigurator-option"
-      name="konfigurator_dachform"
-      id="satteldach"
+      formControlName="fensterfarbe"
+      id="weiss"
       type="radio"
-      value="satteldach"
+      [value]="fensterfarbe.weiss"
     />
-    <label for="satteldach">
-      <img src="../../../../../assets/konfigurator/step-a/img.1.jpg" />
-      <span>Satteldach</span>
+    <label for="weiss">
+      <img src="" />
+      <span>Weiß</span>
+    </label>
+  </div>
+  <!-- SATTELDACH -->
+  <div class="option animate__animated animate__fadeIn">
+    <input
+      class="konfigurator-option"
+      formControlName="fensterfarbe"
+      id="schwarz"
+      type="radio"
+      [value]="fensterfarbe.schwarz"
+    />
+    <label for="schwarz">
+      <img src="" />
+      <span>Schwarz</span>
     </label>
   </div>
 </div>

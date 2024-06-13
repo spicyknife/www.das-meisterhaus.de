@@ -1,16 +1,30 @@
-<div class="option-wrapper">
+<div class="option-wrapper" [formGroup]="konfiguratorService.formular">
   <!-- SATTELDACH -->
   <div class="option animate__animated animate__fadeIn">
     <input
       class="konfigurator-option"
-      name="konfigurator_dachform"
-      id="satteldach"
+      formControlName="kamin"
+      id="kaminNein"
       type="radio"
-      value="satteldach"
+      [value]="kamin.nein"
     />
-    <label for="satteldach">
-      <img src="../../../../../assets/konfigurator/step-a/img.1.jpg" />
-      <span>Satteldach</span>
+    <label for="kaminNein">
+      <img src="" />
+      <span>Nein</span>
+    </label>
+  </div>
+  <!-- SATTELDACH -->
+  <div class="option animate__animated animate__fadeIn">
+    <input
+      class="konfigurator-option"
+      formControlName="kamin"
+      id="kaminJa"
+      type="radio"
+      [value]="kamin.ja"
+    />
+    <label for="kaminJa">
+      <img src="" />
+      <span>Ja</span>
     </label>
   </div>
 </div>

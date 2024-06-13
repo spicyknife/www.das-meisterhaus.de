@@ -6,7 +6,7 @@ import { FormBuilder } from '@angular/forms';
 })
 export class KonfiguratorService {
 
-  formular = this.formBuilder.group({ bauweise:[] })
+  formular = this.formBuilder.group({ bauweise:[], aktionshaus:[], dachform:[], dachfarbe:[], fensterfarbe:[], kamin:[], ausstattung:[] })
 
   constructor( private formBuilder: FormBuilder) {}
 
@@ -15,6 +15,24 @@ export class KonfiguratorService {
   get stepVorwaertsMoeglich() {
     if (this.aktuellerStep === 1){
       return !! this.formular.get('bauweise')?.value;
+    }
+    if (this.aktuellerStep === 2){
+      return !! this.formular.get('aktionshaus')?.value;
+    }
+    if (this.aktuellerStep === 3){
+      return !! this.formular.get('dachform')?.value;
+    }
+    if (this.aktuellerStep === 4){
+      return !! this.formular.get('dachfarbe')?.value;
+    }
+    if (this.aktuellerStep === 5){
+      return !! this.formular.get('fensterfarbe')?.value;
+    }
+    if (this.aktuellerStep === 6){
+      return !! this.formular.get('kamin')?.value;
+    }
+    if (this.aktuellerStep === 7){
+      return !! this.formular.get('ausstattung')?.value;
     }
     return false;
   }
@@ -83,39 +101,39 @@ export class KonfiguratorService {
 
 }
 
-export const enum Bauweise {
+export enum Bauweise {
   massiv = 'massiv',
   holz = 'holz'
 };
 
-export const enum Aktionshaus {
+export enum Aktionshaus {
   aktionshaus112 = 'aktionshaus112',
   aktionshaus113 = 'aktionshaus113',
   aktionshaus114 = 'aktionshaus114'
 };
 
-export const enum Dachform {
+export enum Dachform {
   satteldach = 'satteldach',
   erker = 'erker',
   vollgeschoss = 'vollgeschoss'
 };
 
-export const enum Dachfarbe {
+export enum Dachfarbe {
   schwarz = 'schwarz',
   rot = 'rot'
 };
 
-export const enum Fensterfarbe {
-  weiß = 'weiß',
+export enum Fensterfarbe {
+  weiss = 'weiss',
   schwarz = 'schwarz'
 };
 
-export const enum Kamin {
+export enum Kamin {
   nein='nein',
   ja = 'ja'
 };
 
-export const enum Ausstattung {
+export enum Ausstattung {
   kellergeschoss = 'kellergeschoss',
   vinylboden = 'vinylboden',
   lueftungsanlageZentral = 'lueftungsanlage-zentral',

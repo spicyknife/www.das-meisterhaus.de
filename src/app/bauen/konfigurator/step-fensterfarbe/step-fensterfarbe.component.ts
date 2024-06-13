@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Fensterfarbe, KonfiguratorService } from '../konfigurator.service';
 
 @Component({
   selector: 'step-fensterfarbe',
@@ -9,7 +10,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StepFensterfarbe implements OnInit {
 
-  constructor() { }
+  fensterfarbe = Fensterfarbe;
+
+  constructor(public konfiguratorService : KonfiguratorService) { }
 
   ngOnInit(): void {
   }

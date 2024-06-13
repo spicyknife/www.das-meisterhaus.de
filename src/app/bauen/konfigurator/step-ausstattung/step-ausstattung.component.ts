@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Ausstattung, KonfiguratorService } from '../konfigurator.service';
 
 @Component({
   selector: 'step-ausstattung',
@@ -9,7 +10,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StepAusstattung implements OnInit {
 
-  constructor() { }
+  ausstattung = Ausstattung;
+
+  constructor(public konfiguratorService : KonfiguratorService) { }
 
   ngOnInit(): void {
   }
