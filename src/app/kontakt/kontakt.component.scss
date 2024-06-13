@@ -5,7 +5,7 @@
   margin-top: 9em;
 }
 .contact-form-wrapper {
-  margin: 3em 0 6em 0;
+  margin: 2em 0 6em 0;
   display: flex;
   justify-content: center;
 }
@@ -17,6 +17,56 @@
   right: 0;
   img {
     width: 100%;
+  }
+}
+/* KONFIGURATOR - SUMMARY */
+.konfigurator-summary-wrapper {
+  width: 50em;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+  border: 1px solid #ced4da;
+  border-radius: 0.5em;
+  padding: 2em ;
+  margin-top: 2em;
+  h1 {
+    font-size: 1.6em;
+    color: #f38800;
+    margin-bottom: 0.75em;
+  }
+  .konfigurator-summary {
+    display: flex;
+    justify-content: space-between;
+    .konfigurator-summary-details {
+      width: 49%;
+      order: 1;
+    }
+    .konfigurator-summary-image {
+      width: 49%;
+      order: 2;
+      img {
+        width: 100%;
+      }
+      a {
+        width: 100%;
+        font-size: 1.2em;
+      }
+    }
+  }
+  .input-wrapper {
+    display: flex;
+    margin-bottom: 0.5em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .summary-label {
+      width: 8em;
+      font-weight: bold;
+    }
+    .summary-value-ausstattung {
+      &.block {
+        display: block;
+      }
+    }
   }
 }
 /*************************/
@@ -55,9 +105,9 @@
   margin-bottom: 1em;
 }
 .baudetails-2 {
-  // border-top: 1px solid #ced4da;
+  border-top: 1px solid #ced4da;
   border-bottom: 1px solid #ced4da;
-  // padding-top: 1em;
+  padding-top: 1em;
   margin-bottom: 1em;
 }
 a.headline {
@@ -113,6 +163,13 @@ a.headline {
 #success-toast {
   padding-top: 5em;
 }
+
+@media (max-width: 1300px){
+  .contact-frog {
+    display: none;
+  }
+}
+
 /*************************/
 /*************************/
 /*************************/
@@ -123,6 +180,16 @@ a.headline {
   }
   .contact-frog {
     width: 15em;
+  }
+}
+
+/*************************/
+/*************************/
+/*************************/
+/* MEDIUM */
+@media (max-width: 860px) {
+  .konfigurator-summary-wrapper {
+    width: 100%;
   }
 }
 /*************************/
@@ -172,6 +239,38 @@ a.headline {
   }
   .contact-frog {
     display: none;
+  }
+  .konfigurator-summary-wrapper {
+    width: 100%;
+    padding: 1.5em 1em;
+    h1 {
+      font-size: 1.4em;
+    }
+    .konfigurator-summary {
+      display: flex;
+      flex-wrap: wrap;
+      .konfigurator-summary-image {
+        order: 1 !important;
+        width: 100%;
+      }
+      .konfigurator-summary-details {
+        order: 2;
+        width: 100%;
+        margin-top: 1em;
+        .summary-value {
+          &.ausstattung {
+            display: flex;
+            .summary-value {
+              margin-right: 0.5em;
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+
+      }
+    }
   }
   /*************************/
   /* GOOGLE-MAPS (iFrame) */

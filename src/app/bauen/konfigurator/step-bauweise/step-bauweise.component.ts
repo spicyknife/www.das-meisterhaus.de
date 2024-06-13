@@ -10,7 +10,9 @@ import { KonfiguratorService } from '../konfigurator.service';
 })
 export class StepBauweise implements OnInit {
 
-  constructor( public konfiguratorService : KonfiguratorService) { }
+  constructor( public konfiguratorService : KonfiguratorService) {
+
+  }
 
   ngOnInit(): void {
   }
