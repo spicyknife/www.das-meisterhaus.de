@@ -8,7 +8,6 @@ export class KonfiguratorService {
   constructor() {}
 
   aktuellerStep : number = 1;
-
   bauweise? : Bauweise;
   aktionshaus? : Aktionshaus;
   dachform? : Dachform;
@@ -25,18 +24,14 @@ export class KonfiguratorService {
     if (this.aktionshaus === Aktionshaus.aktionshaus114) {
       bild = "img.3";
     }
-
     if (this.dachform === Dachform.erker) {
         bild +='Erker';
     }
     if (this.dachform === Dachform.vollgeschoss) {
         bild += 'VG';
     }
-
     bild += '.jpg'
-
     return bild;
-
   }
 
 }
