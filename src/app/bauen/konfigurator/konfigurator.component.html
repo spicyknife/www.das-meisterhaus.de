@@ -23,21 +23,21 @@
       </div>
 
       <!-- STEPS -->
-      <div class="control-panel">
+      <div class="control-panel" [ngSwitch]="konfiguratorService.aktuellerStep">
         <!-- SCHRITT 1 -->
-        <step-bauweise></step-bauweise>
+        <step-bauweise *ngSwitchCase="1"></step-bauweise>
         <!-- SCHRITT 2 -->
-        <!-- <step-aktionshaus></step-aktionshaus> -->
+        <step-aktionshaus *ngSwitchCase="2"></step-aktionshaus>
         <!-- SCHRITT 3 -->
-        <!-- <step-dachform></step-dachform> -->
+        <step-dachform *ngSwitchCase="3"></step-dachform>
         <!-- SCHRITT 4 -->
-        <!-- <step-dachfarbe></step-dachfarbe> -->
+        <step-dachfarbe *ngSwitchCase="4"></step-dachfarbe>
         <!-- SCHRITT 5 -->
-        <!-- <step-fensterfarbe></step-fensterfarbe> -->
+        <step-fensterfarbe *ngSwitchCase="5"></step-fensterfarbe>
         <!-- SCHRITT 6 -->
-        <!-- <step-schornstein></step-schornstein> -->
+        <step-schornstein *ngSwitchCase="6"></step-schornstein>
         <!-- SCHRITT 7 -->
-        <!-- <step-ausstattung></step-ausstattung> -->
+        <step-ausstattung *ngSwitchCase="7"></step-ausstattung>
       </div>
     </div>
   </div>

@@ -19,6 +19,10 @@ export class KonfiguratorService {
     return false;
   }
 
+  get stepRueckwaertsMoeglich() {
+    return this.aktuellerStep > 1;
+  }
+
   get stepName() {
     switch (this.aktuellerStep){
       case 1: return 'Schritt 1: Bauweise';
@@ -37,6 +41,18 @@ export class KonfiguratorService {
       return ` Schritt ${this.aktuellerStep+1} `
     }
     return 'Fertigstellen'
+  }
+
+  geheZumNaechstenSchritt() {
+    if (this.stepVorwaertsMoeglich){
+      this.aktuellerStep++;
+    }
+  }
+
+  geheZumVorherigenSchritt() {
+    if (this.aktuellerStep > 1){
+      this.aktuellerStep--;
+    }
   }
 
   bauweise? : Bauweise;

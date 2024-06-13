@@ -65,6 +65,10 @@ a:hover {
 .btn-back {
   background-color: #000000;
 }
+.btn-back.backDisabled:active {
+    background-color: #000 !important;
+    opacity: 10% !important;
+}
 .btn-back:hover,
 .btn-back:not(:disabled):not(.disabled):active,
 .btn-back:focus {

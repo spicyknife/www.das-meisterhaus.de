@@ -12,7 +12,12 @@
     <nav aria-label="Page navigation example">
       <ul class="pagination">
         <li class="page-item">
-          <a class="page-link btn btn-back" routerLink="/starte-konfigurator"
+          <a
+            class="page-link btn btn-back"
+            [ngClass]="{
+              backDisabled: !konfiguratorService.stepRueckwaertsMoeglich
+            }"
+            (click)="konfiguratorService.geheZumVorherigenSchritt()"
             >zurück</a
           >
         </li>
@@ -20,7 +25,7 @@
           <a
             [ngClass]="{ disabled: !konfiguratorService.stepVorwaertsMoeglich }"
             class="page-link btn btn-primary"
-            routerLink="/konfigurator"
+            (click)="konfiguratorService.geheZumNaechstenSchritt()"
             >{{ konfiguratorService.naechsterStepName }}</a
           >
         </li>

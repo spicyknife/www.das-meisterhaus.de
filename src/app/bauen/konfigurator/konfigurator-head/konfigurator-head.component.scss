@@ -31,10 +31,7 @@
         &:last-child {
           margin-right: 0;
         }
-        &:active,
-        &:focus {
-          background-color: #ea6e09 !important;
-        }
+
       }
       .page-link {
         border-radius: 0;
@@ -43,12 +40,25 @@
         &:hover {
           color: #fff;
         }
+        .btn-primary {
+          &:active,
+          &:focus {
+          background-color: #ea6e09;
+        }
+        }
         &.disabled {
           background-color: #ea6e09;
           opacity: 50%;
           cursor: not-allowed;
         }
+        &.backDisabled {
+          background-color: #000;
+          opacity: 10%;
+        }
+
+
       }
+
     }
   }
 }
