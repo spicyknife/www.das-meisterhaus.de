@@ -1,13 +1,44 @@
 import { Injectable } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
 })
 export class KonfiguratorService {
 
-  constructor() {}
+  formular = this.formBuilder.group({ bauweise:[] })
+
+  constructor( private formBuilder: FormBuilder) {}
 
   aktuellerStep : number = 1;
+
+  get stepVorwaertsMoeglich() {
+    if (this.aktuellerStep === 1){
+      return !! this.formular.get('bauweise')?.value;
+    }
+    return false;
+  }
+
+  get stepName() {
+    switch (this.aktuellerStep){
+      case 1: return 'Schritt 1: Bauweise';
+      case 2: return 'Schritt 2: Aktionshaus';
+      case 3: return 'Schritt 3: Dachform';
+      case 4: return 'Schritt 4: Dachfarbe';
+      case 5: return 'Schritt 5: Fensterfarbe';
+      case 6: return 'Schritt 6: Kamin';
+      case 7: return 'Schritt 7: Optionale Ausstattung';
+    }
+    return '';
+  }
+
+  get naechsterStepName() {
+    if (this.aktuellerStep < 7){
+      return ` Schritt ${this.aktuellerStep+1} `
+    }
+    return 'Fertigstellen'
+  }
+
   bauweise? : Bauweise;
   aktionshaus? : Aktionshaus;
   dachform? : Dachform;

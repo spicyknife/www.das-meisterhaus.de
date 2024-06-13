@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { KonfiguratorService } from '../konfigurator.service';
 
 @Component({
   selector: 'step-bauweise',
@@ -10,9 +10,7 @@ import { FormGroup } from '@angular/forms';
 })
 export class StepBauweise implements OnInit {
 
-  @Input() formular: FormGroup = new FormGroup({});
-
-  constructor() { }
+  constructor( public konfiguratorService : KonfiguratorService) { }
 
   ngOnInit(): void {
   }

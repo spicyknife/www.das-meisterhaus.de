@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { KonfiguratorService } from '../konfigurator.service';
 
 @Component({
   selector: 'app-konfigurator-head',
@@ -9,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KonfiguratorHeadComponent implements OnInit {
 
-  constructor() { }
+  constructor( public konfiguratorService : KonfiguratorService) { }
 
   ngOnInit(): void {
   }

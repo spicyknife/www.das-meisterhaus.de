@@ -6,7 +6,9 @@
 
   <div class="konfigurator-step-wrapper">
     <div class="step-headline">
-      <h1 class="animate__animated animate__fadeIn">Schritt X: XXX</h1>
+      <h1 class="animate__animated animate__fadeIn">
+        {{ konfiguratorService.stepName }}
+      </h1>
     </div>
   </div>
 
@@ -20,24 +22,22 @@
         />
       </div>
 
-      <!-- {{ formular.value | json }} -->
-
       <!-- STEPS -->
-      <div class="control-panel" [formGroup]="formular">
+      <div class="control-panel">
         <!-- SCHRITT 1 -->
-        <step-bauweise [formular]="formular"></step-bauweise>
+        <step-bauweise></step-bauweise>
         <!-- SCHRITT 2 -->
-        <!-- <step-aktionshaus [formular]="formular"></step-aktionshaus> -->
+        <!-- <step-aktionshaus></step-aktionshaus> -->
         <!-- SCHRITT 3 -->
-        <!-- <step-dachform [formular]="formular"></step-dachform> -->
+        <!-- <step-dachform></step-dachform> -->
         <!-- SCHRITT 4 -->
-        <!-- <step-dachfarbe [formular]="formular"></step-dachfarbe> -->
+        <!-- <step-dachfarbe></step-dachfarbe> -->
         <!-- SCHRITT 5 -->
-        <!-- <step-fensterfarbe [formular]="formular"></step-fensterfarbe> -->
+        <!-- <step-fensterfarbe></step-fensterfarbe> -->
         <!-- SCHRITT 6 -->
-        <!-- <step-schornstein [formular]="formular"></step-schornstein> -->
+        <!-- <step-schornstein></step-schornstein> -->
         <!-- SCHRITT 7 -->
-        <!-- <step-ausstattung [formular]="formular"></step-ausstattung> -->
+        <!-- <step-ausstattung></step-ausstattung> -->
       </div>
     </div>
   </div>

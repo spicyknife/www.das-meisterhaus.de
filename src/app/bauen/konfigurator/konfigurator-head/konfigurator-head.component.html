@@ -3,7 +3,7 @@
     <div>
       <h1>Konfigurator</h1>
     </div>
-    <!-- TODO: After select Option 1 -->
+
     <div class="summary-section">
       <label>Preis: </label>
       <span>328.310,00€</span>
@@ -18,9 +18,10 @@
         </li>
         <li class="page-item">
           <a
-            class="page-link btn btn-primary disabled"
+            [ngClass]="{ disabled: !konfiguratorService.stepVorwaertsMoeglich }"
+            class="page-link btn btn-primary"
             routerLink="/konfigurator"
-            >Schritt X</a
+            >{{ konfiguratorService.naechsterStepName }}</a
           >
         </li>
       </ul>

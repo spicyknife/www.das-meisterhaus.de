@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { KonfiguratorService } from './konfigurator.service';
 
 
 @Component({
@@ -9,9 +9,7 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 })
 export class KonfiguratorComponent implements OnInit {
 
-  formular = this.formBuilder.group({ bauweise:[] })
-
-  constructor( private formBuilder: FormBuilder) {}
+  constructor(public konfiguratorService : KonfiguratorService) {}
 
   ngOnInit(): void {
   }
