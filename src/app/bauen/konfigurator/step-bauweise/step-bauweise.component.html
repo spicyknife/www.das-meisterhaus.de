@@ -1,9 +1,9 @@
-<div class="option-wrapper">
+<div class="option-wrapper" [formGroup]="formular">
   <!-- BAUWEISE: HOLZ -->
   <div class="option animate__animated animate__fadeIn">
     <input
       class="konfigurator-option"
-      name="konfigurator_bauweise"
+      formControlName="bauweise"
       id="bauweiseHolz"
       type="radio"
       value="bauweiseHolz"
@@ -17,7 +17,7 @@
   <div class="option animate__animated animate__fadeIn">
     <input
       class="konfigurator-option"
-      name="konfigurator_bauweise"
+      formControlName="bauweise"
       id="bauweiseMassiv"
       type="radio"
       value="bauweiseMassiv"

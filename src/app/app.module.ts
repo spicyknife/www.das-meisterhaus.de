@@ -2,6 +2,7 @@ import { SharedModule } from './shared/shared.module';
 import { KontaktModule } from './kontakt/kontakt.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReferenzenComponent } from './referenzen/referenzen.component';
@@ -85,9 +86,10 @@ import { StepAusstattung } from './bauen/konfigurator/step-ausstattung/step-auss
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     KontaktModule,
-    SharedModule
+    SharedModule,
   ],
   providers: [],
   exports: [],

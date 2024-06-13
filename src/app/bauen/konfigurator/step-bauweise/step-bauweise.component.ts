@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'step-bauweise',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class StepBauweise implements OnInit {
+
+  @Input() formular: FormGroup = new FormGroup({});
 
   constructor() { }
 
