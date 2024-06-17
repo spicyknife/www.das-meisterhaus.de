@@ -6,7 +6,16 @@ import { FormBuilder } from '@angular/forms';
 })
 export class KonfiguratorService {
 
-  formular = this.formBuilder.group({ bauweise:[], aktionshaus:[], dachform:[], dachfarbe:[], fensterfarbe:[], kamin:[], ausstattung:[] })
+  formular = this.formBuilder.group({ bauweise:[], aktionshaus:[], dachform:[], dachfarbe:[], fensterfarbe:[], kamin:[],
+    ausstattung: this.formBuilder.group({
+      kellergeschoss: [],
+      vinylboden: [],
+      lueftungsanlageZentral: [],
+      lueftungsanlageDezentral: [],
+      kaminEinzuegig: [],
+      elektrischeRolladen: [],
+      malerarbeitenInnen: [],
+    }) })
 
   constructor( private formBuilder: FormBuilder) {}
 
@@ -100,7 +109,7 @@ export class KonfiguratorService {
     return this.formular.get('kamin')!.value as Kamin;
   }
   get ausstattung() {
-    return this.formular.get('ausstattung')!.value as Ausstattung;
+    return this.formular.get('ausstattung')!.value;
   }
 
   get urlZumBild() {
@@ -152,7 +161,37 @@ export class KonfiguratorService {
     }
   }
 
-  stepUrl(step: number, ersatzwert: Aktionshaus | Dachform | Dachfarbe) {
+  step4UrlTeil(dachfarbe: Dachfarbe) {
+    switch (dachfarbe) {
+      case Dachfarbe.rot:
+        return '.DR';
+      default:
+        return '';
+    }
+  }
+
+  step5UrlTeil(fensterfarbe: Fensterfarbe) {
+    switch (fensterfarbe) {
+      case Fensterfarbe.schwarz:
+        return '.AF';
+      default:
+        return '';
+    }
+  }
+
+  step6UrlTeil(kamin: Kamin) {
+    switch(kamin) {
+      case Kamin.ja:
+        return '.Kamin';
+      default:
+        return '';
+    }
+  }
+
+  stepUrl(
+    step: number,
+    ersatzwert: Aktionshaus | Dachform | Dachfarbe | Fensterfarbe | Kamin | null
+  ) {
     const formulardaten = this.formular.value;
     switch (step) {
       case 2:
@@ -160,10 +199,24 @@ export class KonfiguratorService {
         break;
       case 3:
         formulardaten.dachform = ersatzwert;
+        break;
+      case 4:
+        formulardaten.dachfarbe = ersatzwert;
+        break;
+      case 5:
+        formulardaten.fensterfarbe = ersatzwert;
+        break;
+      case 6:
+        formulardaten.kamin = ersatzwert;
+        break;
     }
     return `img${this.step2UrlTeil(
       formulardaten.aktionshaus
-    )}${this.step3UrlTeil(formulardaten.dachform)}.jpg`;
+    )}${this.step3UrlTeil(formulardaten.dachform)}${this.step4UrlTeil(
+      formulardaten.dachfarbe
+    )}${this.step5UrlTeil(formulardaten.fensterfarbe)}${this.step6UrlTeil(
+      formulardaten.kamin
+    )}`;
   }
 
 }

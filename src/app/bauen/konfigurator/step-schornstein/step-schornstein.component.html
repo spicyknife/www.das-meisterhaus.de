@@ -9,7 +9,11 @@
       [value]="kamin.nein"
     />
     <label for="kaminNein">
-      <img src="" />
+      <img
+        src="../../../../../assets/konfigurator/{{
+          konfiguratorService.stepUrl(6, kamin.nein)
+        }}.jpg"
+      />
       <span>Nein</span>
     </label>
   </div>
@@ -23,7 +27,11 @@
       [value]="kamin.ja"
     />
     <label for="kaminJa">
-      <img src="" />
+      <img
+        src="../../../../../assets/konfigurator/{{
+          konfiguratorService.stepUrl(6, kamin.ja)
+        }}.jpg"
+      />
       <span>Ja</span>
     </label>
   </div>

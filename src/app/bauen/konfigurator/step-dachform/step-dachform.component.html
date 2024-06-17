@@ -9,7 +9,11 @@
       [value]="dachform.satteldach"
     />
     <label for="satteldach">
-      <img src="" />
+      <img
+        src="../../../../../assets/konfigurator/{{
+          konfiguratorService.stepUrl(3, dachform.satteldach)
+        }}.jpg"
+      />
       <span>Satteldach</span>
     </label>
   </div>
@@ -24,7 +28,11 @@
       [value]="dachform.erker"
     />
     <label for="erker">
-      <img src="" />
+      <img
+        src="../../../../../assets/konfigurator/{{
+          konfiguratorService.stepUrl(3, dachform.erker)
+        }}.jpg"
+      />
       <span>Erker</span>
     </label>
   </div>
@@ -39,7 +47,11 @@
       [value]="dachform.vollgeschoss"
     />
     <label for="vollgeschoss">
-      <img src="" />
+      <img
+        src="../../../../../assets/konfigurator/{{
+          konfiguratorService.stepUrl(3, dachform.vollgeschoss)
+        }}.jpg"
+      />
       <span>Vollgeschoss</span>
     </label>
   </div>

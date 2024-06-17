@@ -174,7 +174,8 @@ input.ng-invalid.ng-touched {
 /* KONFIGURATOR OPTIONS */
 .option {
   margin-bottom: 1em;
-  input.konfigurator-option[type='radio'] {
+  input.konfigurator-option[type='radio'],
+  input.konfigurator-option[type='checkbox'] {
     display: none;
   }
   input.konfigurator-option[type='radio']:checked + label > img {
@@ -183,7 +184,8 @@ input.ng-invalid.ng-touched {
     border-top: 5px solid #f38800;
     transition: 0.35s;
   }
-  input.konfigurator-option[type='radio']:checked + label > span {
+  input.konfigurator-option[type='radio']:checked + label > span,
+  input.konfigurator-option[type='checkbox']:checked + label > span {
     background-color: #f38800;
     transition: 0.35s;
   }

@@ -1,16 +1,88 @@
 <div class="option-wrapper" [formGroup]="konfiguratorService.formular">
-  <!-- SATTELDACH -->
-  <div class="option animate__animated animate__fadeIn">
-    <input
-      class="konfigurator-option"
-      name="konfigurator_dachform"
-      id="satteldach"
-      type="radio"
-      value="satteldach"
-    />
-    <label for="satteldach">
-      <img src="../../../../../assets/konfigurator/step-a/img.1.jpg" />
-      <span>Satteldach</span>
-    </label>
+  <div formGroupName="ausstattung">
+    <!-- SATTELDACH -->
+    <div class="option animate__animated animate__fadeIn">
+      <input
+        class="konfigurator-option"
+        formControlName="kellergeschoss"
+        id="kellergeschoss"
+        type="checkbox"
+      />
+      <label for="kellergeschoss">
+        <span>Kellergeschoss</span>
+      </label>
+    </div>
+    <!-- SATTELDACH -->
+    <div class="option animate__animated animate__fadeIn">
+      <input
+        class="konfigurator-option"
+        formControlName="vinylboden"
+        id="vinylboden"
+        type="checkbox"
+      />
+      <label for="vinylboden">
+        <span>Vinylboden</span>
+      </label>
+    </div>
+    <!-- SATTELDACH -->
+    <div class="option animate__animated animate__fadeIn">
+      <input
+        class="konfigurator-option"
+        formControlName="lueftungsanlageZentral"
+        id="lueftungsanlageZentral"
+        type="checkbox"
+      />
+      <label for="lueftungsanlageZentral">
+        <span>Lüftungsanlage zentral</span>
+      </label>
+    </div>
+    <!-- SATTELDACH -->
+    <div class="option animate__animated animate__fadeIn">
+      <input
+        class="konfigurator-option"
+        formControlName="lueftungsanlageDezentral"
+        id="lueftungsanlageDezentral"
+        type="checkbox"
+      />
+      <label for="lueftungsanlageDezentral">
+        <span>Lüftungsanlage dezentral</span>
+      </label>
+    </div>
+    <!-- SATTELDACH -->
+    <div class="option animate__animated animate__fadeIn">
+      <input
+        class="konfigurator-option"
+        formControlName="kaminEinzuegig"
+        id="kaminEinzuegig"
+        type="checkbox"
+      />
+      <label for="kaminEinzuegig">
+        <span>Kamin 1zgg.</span>
+      </label>
+    </div>
+    <!-- SATTELDACH -->
+    <div class="option animate__animated animate__fadeIn">
+      <input
+        class="konfigurator-option"
+        formControlName="elektrischeRolladen"
+        id="elektrischeRolladen"
+        type="checkbox"
+      />
+      <label for="elektrischeRolladen">
+        <span>Elektrische-Rolladen</span>
+      </label>
+    </div>
+    <!-- SATTELDACH -->
+    <div class="option animate__animated animate__fadeIn">
+      <input
+        class="konfigurator-option"
+        formControlName="malerarbeitenInnen"
+        id="malerarbeitenInnen"
+        type="checkbox"
+      />
+      <label for="malerarbeitenInnen">
+        <span>Malerarbeiten innen</span>
+      </label>
+    </div>
   </div>
 </div>

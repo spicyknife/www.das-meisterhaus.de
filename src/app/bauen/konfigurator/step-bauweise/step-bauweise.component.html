@@ -9,7 +9,11 @@
       [value]="bauweise.holz"
     />
     <label for="holz">
-      <img src="../../../../../assets/konfigurator/img.1.jpg" />
+      <img
+        src="../../../../../assets/konfigurator/{{
+          konfiguratorService.stepUrl(1, null)
+        }}.jpg"
+      />
       <span>Holz</span>
     </label>
   </div>
@@ -23,7 +27,11 @@
       [value]="bauweise.massiv"
     />
     <label for="massiv">
-      <img src="../../../../../assets/konfigurator/img.1.jpg" />
+      <img
+        src="../../../../../assets/konfigurator/{{
+          konfiguratorService.stepUrl(1, null)
+        }}.jpg"
+      />
       <span>Massiv</span>
     </label>
   </div>
