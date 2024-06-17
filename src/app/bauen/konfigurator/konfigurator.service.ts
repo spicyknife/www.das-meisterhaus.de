@@ -6,13 +6,18 @@ import { FormBuilder } from '@angular/forms';
 })
 export class KonfiguratorService {
 
-  formular = this.formBuilder.group({ bauweise:[], aktionshaus:[], dachform:[], dachfarbe:[], fensterfarbe:[], kamin:[],
+  formular = this.formBuilder.group({
+    bauweise:[],
+    aktionshaus:[],
+    dachform:[],
+    dachfarbe:[],
+    fensterfarbe:[],
+    kamin:[],
     ausstattung: this.formBuilder.group({
       kellergeschoss: [],
       vinylboden: [],
       lueftungsanlageZentral: [],
       lueftungsanlageDezentral: [],
-      kaminEinzuegig: [],
       elektrischeRolladen: [],
       malerarbeitenInnen: [],
     }) })
@@ -219,8 +224,44 @@ export class KonfiguratorService {
     )}`;
   }
 
-}
+  get aktuellerPreis() {
+    let preis : number | null = null;
+    const formulardaten = this.formular.value;
 
+    console.debug(formulardaten);
+
+    if (formulardaten.bauweise) {
+      preis = Preise.bauweise[formulardaten.bauweise as Bauweise];
+      if (formulardaten.dachform) {
+        preis = Preise.dachform[formulardaten.dachform as Dachform][formulardaten.bauweise as Bauweise];
+      }
+    }
+    if (preis && formulardaten.fensterfarbe) {
+      preis += Preise.fensterfarbe[formulardaten.fensterfarbe as Fensterfarbe];
+    }
+    if (preis && formulardaten.ausstattung.kellergeschoss) {
+      preis += Preise.ausstattung.kellergeschoss;
+    }
+    if (preis && formulardaten.ausstattung.vinylboden) {
+      preis += Preise.ausstattung.vinylboden;
+    }
+    if (preis && formulardaten.ausstattung.lueftungsanlageZentral) {
+      preis += Preise.ausstattung.lueftungsanlageZentral;
+    }
+    if (preis && formulardaten.ausstattung.lueftungsanlageDezentral) {
+      preis += Preise.ausstattung.lueftungsanlageDezentral;
+    }
+    if (preis && formulardaten.ausstattung.elektrischeRolladen) {
+      preis += Preise.ausstattung.elektrischeRolladen;
+    }
+    if (preis && formulardaten.ausstattung.malerarbeitenInnen) {
+      preis += Preise.ausstattung.malerarbeitenInnen;
+    }
+
+    return preis;
+  }
+
+}
 
 export enum Bauweise {
   massiv = 'massiv',
@@ -259,6 +300,44 @@ export enum Ausstattung {
   vinylboden = 'vinylboden',
   lueftungsanlageZentral = 'lueftungsanlage-zentral',
   lueftungsanlageDezentral = 'lueftungsanlage-dezentral',
+  kaminEinzuegig = 'kamin-einzuegig',
   elektrischeRolladen = 'elektrische-rolladen',
-  malerArbeitenInnen = 'maler-arbeiten-innen'
+  malerarbeitenInnen = 'maler-arbeiten-innen'
+}
+
+export const Preise = {
+  bauweise: {
+    [Bauweise.holz]: 343900,
+    [Bauweise.massiv]: 319900
+  },
+  dachform: {
+    [Dachform.satteldach]: {
+      [Bauweise.holz]: 343900,
+      [Bauweise.massiv]: 319900
+    },
+    [Dachform.erker]: {
+      [Bauweise.holz]: 355690,
+      [Bauweise.massiv]: 328690
+    },
+    [Dachform.vollgeschoss]: {
+      [Bauweise.holz]: 359740,
+      [Bauweise.massiv]: 330890,
+    }
+  },
+  fensterfarbe: {
+    [Fensterfarbe.weiss]: 0,
+    [Fensterfarbe.schwarz]: 1390,
+  },
+  kamin: {
+    [Kamin.nein]: 0,
+    [Kamin.ja]: 6990,
+  },
+  ausstattung: {
+    kellergeschoss: 59900,
+    vinylboden: 8390,
+    lueftungsanlageZentral: 12890,
+    lueftungsanlageDezentral: 9890,
+    elektrischeRolladen: 4560,
+    malerarbeitenInnen: 7990,
+  },
 }
