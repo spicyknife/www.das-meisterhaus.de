@@ -1,43 +1,41 @@
 <div class="konfigurator-summary-bar">
   <div class="konfigurator-summary">
-    <div>
+    <div class="summary-headline">
       <h1>Konfigurator</h1>
     </div>
 
-    <!-- <div
-      *ngIf="konfiguratorService.aktuellerPreis == null"
-      class="summary-section animate__animated animate__fadeIn"
-    >
-      <label>Preis: </label>
-      <span>{{ konfiguratorService.aktuellerPreis }}€</span>
-    </div> -->
-
     <div class="summary-section animate__animated animate__fadeIn">
-      <label>Preis: </label>
-      <span>{{ konfiguratorService.aktuellerPreis }}€</span>
+      <label *ngIf="konfiguratorService.aktuellerPreis == null">Preis: </label>
+      <span *ngIf="konfiguratorService.aktuellerPreis == null">
+        {{ konfiguratorService.aktuellerPreis }}€</span
+      >
     </div>
 
-    <nav aria-label="Page navigation example">
-      <ul class="pagination">
-        <li class="page-item">
-          <a
-            class="page-link btn btn-back"
-            [ngClass]="{
-              backDisabled: !konfiguratorService.stepRueckwaertsMoeglich
-            }"
-            (click)="konfiguratorService.geheZumVorherigenSchritt()"
-            >zurück</a
-          >
-        </li>
-        <li class="page-item">
-          <a
-            [ngClass]="{ disabled: !konfiguratorService.stepVorwaertsMoeglich }"
-            class="page-link btn btn-primary"
-            (click)="konfiguratorService.geheZumNaechstenSchritt()"
-            >{{ konfiguratorService.naechsterStepName }}</a
-          >
-        </li>
-      </ul>
-    </nav>
+    <div class="summary-nav">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a
+              class="page-link btn btn-back"
+              [ngClass]="{
+                backDisabled: !konfiguratorService.stepRueckwaertsMoeglich
+              }"
+              (click)="konfiguratorService.geheZumVorherigenSchritt()"
+              >zurück</a
+            >
+          </li>
+          <li class="page-item">
+            <a
+              [ngClass]="{
+                disabled: !konfiguratorService.stepVorwaertsMoeglich
+              }"
+              class="page-link btn btn-primary"
+              (click)="konfiguratorService.geheZumNaechstenSchritt()"
+              >{{ konfiguratorService.naechsterStepName }}</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </div>
