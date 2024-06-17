@@ -7,19 +7,19 @@ import { FormBuilder } from '@angular/forms';
 export class KonfiguratorService {
 
   formular = this.formBuilder.group({
-    bauweise:[],
-    aktionshaus:[],
-    dachform:[],
-    dachfarbe:[],
-    fensterfarbe:[],
-    kamin:[],
+    bauweise:[null],
+    aktionshaus:[null],
+    dachform:[null],
+    dachfarbe:[null],
+    fensterfarbe:[null],
+    kamin:[null],
     ausstattung: this.formBuilder.group({
-      kellergeschoss: [],
-      vinylboden: [],
-      lueftungsanlageZentral: [],
-      lueftungsanlageDezentral: [],
-      elektrischeRolladen: [],
-      malerarbeitenInnen: [],
+      kellergeschoss: [false],
+      vinylboden: [false],
+      lueftungsanlageZentral: [false],
+      lueftungsanlageDezentral: [false],
+      elektrischeRolladen: [false],
+      malerarbeitenInnen: [false],
     }) })
 
   constructor( private formBuilder: FormBuilder) {}
@@ -86,14 +86,6 @@ export class KonfiguratorService {
       this.aktuellerStep--;
     }
   }
-
-  // bauweise? : Bauweise;
-  // aktionshaus? : Aktionshaus;
-  // dachform? : Dachform;
-  // dachfarbe? : Dachfarbe;
-  // fensterfarbe? : Fensterfarbe;
-  // kamin? : Kamin;
-  // ausstattung? : Ausstattung;
 
   get bauweise() {
     return this.formular.get('bauweise')!.value as Bauweise;
@@ -197,7 +189,7 @@ export class KonfiguratorService {
     step: number,
     ersatzwert: Aktionshaus | Dachform | Dachfarbe | Fensterfarbe | Kamin | null
   ) {
-    const formulardaten = this.formular.value;
+    const formulardaten = {...this.formular.value};
     switch (step) {
       case 2:
         formulardaten.aktionshaus = ersatzwert;
@@ -238,6 +230,9 @@ export class KonfiguratorService {
     }
     if (preis && formulardaten.fensterfarbe) {
       preis += Preise.fensterfarbe[formulardaten.fensterfarbe as Fensterfarbe];
+    }
+    if (preis && formulardaten.kamin) {
+      preis += Preise.kamin[formulardaten.kamin as Kamin];
     }
     if (preis && formulardaten.ausstattung.kellergeschoss) {
       preis += Preise.ausstattung.kellergeschoss;

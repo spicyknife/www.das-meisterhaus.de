@@ -5,3 +5,26 @@
     }
   }
 }
+
+
+
+
+@media (max-width: 812px) {
+  .option  {
+    display: flex;
+    label {
+      span {
+        padding: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+    }
+  }
+  .ausstattungs-wrapper {
+    display: flex;
+  }
+}
+
+
