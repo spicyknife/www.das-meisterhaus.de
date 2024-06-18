@@ -1,0 +1,47 @@
+<!-- HEAD / NAVIGATION -->
+<app-navigation></app-navigation>
+
+<div class="konfigurator-container content text-align-center">
+  <div class="konfigurator-summary-bar">
+    <div class="summary-section">
+      <label>Typ: </label>
+      <span>Haustyp A</span>
+    </div>
+    <div class="summary-section">
+      <label>Größe: </label>
+      <span>128 m2</span>
+    </div>
+    <div class="summary-section">
+      <label>Preis: </label>
+      <span>328.310,00€</span>
+    </div>
+  </div>
+
+  <div class="konfigurator-step-wrapper">
+    <div class="step-headline">
+      <h1>Schritt 2: X</h1>
+    </div>
+
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item">
+          <a class="page-link btn btn-back" routerLink="/konfigurator/schritt-1"
+            >zurück</a
+          >
+        </li>
+        <li class="page-item">
+          <a class="page-link btn btn-primary" routerLink="#">Schritt 3</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="konfigurator-wrapper">
+    <div class="konfigurator">
+      <div class="showcase"></div>
+      <div class="control-panel"></div>
+    </div>
+  </div>
+</div>
+<!-- FOOTER -->
+<app-footer></app-footer>
