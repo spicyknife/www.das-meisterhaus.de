@@ -5,9 +5,9 @@
     </div>
 
     <div class="summary-section animate__animated animate__fadeIn">
-      <label *ngIf="konfiguratorService.aktuellerPreis == null">Preis: </label>
-      <span *ngIf="konfiguratorService.aktuellerPreis == null">
-        {{ konfiguratorService.aktuellerPreis }}€</span
+      <label *ngIf="konfiguratorService.aktuellerPreis !== null">Preis: </label>
+      <span *ngIf="konfiguratorService.aktuellerPreis !== null">
+        {{ konfiguratorService.aktuellerPreis }} €</span
       >
     </div>
 

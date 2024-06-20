@@ -253,6 +253,10 @@ export class KonfiguratorService {
       preis += Preise.ausstattung.malerarbeitenInnen;
     }
 
+    if (preis !== null) {
+      return preis.toLocaleString('de-DE');
+    }
+
     return preis;
   }
 
