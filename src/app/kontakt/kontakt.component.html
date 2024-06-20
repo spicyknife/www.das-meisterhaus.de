@@ -18,7 +18,10 @@
     </div>
 
     <!-- KONFIGURATOR SUMMARY -->
-    <div class="konfigurator-summary-wrapper animate__animated animate__fadeIn">
+    <div
+      *ngIf="konfiguratorService.abgeschlossen"
+      class="konfigurator-summary-wrapper animate__animated animate__fadeIn"
+    >
       <h1>Ihre Konfiguration:</h1>
 
       <div class="konfigurator-summary">
@@ -238,7 +241,7 @@
         <!-- ********************************************** -->
         <!-- ********************************************** -->
         <!-- INDIVIDUELL BAUEN -->
-        <div class="baudetails-2">
+        <div *ngIf="!konfiguratorService.abgeschlossen" class="baudetails-2">
           <div class="input-wrapper col-12">
             <a href="/individuell-bauen" class="headline">
               Individuell bauen

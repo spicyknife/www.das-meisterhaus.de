@@ -29,6 +29,8 @@ export class KonfiguratorService {
 
   aktuellerStep : number = 1;
 
+  abgeschlossen : boolean = false;
+
   get stepVorwaertsMoeglich() {
     if (this.aktuellerStep === 1){
       return !! this.formular.get('bauweise')?.value;
@@ -82,20 +84,25 @@ export class KonfiguratorService {
     if (this.stepVorwaertsMoeglich){
 
       if (this.aktuellerStep === 7) {
-        this.router.navigate(['kontakt'])
-        return
+        this.abgeschlossen = true;
+        this.router.navigate(['kontakt']);
+        return;
       }
 
       this.aktuellerStep++;
     }
-
-
   }
 
   geheZumVorherigenSchritt() {
     if (this.aktuellerStep > 1){
       this.aktuellerStep--;
+      this.abgeschlossen = false;
     }
+  }
+
+  setzeZurueck() {
+    this.formular.reset();
+    this.abgeschlossen = false;
   }
 
   get bauweise() {

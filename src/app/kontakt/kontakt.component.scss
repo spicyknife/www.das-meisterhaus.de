@@ -278,3 +278,24 @@ a.headline {
     margin: 1em 0 3em 0;
   }
 }
+
+@media (max-width: 812px) {
+  .konfigurator-summary-wrapper {
+    .konfigurator-summary {
+      .konfigurator-summary-details {
+        .summary-value {
+          &.ausstattung {
+            display: block;
+            .summary-value {
+              margin-right: 0;
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
