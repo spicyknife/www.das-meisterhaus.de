@@ -23,6 +23,7 @@ import { StepFensterfarbe } from './bauen/konfigurator/step-fensterfarbe/step-fe
 import { StepSchornstein } from './bauen/konfigurator/step-schornstein/step-schornstein.component';
 import { StepAusstattung } from './bauen/konfigurator/step-ausstattung/step-ausstattung.component';
 import { KonfigStartComponent } from './bauen/konfigurator/start/start.component';
+import { KontaktComponent } from './kontakt/kontakt.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -42,13 +43,7 @@ const routes: Routes = [
   { path: 'finanzierungsanfrage', component: FinanzierungsanfrageComponent},
   { path: 'starte-konfigurator', component: KonfigStartComponent},
   { path: 'konfigurator', component: KonfiguratorComponent},
-  { path: 'konfigurator/schritt-1', component: StepBauweise},
-  { path: 'konfigurator/schritt-2', component: StepAktionshaus},
-  { path: 'konfigurator/schritt-3', component: StepDachform},
-  { path: 'konfigurator/schritt-4', component: StepDachfarbe},
-  { path: 'konfigurator/schritt-5', component: StepFensterfarbe},
-  { path: 'konfigurator/schritt-6', component: StepSchornstein},
-  { path: 'konfigurator/schritt-7', component: StepAusstattung}
+  { path: 'kontakt', component: KontaktComponent },
 ];
 
 @NgModule({

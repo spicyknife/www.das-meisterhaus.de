@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { KontaktService } from './kontakt.service';
 import { ContactForm } from '../shared/interfaces';
+import { KonfiguratorService } from '../bauen/konfigurator/konfigurator.service';
 
 @Component({
   selector: 'app-kontakt',
@@ -12,7 +13,7 @@ export class KontaktComponent implements OnInit, AfterViewInit {
   form: FormGroup;
   show = false;
 
-  constructor(fb: FormBuilder, private kontaktService: KontaktService) {
+  constructor(fb: FormBuilder, private kontaktService: KontaktService, public konfiguratorService:KonfiguratorService) {
     this.form = fb.group({
       // Base Data
       anrede: [''],
@@ -22,14 +23,11 @@ export class KontaktComponent implements OnInit, AfterViewInit {
       plz: [''],
       ort: [''],
       email: ['', [Validators.required]],
-
       telefon: ['', [Validators.required]],
-      // Clever bauen
-      aktionshaus: [false],
-      ahDachform: [''],
-      ahKeller: [''],
-      erdgeschoss: [''],
-      dachgeschoss: [''],
+
+      // Konfigurator
+      konfigurator: konfiguratorService.formular,
+
       // Individuell Bauen
       individuellerBau: [false],
       bauform: [''],

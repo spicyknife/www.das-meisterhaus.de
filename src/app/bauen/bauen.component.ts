@@ -23,9 +23,9 @@ export class BauenComponent implements OnInit {
   subNavItem1Size = 'col-6';
   subNavItem1Id = 'individuell-bauen';
   // ITEM-2
-  subNavItem2Headline = 'Clever bauen';
-  subNavItem2Subline = 'Mit unseren Aktionshäusern einfach & günstig bauen';
-  subNavItem2Url = '/clever-bauen';
+  subNavItem2Headline = 'Konfigurator';
+  subNavItem2Subline = '';
+  subNavItem2Url = '/starte-konfigurator';
   subNavItem2Size = 'col-6';
   subNavItem2Id = 'clever-bauen';
 

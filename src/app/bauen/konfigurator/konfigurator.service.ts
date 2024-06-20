@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -20,9 +21,11 @@ export class KonfiguratorService {
       lueftungsanlageDezentral: [false],
       elektrischeRolladen: [false],
       malerarbeitenInnen: [false],
-    }) })
+    }),
+    preis: [null]
+  })
 
-  constructor( private formBuilder: FormBuilder) {}
+  constructor( private formBuilder: FormBuilder, private router:Router) {}
 
   aktuellerStep : number = 1;
 
@@ -46,7 +49,7 @@ export class KonfiguratorService {
       return !! this.formular.get('kamin')?.value;
     }
     if (this.aktuellerStep === 7){
-      return !! this.formular.get('ausstattung')?.value;
+      return true
     }
     return false;
   }
@@ -77,8 +80,16 @@ export class KonfiguratorService {
 
   geheZumNaechstenSchritt() {
     if (this.stepVorwaertsMoeglich){
+
+      if (this.aktuellerStep === 7) {
+        this.router.navigate(['kontakt'])
+        return
+      }
+
       this.aktuellerStep++;
     }
+
+
   }
 
   geheZumVorherigenSchritt() {
@@ -105,8 +116,32 @@ export class KonfiguratorService {
   get kamin() {
     return this.formular.get('kamin')!.value as Kamin;
   }
-  get ausstattung() {
-    return this.formular.get('ausstattung')!.value;
+  get ausstattungsListe() {
+
+    const ausstattung = [];
+    const formulardaten = this.formular.value;
+
+    if (formulardaten.ausstattung.kellergeschoss){
+      ausstattung.push(Ausstattung.kellergeschoss);
+    }
+    if (formulardaten.ausstattung.vinylboden){
+      ausstattung.push(Ausstattung.vinylboden);
+    }
+    if (formulardaten.ausstattung.lueftungsanlageZentral){
+      ausstattung.push(Ausstattung.lueftungsanlageZentral);
+    }
+    if (formulardaten.ausstattung.lueftungsanlageDezentral){
+      ausstattung.push(Ausstattung.lueftungsanlageDezentral);
+    }
+    if (formulardaten.ausstattung.elektrischeRolladen){
+      ausstattung.push(Ausstattung.elektrischeRolladen);
+    }
+    if (formulardaten.ausstattung.malerarbeitenInnen){
+      ausstattung.push(Ausstattung.malerarbeitenInnen);
+    }
+
+    return ausstattung;
+
   }
 
   get urlZumBild() {
@@ -254,8 +289,11 @@ export class KonfiguratorService {
     }
 
     if (preis !== null) {
+      this.formular.patchValue({preis:preis.toLocaleString('de-DE')});
       return preis.toLocaleString('de-DE');
     }
+
+    this.formular.patchValue({preis:preis});
 
     return preis;
   }
@@ -263,45 +301,44 @@ export class KonfiguratorService {
 }
 
 export enum Bauweise {
-  massiv = 'massiv',
-  holz = 'holz'
+  massiv = 'Massiv',
+  holz = 'Holz'
 };
 
 export enum Aktionshaus {
-  aktionshaus112 = 'aktionshaus112',
-  aktionshaus113 = 'aktionshaus113',
-  aktionshaus114 = 'aktionshaus114'
+  aktionshaus112 = 'Aktionshaus 112',
+  aktionshaus113 = 'Aktionshaus 113',
+  aktionshaus114 = 'Aktionshaus 114'
 };
 
 export enum Dachform {
-  satteldach = 'satteldach',
-  erker = 'erker',
-  vollgeschoss = 'vollgeschoss'
+  satteldach = 'Satteldach',
+  erker = 'Erker',
+  vollgeschoss = 'Vollgeschoss'
 };
 
 export enum Dachfarbe {
-  schwarz = 'schwarz',
-  rot = 'rot'
+  schwarz = 'Schwarz',
+  rot = 'Rot'
 };
 
 export enum Fensterfarbe {
-  weiss = 'weiss',
-  schwarz = 'schwarz'
+  weiss = 'Weiß',
+  schwarz = 'Schwarz'
 };
 
 export enum Kamin {
-  nein='nein',
-  ja = 'ja'
+  nein='Nein',
+  ja = 'Ja'
 };
 
 export enum Ausstattung {
-  kellergeschoss = 'kellergeschoss',
-  vinylboden = 'vinylboden',
-  lueftungsanlageZentral = 'lueftungsanlage-zentral',
-  lueftungsanlageDezentral = 'lueftungsanlage-dezentral',
-  kaminEinzuegig = 'kamin-einzuegig',
-  elektrischeRolladen = 'elektrische-rolladen',
-  malerarbeitenInnen = 'maler-arbeiten-innen'
+  kellergeschoss = 'Kellergeschoss',
+  vinylboden = 'Vinylboden',
+  lueftungsanlageZentral = 'Lüftungsanlage Zentral',
+  lueftungsanlageDezentral = 'Lüftungsanlage Dezentral',
+  elektrischeRolladen = 'Elektrische Rolladen',
+  malerarbeitenInnen = 'Malerarbeiten Innen'
 }
 
 export const Preise = {

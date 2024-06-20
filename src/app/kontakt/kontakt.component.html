@@ -25,44 +25,65 @@
         <div class="konfigurator-summary-details">
           <div class="input-wrapper">
             <div class="summary-label">Gesamtpreis:</div>
-            <div class="summary-value">X</div>
+            <div class="summary-value">
+              {{ konfiguratorService.formular.get("preis")?.value }} €
+            </div>
           </div>
           <div class="input-wrapper">
             <div class="summary-label">Bauweise:</div>
-            <div class="summary-value">Holz</div>
+            <div class="summary-value">
+              {{ konfiguratorService.formular.get("bauweise")?.value }}
+            </div>
           </div>
           <div class="input-wrapper">
             <div class="summary-label">Aktionshaus:</div>
-            <div class="summary-value">Aktionshaus 112</div>
+            <div class="summary-value">
+              {{ konfiguratorService.formular.get("aktionshaus")?.value }}
+            </div>
           </div>
           <div class="input-wrapper">
             <div class="summary-label">Dachform:</div>
-            <div class="summary-value">Attikadach</div>
+            <div class="summary-value">
+              {{ konfiguratorService.formular.get("dachform")?.value }}
+            </div>
           </div>
           <div class="input-wrapper">
             <div class="summary-label">Dachfarbe:</div>
-            <div class="summary-value">Schwarz</div>
+            <div class="summary-value">
+              {{ konfiguratorService.formular.get("dachfarbe")?.value }}
+            </div>
           </div>
           <div class="input-wrapper">
             <div class="summary-label">Fensterfarbe:</div>
-            <div class="summary-value">Weiß</div>
+            <div class="summary-value">
+              {{ konfiguratorService.formular.get("fensterfarbe")?.value }}
+            </div>
           </div>
           <div class="input-wrapper">
             <div class="summary-label">Kamin:</div>
-            <div class="summary-value">Ja</div>
+            <div class="summary-value">
+              {{ konfiguratorService.formular.get("kamin")?.value }}
+            </div>
           </div>
           <div class="input-wrapper">
             <div class="summary-label">Ausstattung:</div>
             <div class="summary-value ausstattung">
-              <div class="summary-value">Test</div>
-              <div class="summary-value">Test</div>
-              <div class="summary-value">Test</div>
+              <div
+                *ngFor="
+                  let ausstattung of konfiguratorService.ausstattungsListe
+                "
+                class="summary-value"
+              >
+                {{ ausstattung }}
+              </div>
             </div>
           </div>
         </div>
 
         <div class="konfigurator-summary-image">
-          <img src="../../assets/konfigurator/img.1.jpg" />
+          <img
+            src="../../assets/konfigurator/{{ konfiguratorService.urlZumBild }}"
+          />
           <a routerLink="/konfigurator" class="btn btn-primary"
             >Noch etwas ändern?</a
           >
@@ -213,114 +234,6 @@
             placeholder=""
           />
         </div>
-        <!-- ********************************************** -->
-        <!-- ********************************************** -->
-        <!-- BAUDETAILS -->
-        <!-- <div class="baudetails-1"> -->
-        <!-- ********************************************** -->
-        <!-- ********************************************** -->
-        <!-- ********************************************** -->
-        <!-- AKTIONSHAUS / CLEVER BAUEN -->
-        <!-- <div class="input-wrapper col-12">
-            <a href="/clever-bauen" class="headline"> Clever bauen </a>
-          </div>
-          <div class="input-wrapper no-margin col-12">
-            <label for="aktionshaus" class="col-3">Aktionshaus:</label>
-            <select
-              formControlName="aktionshaus"
-              id="aktionshaus"
-              class="form-control col-3"
-              name="aktionshaus"
-            >
-              <option value="">Bitte wählen</option>
-              <option value="true">Ja</option>
-              <option value="false">Nein</option>
-            </select>
-          </div>
-          <div
-            *ngIf="form.value.aktionshaus === 'true'"
-            class="input-wrapper no-margin col-12"
-          > -->
-        <!-- ********************************************** -->
-        <!-- DACHFORM -->
-        <!-- <label for="ahDachform" class="col-3 mobile-label">Dachform:</label>
-            <select
-              formControlName="ahDachform"
-              id="ahDachform"
-              class="form-control col-3"
-              name="ahDachform"
-            >
-              <option value="">Bitte wählen</option>
-              <option value="attikadach">Attikadach</option>
-              <option value="flachdach">Flachdach</option>
-              <option value="krueppelwalmdach">Krüppelwalmdach</option>
-              <option value="pultdach">Pultdach</option>
-              <option value="pultdach_versetzt">Pultdach, versetzt</option>
-              <option value="satteldach">Satteldach</option>
-              <option value="walmdach">Walmdach</option>
-            </select> -->
-        <!-- ********************************************** -->
-        <!-- KELLER -->
-        <!-- <label for="ahKeller" class="col-3 mobile-label">Keller:</label>
-            <select
-              formControlName="ahKeller"
-              id="ahKeller"
-              class="form-control col-3"
-              name="ahKeller"
-            >
-              <option value="">Bitte wählen</option>
-              <option value="true">Ja</option>
-              <option value="false">Nein</option>
-            </select>
-          </div>
-          <div
-            *ngIf="form.value.aktionshaus === 'true'"
-            class="input-wrapper col-12"
-          > -->
-        <!-- ********************************************** -->
-        <!-- ERDGESCHOSS -->
-        <!-- <label for="erdgeschoss" class="col-3 mobile-label"
-              >Erdgeschoss:</label
-            >
-            <select
-              formControlName="erdgeschoss"
-              id="erdgeschoss"
-              class="form-control col-3"
-              name="erdgeschoss"
-            >
-              <option value="">Bitte wählen</option>
-              <option value="erdgeschoss1">Erdgeschoss 1</option>
-              <option value="erdgeschoss2">Erdgeschoss 2</option>
-              <option value="erdgeschoss3">Erdgeschoss 3</option>
-              <option value="erdgeschoss4">Erdgeschoss 4</option>
-              <option value="erdgeschoss5">Erdgeschoss 5</option>
-              <option value="erdgeschoss6">Erdgeschoss 6</option>
-              <option value="erdgeschoss7">Erdgeschoss 7</option>
-              <option value="erdgeschoss8">Erdgeschoss 8</option>
-            </select> -->
-        <!-- ********************************************** -->
-        <!-- DACHGESCHOSS -->
-        <!-- <label for="dachgeschoss" class="col-3 mobile-label"
-              >Dachgeschoss:</label
-            >
-            <select
-              formControlName="dachgeschoss"
-              id="dachgeschoss"
-              class="form-control col-3"
-              name="dachgeschoss"
-            >
-              <option value="">Bitte wählen</option>
-              <option value="dachgeschoss1">Dachgeschoss 1</option>
-              <option value="dachgeschoss2">Dachgeschoss 2</option>
-              <option value="dachgeschoss3">Dachgeschoss 3</option>
-              <option value="dachgeschoss4">Dachgeschoss 4</option>
-              <option value="dachgeschoss5">Dachgeschoss 5</option>
-              <option value="dachgeschoss6">Dachgeschoss 6</option>
-              <option value="dachgeschoss7">Dachgeschoss 7</option>
-              <option value="dachgeschoss8">Dachgeschoss 8</option>
-            </select>
-          </div>
-        </div> -->
         <!-- ********************************************** -->
         <!-- ********************************************** -->
         <!-- ********************************************** -->

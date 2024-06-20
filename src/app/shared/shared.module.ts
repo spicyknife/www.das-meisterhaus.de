@@ -7,6 +7,7 @@ import { TestimonialSliderComponent } from './testimonial-slider/testimonial-sli
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -17,8 +18,8 @@ import { CommonModule } from '@angular/common';
     CtaContactComponent,
     NavigationComponent
   ],
-  imports: [BrowserModule, CommonModule],
-  exports: [TestimonialSliderComponent, SubNavigationComponent, SliderComponent, FooterComponent, CtaContactComponent, NavigationComponent],
+  imports: [BrowserModule, CommonModule, RouterModule],
+  exports: [TestimonialSliderComponent, SubNavigationComponent, SliderComponent, FooterComponent, CtaContactComponent, NavigationComponent, RouterModule],
   providers: [],
   bootstrap: []
 })
