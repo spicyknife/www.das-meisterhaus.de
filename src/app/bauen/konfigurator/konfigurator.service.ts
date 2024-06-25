@@ -175,7 +175,10 @@ export class KonfiguratorService {
       bild +='.Kamin';
     }
     if (this.aktuellerStep === 3){
-      bild = '01_grundriss_112'
+      bild = '00_grundriss.auswahl'
+      if (this.aktionshaus === Aktionshaus.aktionshaus112) {
+        bild = "01_grundriss_112";
+      }
       if (this.aktionshaus === Aktionshaus.aktionshaus113) {
         bild = "02_grundriss_113";
       }
