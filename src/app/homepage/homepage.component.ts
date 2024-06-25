@@ -21,9 +21,9 @@ export class HomepageComponent implements OnInit {
   slide2Url = '/individuell-bauen';
   // ITEM-3
   slide3ImageSrc = '../../assets/img/slider/clever-bauen.jpg';
-  slide3Headline = 'Clever bauen';
-  slide3Subline = 'Mit unseren Aktionshäusern einfach & günstig bauen';
-  slide3Url = '/clever-bauen';
+  slide3Headline = 'Unser Konfigurator';
+  slide3Subline = 'Schritt für Schritt zum Ihrem Meisterhaus';
+  slide3Url = '/starte-konfigurator';
 
   // ********** SUB-NAVIGATION ********** //
   // ITEM-1
