@@ -33,6 +33,21 @@
     color: #f38800;
     margin-bottom: 0.75em;
   }
+  .konfigurator-reset-option {
+    margin-top: 2em;
+    text-align: right;
+    h3 {
+      font-weight: 600;
+      text-transform: none;
+      font-size: 1.3em;
+      color: #6c757d;
+    }
+    a {
+      font-size: 1.2em;
+    }
+  }
+
+  }
   .konfigurator-summary {
     display: flex;
     justify-content: space-between;
@@ -68,7 +83,8 @@
       }
     }
   }
-}
+
+
 /*************************/
 /* CONTACT-FORM */
 #contact-form {
@@ -281,6 +297,22 @@ a.headline {
 
 @media (max-width: 812px) {
   .konfigurator-summary-wrapper {
+
+    .konfigurator-reset-option {
+      margin-top: 2em;
+      text-align: center;
+
+      h3 {
+        font-weight: 600;
+        text-transform: none;
+        font-size: 1.1em;
+        color: #6c757d;
+      }
+      a {
+        font-size: 1.1em;
+        width: 100%;
+      }
+    }
     .konfigurator-summary {
       .konfigurator-summary-details {
         .summary-value {
