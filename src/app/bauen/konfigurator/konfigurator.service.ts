@@ -17,8 +17,7 @@ export class KonfiguratorService {
     ausstattung: this.formBuilder.group({
       kellergeschoss: [false],
       vinylboden: [false],
-      lueftungsanlageZentral: [false],
-      lueftungsanlageDezentral: [false],
+      lueftungsanlage: [null],
       elektrischeRolladen: [false],
       malerarbeitenInnen: [false],
     }),
@@ -134,10 +133,10 @@ export class KonfiguratorService {
     if (formulardaten.ausstattung.vinylboden){
       ausstattung.push(Ausstattung.vinylboden);
     }
-    if (formulardaten.ausstattung.lueftungsanlageZentral){
+    if (formulardaten.ausstattung.lueftungsanlage === Ausstattung.lueftungsanlageZentral){
       ausstattung.push(Ausstattung.lueftungsanlageZentral);
     }
-    if (formulardaten.ausstattung.lueftungsanlageDezentral){
+    if (formulardaten.ausstattung.lueftungsanlage === Ausstattung.lueftungsanlageDezentral){
       ausstattung.push(Ausstattung.lueftungsanlageDezentral);
     }
     if (formulardaten.ausstattung.elektrischeRolladen){
@@ -282,10 +281,10 @@ export class KonfiguratorService {
     if (preis && formulardaten.ausstattung.vinylboden) {
       preis += Preise.ausstattung.vinylboden;
     }
-    if (preis && formulardaten.ausstattung.lueftungsanlageZentral) {
+    if (preis && formulardaten.ausstattung.lueftungsanlage === Ausstattung.lueftungsanlageZentral) {
       preis += Preise.ausstattung.lueftungsanlageZentral;
     }
-    if (preis && formulardaten.ausstattung.lueftungsanlageDezentral) {
+    if (preis && formulardaten.ausstattung.lueftungsanlage === Ausstattung.lueftungsanlageDezentral) {
       preis += Preise.ausstattung.lueftungsanlageDezentral;
     }
     if (preis && formulardaten.ausstattung.elektrischeRolladen) {

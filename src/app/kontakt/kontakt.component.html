@@ -94,7 +94,9 @@
       </div>
       <div class="konfigurator-reset-option">
         <h3>Nicht zufrieden? Jetzt individuell anfragen:</h3>
-        <a href="/kontakt" class="btn btn-secondary"
+        <a
+          (click)="konfiguratorService.setzeZurueck()"
+          class="btn btn-secondary"
           >Ohne Konfiguration fortfahren</a
         >
       </div>

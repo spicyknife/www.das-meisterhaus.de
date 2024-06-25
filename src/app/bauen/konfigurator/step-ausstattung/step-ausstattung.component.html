@@ -21,7 +21,7 @@
         type="checkbox"
       />
       <label for="vinylboden">
-        <span>Vinylboden <br />+ 59.900 €</span>
+        <span>Vinylboden <br />+ 8.390 €</span>
       </label>
     </div>
 
@@ -34,7 +34,7 @@
         type="checkbox"
       />
       <label for="elektrischeRolladen">
-        <span>Elektrische-Rolladen <br />+ 8.390 €</span>
+        <span>Elektrische-Rolladen <br />+ 4.560 €</span>
       </label>
     </div>
     <!-- SATTELDACH -->
@@ -54,21 +54,24 @@
     <div class="option animate__animated animate__fadeIn">
       <input
         class="konfigurator-option"
-        formControlName="lueftungsanlageZentral"
+        formControlName="lueftungsanlage"
         id="lueftungsanlageZentral"
-        type="checkbox"
+        type="radio"
+        [value]="ausstattung.lueftungsanlageZentral"
       />
       <label for="lueftungsanlageZentral">
         <span>Lüftungsanlage zentral <br />+ 12.890 €</span>
       </label>
     </div>
+
     <!-- SATTELDACH -->
     <div class="option animate__animated animate__fadeIn">
       <input
         class="konfigurator-option"
-        formControlName="lueftungsanlageDezentral"
+        formControlName="lueftungsanlage"
         id="lueftungsanlageDezentral"
-        type="checkbox"
+        type="radio"
+        [value]="ausstattung.lueftungsanlageDezentral"
       />
       <label for="lueftungsanlageDezentral">
         <span>Lüftungsanlage dezentral <br />+ 9.890 €</span>
