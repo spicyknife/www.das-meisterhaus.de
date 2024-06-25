@@ -35,11 +35,12 @@ export class KonfiguratorService {
       return !! this.formular.get('bauweise')?.value;
     }
     if (this.aktuellerStep === 2){
-      return !! this.formular.get('aktionshaus')?.value;
-    }
-    if (this.aktuellerStep === 3){
       return !! this.formular.get('dachform')?.value;
     }
+    if (this.aktuellerStep === 3){
+      return !! this.formular.get('aktionshaus')?.value;
+    }
+
     if (this.aktuellerStep === 4){
       return !! this.formular.get('dachfarbe')?.value;
     }
@@ -62,8 +63,8 @@ export class KonfiguratorService {
   get stepName() {
     switch (this.aktuellerStep){
       case 1: return 'Schritt 1: Bauweise';
-      case 2: return 'Schritt 2: Aktionshaus';
-      case 3: return 'Schritt 3: Dachform';
+      case 2: return 'Schritt 2: Dachform';
+      case 3: return 'Schritt 3: Grundriss';
       case 4: return 'Schritt 4: Dachfarbe';
       case 5: return 'Schritt 5: Fensterfarbe';
       case 6: return 'Schritt 6: Kamin';
@@ -172,6 +173,21 @@ export class KonfiguratorService {
     }
     if (this.kamin === Kamin.ja) {
       bild +='.Kamin';
+    }
+    if (this.aktuellerStep === 3){
+      bild = '01_grundriss_112'
+      if (this.aktionshaus === Aktionshaus.aktionshaus113) {
+        bild = "02_grundriss_113";
+      }
+      if (this.aktionshaus === Aktionshaus.aktionshaus114) {
+        bild = "03_grundriss_114";
+      }
+      if (this.dachform === Dachform.erker) {
+        bild +='.Erker';
+      }
+      if (this.dachform === Dachform.vollgeschoss) {
+        bild += '.VG';
+      }
     }
     bild += '.jpg'
     return bild;
