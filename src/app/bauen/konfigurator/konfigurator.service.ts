@@ -102,6 +102,7 @@ export class KonfiguratorService {
 
   setzeZurueck() {
     this.formular.reset();
+    this.aktuellerStep = 1;
     this.abgeschlossen = false;
   }
 
