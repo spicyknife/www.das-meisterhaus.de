@@ -17,7 +17,7 @@ export class KontaktService {
   constructor(private http: HttpClient) { }
   sendMail(formData: any) {
     // if (!(formData.repeatMail || formData.surname || formData.name)) {
-      return this.http.post<string>('https://das-meisterhaus.de/api/mail.php', formData, httpOptions).pipe(
+      return this.http.post<string>('https://redeyemoody.de/api/mail.php', formData, httpOptions).pipe(
         catchError(this.handleError)
       );
     // }
