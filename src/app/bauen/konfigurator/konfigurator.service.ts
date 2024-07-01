@@ -344,13 +344,13 @@ export enum Dachform {
 };
 
 export enum Dachfarbe {
-  schwarz = 'Schwarz',
+  schwarz = 'Anthrazit',
   rot = 'Rot'
 };
 
 export enum Fensterfarbe {
   weiss = 'Weiß',
-  schwarz = 'Schwarz'
+  schwarz = 'Anthrazit'
 };
 
 export enum Kamin {
