@@ -14,7 +14,10 @@
           konfiguratorService.stepUrl(3, dachform.satteldach)
         }}.jpg"
       />
-      <span>Satteldach</span>
+      <span
+        >Satteldach <br />
+        <ng-container>+ 0 €</ng-container>
+      </span>
     </label>
   </div>
 
@@ -33,7 +36,15 @@
           konfiguratorService.stepUrl(3, dachform.erker)
         }}.jpg"
       />
-      <span>Erker</span>
+      <span
+        >Erker <br />
+        <ng-container *ngIf="konfiguratorService.bauweise === bauweise.holz">
+          + 11.790 €
+        </ng-container>
+        <ng-container *ngIf="konfiguratorService.bauweise === bauweise.massiv">
+          + 8.790 €
+        </ng-container>
+      </span>
     </label>
   </div>
 
@@ -52,7 +63,15 @@
           konfiguratorService.stepUrl(3, dachform.vollgeschoss)
         }}.jpg"
       />
-      <span>Vollgeschoss</span>
+      <span
+        >Vollgeschoss <br />
+        <ng-container *ngIf="konfiguratorService.bauweise === bauweise.holz"
+          >+ 15.840 €</ng-container
+        >
+        <ng-container *ngIf="konfiguratorService.bauweise === bauweise.massiv"
+          >+ 10.990 € ></ng-container
+        >
+      </span>
     </label>
   </div>
 </div>

@@ -197,6 +197,27 @@ export class KonfiguratorService {
     return bild;
   }
 
+  get urlZumGrundriss() {
+    let bild = '00_grundriss.auswahl'
+      if (this.aktionshaus === Aktionshaus.aktionshaus112) {
+        bild = "01_grundriss_112";
+      }
+      if (this.aktionshaus === Aktionshaus.aktionshaus113) {
+        bild = "02_grundriss_113";
+      }
+      if (this.aktionshaus === Aktionshaus.aktionshaus114) {
+        bild = "03_grundriss_114";
+      }
+      if (this.dachform === Dachform.erker) {
+        bild +='.Erker';
+      }
+      if (this.dachform === Dachform.vollgeschoss) {
+        bild += '.VG';
+      }
+      bild += '.jpg'
+    return bild;
+  }
+
   step2UrlTeil(aktionshaus: Aktionshaus) {
     switch (aktionshaus) {
       case Aktionshaus.aktionshaus113:
@@ -280,8 +301,6 @@ export class KonfiguratorService {
   get aktuellerPreis() {
     let preis : number | null = null;
     const formulardaten = this.formular.value;
-
-    console.debug(formulardaten);
 
     if (formulardaten.bauweise) {
       preis = Preise.bauweise[formulardaten.bauweise as Bauweise];

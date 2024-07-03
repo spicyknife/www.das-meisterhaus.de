@@ -81,24 +81,32 @@
               </div>
             </div>
           </div>
+          <div class="konfigurator-reset-option-wrapper">
+            <div class="konfigurator-reset-option">
+              <h3>Nicht zufrieden? Jetzt individuell anfragen:</h3>
+              <a
+                (click)="konfiguratorService.setzeZurueck()"
+                class="btn btn-secondary"
+                >Ohne Konfiguration fortfahren</a
+              >
+            </div>
+          </div>
         </div>
 
         <div class="konfigurator-summary-image">
           <img
             src="../../assets/konfigurator/{{ konfiguratorService.urlZumBild }}"
           />
+
+          <img
+            src="../../assets/konfigurator/{{
+              konfiguratorService.urlZumGrundriss
+            }}"
+          />
           <a routerLink="/konfigurator" class="btn btn-primary"
             >Noch etwas ändern?</a
           >
         </div>
-      </div>
-      <div class="konfigurator-reset-option">
-        <h3>Nicht zufrieden? Jetzt individuell anfragen:</h3>
-        <a
-          (click)="konfiguratorService.setzeZurueck()"
-          class="btn btn-secondary"
-          >Ohne Konfiguration fortfahren</a
-        >
       </div>
     </div>
 

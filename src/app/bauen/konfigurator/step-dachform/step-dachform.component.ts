@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Dachform, KonfiguratorService } from '../konfigurator.service';
+import { Bauweise, Dachform, KonfiguratorService } from '../konfigurator.service';
 
 @Component({
   selector: 'step-dachform',
@@ -11,6 +11,7 @@ import { Dachform, KonfiguratorService } from '../konfigurator.service';
 export class StepDachform implements OnInit {
 
   dachform = Dachform;
+  bauweise = Bauweise;
 
   constructor(public konfiguratorService : KonfiguratorService) { }
 
