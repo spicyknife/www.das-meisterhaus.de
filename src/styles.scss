@@ -179,13 +179,15 @@ input.ng-invalid.ng-touched {
     display: none;
   }
   input.konfigurator-option[type='radio']:checked + label > img {
-    border-left: 5px solid #f38800;
-    border-right: 5px solid #f38800;
-    border-top: 5px solid #f38800;
+    // border-left: 5px solid #f38800;
+    // border-right: 5px solid #f38800;
+    // border-top: 5px solid #f38800;
+
   }
   input.konfigurator-option[type='radio']:checked + label > span,
   input.konfigurator-option[type='checkbox']:checked + label > span {
     background-color: #f38800;
+    transition: 0.35s;
   }
   label {
     width: 100%;
@@ -218,7 +220,7 @@ input.ng-invalid.ng-touched {
     .option {
       margin-bottom: 0;
       margin-right: 0.5em;
-      width: 10.9em;
+      width: 9em;
       &:last-child {
         margin-right: 0;
       }
