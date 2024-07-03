@@ -16,6 +16,7 @@
       />
       <span
         >Satteldach <br />
+        ca. 113m²<br />
         <ng-container>+ 0 €</ng-container>
       </span>
     </label>
@@ -38,6 +39,7 @@
       />
       <span
         >Erker <br />
+        ca. 116m²<br />
         <ng-container *ngIf="konfiguratorService.bauweise === bauweise.holz">
           + 11.790 €
         </ng-container>
@@ -65,12 +67,13 @@
       />
       <span
         >Vollgeschoss <br />
+        ca. 129m²<br />
         <ng-container *ngIf="konfiguratorService.bauweise === bauweise.holz"
           >+ 15.840 €</ng-container
         >
         <ng-container *ngIf="konfiguratorService.bauweise === bauweise.massiv"
-          >+ 10.990 € </ng-container
-        >
+          >+ 10.990 €
+        </ng-container>
       </span>
     </label>
   </div>
