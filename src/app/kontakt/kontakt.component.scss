@@ -303,21 +303,24 @@ a.headline {
 @media (max-width: 812px) {
   .konfigurator-summary-wrapper {
 
-    .konfigurator-reset-option {
-      margin-top: 2em;
-      text-align: center;
-
-      h3 {
-        font-weight: 600;
-        text-transform: none;
-        font-size: 1.1em;
-        color: #6c757d;
-      }
-      a {
-        font-size: 1.1em;
+    .konfigurator-reset-option-wrapper {
+      .konfigurator-reset-option {
+        margin-top: 2em;
+        text-align: center;
         width: 100%;
+        h3 {
+          font-weight: 600;
+          text-transform: none;
+          font-size: 1.1em;
+          color: #6c757d;
+        }
+        a {
+          font-size: 1.1em;
+          width: 100%;
+        }
       }
     }
+
     .konfigurator-summary {
       .konfigurator-summary-details {
         .summary-value {
