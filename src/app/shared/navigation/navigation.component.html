@@ -44,7 +44,39 @@
               </svg>
             </a>
           </li>
-          <li><a routerLink="/bauen">Bauen</a></li>
+          <!-- <li><a routerLink="/bauen">Bauen</a></li> -->
+          <div class="dropdown show">
+            <a
+              class="dropdown-toggle"
+              href="/bauen"
+              role="button"
+              id="dropdownMenuLinkBauen"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Bauen
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLinkBauen">
+              <a class="dropdown-item" routerLink="/bauen">Übersicht</a>
+              <a class="dropdown-item" routerLink="/individuell-bauen"
+                >Individuell Bauen</a
+              >
+              <a class="dropdown-item" routerLink="/starte-konfigurator"
+                >Konfigurator</a
+              >
+            </div>
+          </div>
+          <li class="mobile-nav-item no-link-menu-item">Bauen</li>
+          <li class="mobile-nav-item">
+            <svg class="icon-arrow-right" viewBox="0 0 306 306">
+              <polygon
+                points="306 94.35 270.3 58.65 153 175.95 35.7 58.65 0 94.35 153 247.35 306 94.35"
+              />
+            </svg>
+            <a href="/bauen">Übersicht</a>
+          </li>
           <li class="mobile-nav-item">
             <svg class="icon-arrow-right" viewBox="0 0 306 306">
               <polygon
@@ -64,9 +96,9 @@
           <li><a routerLink="/referenzen">Referenzen</a></li>
           <li><a routerLink="/unternehmen">Unternehmen</a></li>
           <li><a routerLink="/kontakt">Kontakt</a></li>
-          <li><a routerLink="/starte-konfigurator">Konfigurator</a></li>
+          <!-- <li><a routerLink="/starte-konfigurator">Konfigurator</a></li> -->
           <!-- UPDATE 10-2021 -->
-          <!-- <div class="dropdown show">
+          <div class="dropdown show">
             <a
               class="dropdown-toggle"
               href="#"
@@ -92,7 +124,7 @@
                 >Finanzierungsanfrage</a
               >
             </div>
-          </div> -->
+          </div>
           <li class="mobile-nav-item no-link-menu-item">
             Finanzierungsrechner
           </li>

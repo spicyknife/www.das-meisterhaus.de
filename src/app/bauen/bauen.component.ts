@@ -28,6 +28,12 @@ export class BauenComponent implements OnInit {
   subNavItem2Url = '/starte-konfigurator';
   subNavItem2Size = 'col-6';
   subNavItem2Id = 'clever-bauen';
+  // ITEM-3
+  subNavItem3Headline = 'Finanzierungsrechner';
+  subNavItem3Subline = '';
+  subNavItem3Url = '/finanzierungsrechner';
+  subNavItem3Size = 'col-12';
+  subNavItem3Id = 'finanzierungsrechner';
 
   ngOnInit() {}
 }
