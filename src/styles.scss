@@ -111,9 +111,11 @@ a:hover {
 /*************************/
 /* HELPER */
 /*************************/
+.page-wrapper {
+  margin: 7em auto 0 auto;
+}
 .container-max-2000 {
   max-width: 1706px;
-  margin: 0 auto;
 }
 .display-flex {
   display: flex;
@@ -214,6 +216,13 @@ input.ng-invalid.ng-touched {
 }
 
 @media (max-width: 812px) {
+  .container-max-2000 {
+    max-width: 1706px;
+
+  }
+  .page-wrapper {
+    margin: 4em auto 0 auto;
+  }
   .option-wrapper {
     display: flex;
     justify-content: center;
