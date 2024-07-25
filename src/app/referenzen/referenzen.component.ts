@@ -26,7 +26,7 @@ export class ReferenzenComponent implements OnInit {
   // ITEM-2
   subNavItem2Headline = 'Das ist das Meisterhaus';
   subNavItem2Subline = '';
-  subNavItem2Url = '/unternehmen';
+  subNavItem2Url = '/ueber-uns';
   subNavItem2Size = 'col-4';
   subNavItem2Id = 'unternehmen';
 

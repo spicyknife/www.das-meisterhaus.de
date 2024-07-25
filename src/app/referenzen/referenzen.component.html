@@ -1,62 +1,68 @@
 <!-- HEAD / NAVIGATION -->
 <app-navigation></app-navigation>
-<!-- SLIDER -->
-<app-slider
-  [slide1ImageSrc]="slide1ImageSrc"
-  [slide1Headline]="slide1Headline"
-  [slide1Subline]="slide1Subline"
-  [slide1Url]="slide1Url"
-></app-slider>
-<!-- CONTENT -->
-<div class="container content text-align-center">
-  <h1>Glücklich mit dem Meisterhaus</h1>
-  <p>
-    In Franken baut man Häuser am Besten mit Meisterhaus. Denn dann stimmt von
-    vorne bis hinten alles - und vor allem passt der Preis.
-  </p>
-  <br />
-  <svg class="icon-arrow-down" viewBox="0 0 306 306">
-    <polygon
-      points="306 94.35 270.3 58.65 153 175.95 35.7 58.65 0 94.35 153 247.35 306 94.35"
-    />
-  </svg>
-  <h2>Unsere Referenzen</h2>
-  <p class="filter-label">Wählen Sie eine Dachform:</p>
-  <!-- **************************** -->
-  <!-- REFERENZEN ZUM FILTERN -->
-  <div id="references-wrapper">
-    <!-- FILTER -->
-    <app-filter (activeFilter)="onActiveFilter($event)"></app-filter>
-    <!-- RESULTS -->
-    <app-results [filter]="filter"></app-results>
+<div class="page-wrapper">
+  <!-- SLIDER -->
+  <app-slider
+    [slide1ImageSrc]="slide1ImageSrc"
+    [slide1Headline]="slide1Headline"
+    [slide1Subline]="slide1Subline"
+    [slide1Url]="slide1Url"
+  ></app-slider>
+  <!-- CONTENT -->
+  <div class="container content text-align-center">
+    <h1>Glücklich mit dem Meisterhaus</h1>
+    <p>
+      In Franken baut man Häuser am Besten mit Meisterhaus. Denn dann stimmt von
+      vorne bis hinten alles - und vor allem passt der Preis.
+    </p>
+    <br />
+    <svg class="icon-arrow-down" viewBox="0 0 306 306">
+      <polygon
+        points="306 94.35 270.3 58.65 153 175.95 35.7 58.65 0 94.35 153 247.35 306 94.35"
+      />
+    </svg>
+    <h2>Unsere Referenzen</h2>
+    <p class="filter-label">Wählen Sie eine Dachform:</p>
+    <!-- **************************** -->
+    <!-- REFERENZEN ZUM FILTERN -->
+    <div id="references-wrapper">
+      <!-- FILTER -->
+      <app-filter (activeFilter)="onActiveFilter($event)"></app-filter>
+      <!-- RESULTS -->
+      <app-results [filter]="filter"></app-results>
+    </div>
+    <br />
+    <svg class="icon-arrow-down" viewBox="0 0 306 306">
+      <polygon
+        points="306 94.35 270.3 58.65 153 175.95 35.7 58.65 0 94.35 153 247.35 306 94.35"
+      />
+    </svg>
+    <h2>Unsere Referenzkarte</h2>
+    <br />
+    <!-- REFERNZEN KARTE -->
+    <iframe
+      src="https://www.google.com/maps/d/embed?mid=1nW9vmk1ZtGUG-ABltWJIFJm0JCRfbLs&ehbc=2E312F"
+      class="reference-map 02"
+    ></iframe>
+    <!-- **************************** -->
+    <!-- **************************** -->
   </div>
-  <br />
-  <svg class="icon-arrow-down" viewBox="0 0 306 306">
-    <polygon
-      points="306 94.35 270.3 58.65 153 175.95 35.7 58.65 0 94.35 153 247.35 306 94.35"
-    />
-  </svg>
-  <h2>Unsere Referenzkarte</h2>
-  <br />
-  <!-- REFERNZEN KARTE -->
-  <iframe src="https://www.google.com/maps/d/embed?mid=1nW9vmk1ZtGUG-ABltWJIFJm0JCRfbLs&ehbc=2E312F" class="reference-map 02"></iframe>
-  <!-- **************************** -->
-  <!-- **************************** -->
+  <!-- SUB-NAVIGATION -->
+  <app-sub-navigation
+    [subNavItem1Headline]="subNavItem1Headline"
+    [subNavItem1Subline]="subNavItem1Subline"
+    [subNavItem1Url]="subNavItem1Url"
+    [subNavItem1Size]="subNavItem1Size"
+    [subNavItem1Id]="subNavItem1Id"
+    [subNavItem2Headline]="subNavItem2Headline"
+    [subNavItem2Subline]="subNavItem2Subline"
+    [subNavItem2Url]="subNavItem2Url"
+    [subNavItem2Size]="subNavItem2Size"
+    [subNavItem2Id]="subNavItem2Id"
+  ></app-sub-navigation>
+  <!-- CTA-CONTACT-->
+  <app-cta-contact></app-cta-contact>
 </div>
-<!-- SUB-NAVIGATION -->
-<app-sub-navigation
-  [subNavItem1Headline]="subNavItem1Headline"
-  [subNavItem1Subline]="subNavItem1Subline"
-  [subNavItem1Url]="subNavItem1Url"
-  [subNavItem1Size]="subNavItem1Size"
-  [subNavItem1Id]="subNavItem1Id"
-  [subNavItem2Headline]="subNavItem2Headline"
-  [subNavItem2Subline]="subNavItem2Subline"
-  [subNavItem2Url]="subNavItem2Url"
-  [subNavItem2Size]="subNavItem2Size"
-  [subNavItem2Id]="subNavItem2Id"
-></app-sub-navigation>
-<!-- CTA-CONTACT-->
-<app-cta-contact></app-cta-contact>
+
 <!-- FOOTER -->
 <app-footer></app-footer>

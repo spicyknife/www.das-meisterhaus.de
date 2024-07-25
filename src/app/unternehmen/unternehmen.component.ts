@@ -13,7 +13,7 @@ export class UnternehmenComponent implements OnInit {
   slide1ImageSrc = '../../assets/img/slider/unternehmen.jpg';
   slide1Headline = 'Das ist das Meisterhaus';
   slide1Subline = 'Details & Wissenswertes zum Unternehmen';
-  slide1Url = '/unternehmen';
+  slide1Url = '/ueber-uns';
 
   // ********** SUB-NAVIGATION ********** //
   // ITEM-1

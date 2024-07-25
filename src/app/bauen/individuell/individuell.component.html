@@ -1,133 +1,135 @@
 <!-- HEAD / NAVIGATION -->
 <app-navigation></app-navigation>
-<!-- SLIDER -->
-<app-slider
-  [slide1ImageSrc]="slide1ImageSrc"
-  [slide1Headline]="slide1Headline"
-  [slide1Subline]="slide1Subline"
-  [slide1Url]="slide1Url"
-></app-slider>
-<!-- CONTENT -->
-<div class="container content text-align-center">
-  <h1>Geht nicht gibt´s nicht</h1>
-  <p>
-    Das eigene Traumhaus zu bauen, ist eine große Aufgabe. Wir beraten und
-    begleiten Sie auf dem Weg
-    <strong>vom ersten Strich auf dem Plan bis zur Schlüsselübergabe.</strong>
-  </p>
-  <p>
-    Nach der gemeinsamen Planungsphase lehnen Sie sich zurück und warten einfach
-    ab – <strong>die Arbeit machen wir!</strong> Wenn Sie möchten, können Sie
-    aber natürlich auch <strong>Eigenleistungen</strong> erbringen und selbst an
-    Ihrem Haus mitarbeiten. Immer genau so, wie Sie es sich vorstellen.
-  </p>
-  <p>
-    Lassen Sie sich von den <a href="/referenzen">Häusern unserer Kunden</a> zu
-    eigenen Wünschen
-    <strong>inspirieren!</strong>
-  </p>
+<div class="page-wrapper">
+  <!-- SLIDER -->
+  <app-slider
+    [slide1ImageSrc]="slide1ImageSrc"
+    [slide1Headline]="slide1Headline"
+    [slide1Subline]="slide1Subline"
+    [slide1Url]="slide1Url"
+  ></app-slider>
+  <!-- CONTENT -->
+  <div class="container content text-align-center">
+    <h1>Geht nicht gibt´s nicht</h1>
+    <p>
+      Das eigene Traumhaus zu bauen, ist eine große Aufgabe. Wir beraten und
+      begleiten Sie auf dem Weg
+      <strong>vom ersten Strich auf dem Plan bis zur Schlüsselübergabe.</strong>
+    </p>
+    <p>
+      Nach der gemeinsamen Planungsphase lehnen Sie sich zurück und warten
+      einfach ab – <strong>die Arbeit machen wir!</strong> Wenn Sie möchten,
+      können Sie aber natürlich auch <strong>Eigenleistungen</strong> erbringen
+      und selbst an Ihrem Haus mitarbeiten. Immer genau so, wie Sie es sich
+      vorstellen.
+    </p>
+    <p>
+      Lassen Sie sich von den
+      <a href="/referenzen">Häusern unserer Kunden</a> zu eigenen Wünschen
+      <strong>inspirieren!</strong>
+    </p>
+  </div>
+
+  <!-- INDIVIDUELL BAUEN // CONTACT FORM -->
+  <!-- CONTACT-FORM -->
+  <div class="container text-align-center">
+    <section class="contact-section">
+      <!-- CONTACT-FORM -->
+      <div class="contact-form-wrapper">
+        <form id="contact-form">
+          <!-- ********************************************** -->
+          <!-- ********************************************** -->
+          <!-- ********************************************** -->
+          <!-- INDIVIDUELL BAUEN -->
+          <div class="individuell-bauen-form">
+            <!-- ********************************************** -->
+            <!-- BAUFORM -->
+            <div class="input-wrapper col-12">
+              <label for="bauform" class="col-2">Bauform:</label>
+              <select
+                id="bauform"
+                class="form-control col-3"
+                name="bauform"
+                #bauform
+                (change)="bauformOutput(bauform.value)"
+              >
+                <option value="">Bitte wählen</option>
+                <option value="einfamilienhaus">Freistehendes EFH</option>
+                <option value="bungalow">Bungalow</option>
+                <option value="doppelhaus">Doppelhaus</option>
+                <option value="sonstiges">sonstiges</option>
+              </select>
+            </div>
+
+            <!-- ********************************************** -->
+            <!-- GRÖSSE -->
+            <div class="input-wrapper col-12">
+              <label for="groesse" class="col-2">Größe:</label>
+              <select
+                id="groesse"
+                class="form-control col-3"
+                name="groesse"
+                #groesse
+                (change)="groesseOutput(groesse.value)"
+              >
+                <option value="">Bitte wählen</option>
+                <option value="groesse1">90 - 110 qm</option>
+                <option value="groesse2">110 - 140 qm</option>
+                <option value="groesse3">140 - 170 qm</option>
+                <option value="groesse4">über 170 qm</option>
+              </select>
+            </div>
+            <!-- ********************************************** -->
+            <!-- DACHFORM -->
+            <div class="input-wrapper col-12">
+              <label for="dachform" class="col-2 mobile-label">Dachform:</label>
+              <select
+                id="dachform"
+                class="form-control col-3"
+                name="dachform"
+                #dachform
+                (change)="dachformOutput(dachform.value)"
+              >
+                <option value="">Bitte wählen</option>
+                <option value="attikadach">Attikadach</option>
+                <option value="flachdach">Flachdach</option>
+                <option value="krueppelwalmdach">Krüppelwalmdach</option>
+                <option value="pultdach">Pultdach</option>
+                <option value="pultdach_versetzt">Pultdach, versetzt</option>
+                <option value="satteldach">Satteldach</option>
+                <option value="walmdach">Walmdach</option>
+              </select>
+            </div>
+            <!-- ********************************************** -->
+            <!-- KELLER -->
+            <div class="input-wrapper col-12">
+              <label for="keller" class="col-2 mobile-label">Keller:</label>
+              <select
+                id="keller"
+                class="form-control col-3"
+                name="keller"
+                #keller
+                (change)="kellerOutput(keller.value)"
+              >
+                <option value="">Bitte wählen</option>
+                <option value="kellerJa">Ja</option>
+                <option value="kellerNein">Nein</option>
+              </select>
+            </div>
+            <!-- ********************************************** -->
+            <!-- SUBMIT -->
+            <a
+              href="/kontakt#formular"
+              (click)="submit()"
+              class="btn btn-primary"
+            >
+              Jetzt Individuelles Meisterhaus anfragen
+            </a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
 </div>
-
-<!-- INDIVIDUELL BAUEN // CONTACT FORM -->
-<!-- CONTACT-FORM -->
-<div class="container text-align-center">
-  <section class="contact-section">
-    <!-- CONTACT-FORM -->
-    <div class="contact-form-wrapper">
-      <form id="contact-form">
-        <!-- ********************************************** -->
-        <!-- ********************************************** -->
-        <!-- ********************************************** -->
-        <!-- INDIVIDUELL BAUEN -->
-        <div class="individuell-bauen-form">
-          <!-- ********************************************** -->
-          <!-- BAUFORM -->
-          <div class="input-wrapper col-12">
-            <label for="bauform" class="col-2">Bauform:</label>
-            <select
-              id="bauform"
-              class="form-control col-3"
-              name="bauform"
-              #bauform
-              (change)="bauformOutput(bauform.value)"
-            >
-              <option value="">Bitte wählen</option>
-              <option value="einfamilienhaus">Freistehendes EFH</option>
-              <option value="bungalow">Bungalow</option>
-              <option value="doppelhaus">Doppelhaus</option>
-              <option value="sonstiges">sonstiges</option>
-            </select>
-          </div>
-
-          <!-- ********************************************** -->
-          <!-- GRÖSSE -->
-          <div class="input-wrapper col-12">
-            <label for="groesse" class="col-2">Größe:</label>
-            <select
-              id="groesse"
-              class="form-control col-3"
-              name="groesse"
-              #groesse
-              (change)="groesseOutput(groesse.value)"
-            >
-              <option value="">Bitte wählen</option>
-              <option value="groesse1">90 - 110 qm</option>
-              <option value="groesse2">110 - 140 qm</option>
-              <option value="groesse3">140 - 170 qm</option>
-              <option value="groesse4">über 170 qm</option>
-            </select>
-          </div>
-          <!-- ********************************************** -->
-          <!-- DACHFORM -->
-          <div class="input-wrapper col-12">
-            <label for="dachform" class="col-2 mobile-label">Dachform:</label>
-            <select
-              id="dachform"
-              class="form-control col-3"
-              name="dachform"
-              #dachform
-              (change)="dachformOutput(dachform.value)"
-            >
-              <option value="">Bitte wählen</option>
-              <option value="attikadach">Attikadach</option>
-              <option value="flachdach">Flachdach</option>
-              <option value="krueppelwalmdach">Krüppelwalmdach</option>
-              <option value="pultdach">Pultdach</option>
-              <option value="pultdach_versetzt">Pultdach, versetzt</option>
-              <option value="satteldach">Satteldach</option>
-              <option value="walmdach">Walmdach</option>
-            </select>
-          </div>
-          <!-- ********************************************** -->
-          <!-- KELLER -->
-          <div class="input-wrapper col-12">
-            <label for="keller" class="col-2 mobile-label">Keller:</label>
-            <select
-              id="keller"
-              class="form-control col-3"
-              name="keller"
-              #keller
-              (change)="kellerOutput(keller.value)"
-            >
-              <option value="">Bitte wählen</option>
-              <option value="kellerJa">Ja</option>
-              <option value="kellerNein">Nein</option>
-            </select>
-          </div>
-          <!-- ********************************************** -->
-          <!-- SUBMIT -->
-          <a
-            href="/kontakt#formular"
-            (click)="submit()"
-            class="btn btn-primary"
-          >
-            Jetzt Individuelles Meisterhaus anfragen
-          </a>
-        </div>
-      </form>
-    </div>
-  </section>
-</div>
-
 <!-- FOOTER -->
 <app-footer></app-footer>

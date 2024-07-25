@@ -31,7 +31,7 @@ const routes: Routes = [
   { path: 'bauen', component: BauenComponent },
   { path: 'referenzen', component: ReferenzenComponent },
   { path: 'referenz/:id', component: ViewsComponent },
-  { path: 'unternehmen', component: UnternehmenComponent },
+  { path: 'ueber-uns', component: UnternehmenComponent },
   { path: 'impressum', component: ImpressumComponent },
   { path: 'datenschutz', component: DatenschutzComponent },
   { path: 'individuell-bauen', component: IndividuellComponent },

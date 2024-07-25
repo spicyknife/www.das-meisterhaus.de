@@ -11,31 +11,31 @@ export class HomepageComponent implements OnInit {
   // ********** SLIDER ********** //
   // ITEM-1
   slide1ImageSrc = '../../assets/img/slider/bauen.jpg';
-  slide1Headline = 'Bauen Sie meisterhaft';
-  slide1Subline = 'Ihr Traum vom eigenen Haus wird Wirklichkeit!';
+  slide1Headline = 'Bauen';
+  slide1Subline = '';
   slide1Url = '/bauen';
   // ITEM-2
   slide2ImageSrc = '../../assets/img/slider/individuell-bauen.jpg';
   slide2Headline = 'Individuell bauen';
-  slide2Subline = 'Beim individuellen Meisterhaus ist alles möglich';
+  slide2Subline = '';
   slide2Url = '/individuell-bauen';
   // ITEM-3
   slide3ImageSrc = '../../assets/img/slider/clever-bauen.jpg';
-  slide3Headline = 'Unser Konfigurator';
-  slide3Subline = 'Schritt für Schritt zum Ihrem Meisterhaus';
+  slide3Headline = 'Konfigurator';
+  slide3Subline = '';
   slide3Url = '/starte-konfigurator';
 
   // ********** SUB-NAVIGATION ********** //
   // ITEM-1
-  subNavItem1Headline = 'Glücklich mit dem Meisterhaus';
-  subNavItem1Subline = 'Referenzhäuser zufriedener Bauherren';
+  subNavItem1Headline = 'Referenzen';
+  subNavItem1Subline = '';
   subNavItem1Url = '/referenzen';
   subNavItem1Size = 'col-8';
   subNavItem1Id = 'referenzen';
   // ITEM-2
-  subNavItem2Headline = 'Das Meisterhaus';
+  subNavItem2Headline = 'Über uns';
   subNavItem2Subline = '';
-  subNavItem2Url = '/unternehmen';
+  subNavItem2Url = '/ueber-uns';
   subNavItem2Size = 'col-4';
   subNavItem2Id = 'unternehmen';
 

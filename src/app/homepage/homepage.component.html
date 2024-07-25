@@ -1,5 +1,8 @@
-<!-- ALERT MODAL -->
-<!-- <div
+<!-- HEAD / NAVIGATION -->
+<app-navigation></app-navigation>
+<div class="page-wrapper">
+  <!-- ALERT MODAL -->
+  <!-- <div
   id="modal-banner"
   class="alert alert-dismissible slide-right show"
   role="alert"
@@ -75,74 +78,73 @@
     <span aria-hidden="true">&times;</span>
   </button>
 </div> -->
-<!-- HEAD / NAVIGATION -->
-<app-navigation></app-navigation>
-<!-- INTRO-VIDEO -->
-<div class="container-max-2000">
-  <div id="intro-video-wrapper">
-    <a href="/unternehmen">
-      <video
-        id="intro-video"
-        autoplay
-        loop
-        playsinline
-        webkit-playsinline
-        [muted]="'muted'"
-      >
-        <source src="../../assets/video/intro-video.mp4" type="video/mp4" />
-        <source src="../../assets/video/intro-video.webm" type="video/webm" />
-        Your browser does not support the video tag.
-      </video>
-      <div class="intro-video-text">
-        <h1>Wir sind <br />Das Meisterhaus</h1>
-      </div>
-    </a>
-  </div>
-</div>
-<!-- SLIDER -->
-<app-slider
-  [slide1ImageSrc]="slide1ImageSrc"
-  [slide1Headline]="slide1Headline"
-  [slide1Subline]="slide1Subline"
-  [slide1Url]="slide1Url"
-  [slide2ImageSrc]="slide2ImageSrc"
-  [slide2Headline]="slide2Headline"
-  [slide2Subline]="slide2Subline"
-  [slide2Url]="slide2Url"
-  [slide3ImageSrc]="slide3ImageSrc"
-  [slide3Headline]="slide3Headline"
-  [slide3Subline]="slide3Subline"
-  [slide3Url]="slide3Url"
-></app-slider>
 
-<!-- SUB-NAV -->
-<app-sub-navigation
-  [subNavItem1Headline]="subNavItem1Headline"
-  [subNavItem1Subline]="subNavItem1Subline"
-  [subNavItem1Url]="subNavItem1Url"
-  [subNavItem1Size]="subNavItem1Size"
-  [subNavItem1Id]="subNavItem1Id"
-  [subNavItem2Headline]="subNavItem2Headline"
-  [subNavItem2Subline]="subNavItem2Subline"
-  [subNavItem2Url]="subNavItem2Url"
-  [subNavItem2Size]="subNavItem2Size"
-  [subNavItem2Id]="subNavItem2Id"
-></app-sub-navigation>
-<!-- TESTIMONIAL-SLIDER -->
-<app-testimonial-slider
-  [testimonial1Text]="testimonial1Text"
-  [testimonial1Author]="testimonial1Author"
-  [testimonial2Text]="testimonial2Text"
-  [testimonial2Author]="testimonial2Author"
-  [testimonial3Text]="testimonial3Text"
-  [testimonial3Author]="testimonial3Author"
-  [testimonial4Text]="testimonial4Text"
-  [testimonial4Author]="testimonial4Author"
-  [testimonial5Text]="testimonial5Text"
-  [testimonial5Author]="testimonial5Author"
-></app-testimonial-slider>
-<!-- NEWS-SECTION -->
-<!-- <div class="container">
+  <!-- INTRO-VIDEO -->
+  <div class="container-max-2000">
+    <div id="intro-video-wrapper">
+      <a href="/ueber-uns">
+        <video
+          id="intro-video"
+          autoplay
+          loop
+          playsinline
+          webkit-playsinline
+          [muted]="'muted'"
+        >
+          <source src="../../assets/video/intro-video.mp4" type="video/mp4" />
+          <source src="../../assets/video/intro-video.webm" type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+        <!-- <div class="intro-video-text">
+          <h1>Über uns</h1>
+        </div> -->
+      </a>
+    </div>
+  </div>
+  <!-- SLIDER -->
+  <!-- <app-slider
+    [slide1ImageSrc]="slide1ImageSrc"
+    [slide1Headline]="slide1Headline"
+    [slide1Subline]="slide1Subline"
+    [slide1Url]="slide1Url"
+    [slide2ImageSrc]="slide2ImageSrc"
+    [slide2Headline]="slide2Headline"
+    [slide2Subline]="slide2Subline"
+    [slide2Url]="slide2Url"
+    [slide3ImageSrc]="slide3ImageSrc"
+    [slide3Headline]="slide3Headline"
+    [slide3Subline]="slide3Subline"
+    [slide3Url]="slide3Url"
+  ></app-slider> -->
+
+  <!-- SUB-NAV -->
+  <app-sub-navigation
+    [subNavItem1Headline]="subNavItem1Headline"
+    [subNavItem1Subline]="subNavItem1Subline"
+    [subNavItem1Url]="subNavItem1Url"
+    [subNavItem1Size]="subNavItem1Size"
+    [subNavItem1Id]="subNavItem1Id"
+    [subNavItem2Headline]="subNavItem2Headline"
+    [subNavItem2Subline]="subNavItem2Subline"
+    [subNavItem2Url]="subNavItem2Url"
+    [subNavItem2Size]="subNavItem2Size"
+    [subNavItem2Id]="subNavItem2Id"
+  ></app-sub-navigation>
+  <!-- TESTIMONIAL-SLIDER -->
+  <app-testimonial-slider
+    [testimonial1Text]="testimonial1Text"
+    [testimonial1Author]="testimonial1Author"
+    [testimonial2Text]="testimonial2Text"
+    [testimonial2Author]="testimonial2Author"
+    [testimonial3Text]="testimonial3Text"
+    [testimonial3Author]="testimonial3Author"
+    [testimonial4Text]="testimonial4Text"
+    [testimonial4Author]="testimonial4Author"
+    [testimonial5Text]="testimonial5Text"
+    [testimonial5Author]="testimonial5Author"
+  ></app-testimonial-slider>
+  <!-- NEWS-SECTION -->
+  <!-- <div class="container">
   <section class="news-section">
     <svg class="icon-arrow-down" viewBox="0 0 306 306">
       <polygon
@@ -166,5 +168,7 @@
     </div>
   </section>
 </div> -->
+</div>
+
 <!-- FOOTER -->
 <app-footer></app-footer>
