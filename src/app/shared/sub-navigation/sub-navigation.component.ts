@@ -21,6 +21,27 @@ export class SubNavigationComponent implements OnInit {
   @Input() subNavItem2Size: string  = "";
   @Input() subNavItem2Id: string  = "";
 
+  // ITEM-3
+  @Input() subNavItem3Headline: string  = "";
+  @Input() subNavItem3Subline: string  = "";
+  @Input() subNavItem3Url: string  = "";
+  @Input() subNavItem3Size: string  = "";
+  @Input() subNavItem3Id: string  = "";
+
+  // ITEM-4
+  @Input() subNavItem4Headline: string  = "";
+  @Input() subNavItem4Subline: string  = "";
+  @Input() subNavItem4Url: string  = "";
+  @Input() subNavItem4Size: string  = "";
+  @Input() subNavItem4Id: string  = "";
+
+  // ITEM-5
+  @Input() subNavItem5Headline: string  = "";
+  @Input() subNavItem5Subline: string  = "";
+  @Input() subNavItem5Url: string  = "";
+  @Input() subNavItem5Size: string  = "";
+  @Input() subNavItem5Id: string  = "";
+
   constructor() {}
 
   ngOnInit() {}
