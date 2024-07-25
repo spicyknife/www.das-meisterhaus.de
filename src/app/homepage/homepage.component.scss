@@ -175,7 +175,8 @@
   margin-top: 6.2em;
   // margin-top: 0.25em;
   display: flex;
-  max-height: 60em;
+  max-height: 40em;
+  overflow: hidden;
   position: relative;
   video {
     width: 100%;
