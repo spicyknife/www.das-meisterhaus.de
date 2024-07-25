@@ -11,8 +11,8 @@ export class BauenComponent implements OnInit {
   // ********** SLIDER ********** //
   // ITEM-1
   slide1ImageSrc = '../../assets/img/slider/bauen.jpg';
-  slide1Headline = 'Bauen';
-  slide1Subline = '';
+  slide1Headline = 'Bauen Sie meisterhaft';
+  slide1Subline = 'Ihr Traum vom eigenen Haus wird Wirklichkeit!';
   slide1Url = '/bauen';
 
   // ********** SUB-NAVIGATION ********** //
