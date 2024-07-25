@@ -18,13 +18,13 @@ export class ReferenzenComponent implements OnInit {
 
   // ********** SUB-NAVIGATION ********** //
   // ITEM-1
-  subNavItem1Headline = 'Bauen Sie meisterhaft';
-  subNavItem1Subline = 'Ihr Traum vom eigenen Haus wird Wirklichkeit';
+  subNavItem1Headline = 'Bauen';
+  subNavItem1Subline = '';
   subNavItem1Url = '/bauen';
   subNavItem1Size = 'col-8';
   subNavItem1Id = 'bauen';
   // ITEM-2
-  subNavItem2Headline = 'Das ist das Meisterhaus';
+  subNavItem2Headline = 'Über uns';
   subNavItem2Subline = '';
   subNavItem2Url = '/ueber-uns';
   subNavItem2Size = 'col-4';
