@@ -279,6 +279,24 @@
             </select>
           </div>
           <!-- ********************************************** -->
+          <!-- BAUWEISE -->
+          <div
+            *ngIf="form.value.individuellerBau == 'true'"
+            class="input-wrapper col-12"
+          >
+            <label for="bauweise" class="col-3 mobile-label">Bauweise:</label>
+            <select
+              formControlName="bauweise"
+              id="bauweise"
+              name="bauweise"
+              class="form-control col-3"
+            >
+              <option value="">Bitte wählen</option>
+              <option value="holz">Holzbauweise</option>
+              <option value="massiv">Massivbauweise</option>
+            </select>
+          </div>
+          <!-- ********************************************** -->
           <!-- BAUFORM -->
           <div
             *ngIf="form.value.individuellerBau == 'true'"

@@ -38,4 +38,7 @@ export class IndividuellComponent implements OnInit {
   bauformOutput(value: string) {
     this.individuellBauen.bauform = value;
   }
+  bauweiseOutput(value: string) {
+    this.individuellBauen.bauweise = value;
+  }
 }

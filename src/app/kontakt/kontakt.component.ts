@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { KontaktService } from './kontakt.service';
 import { ContactForm } from '../shared/interfaces';
-import { KonfiguratorService } from '../bauen/konfigurator/konfigurator.service';
+import { Bauweise, KonfiguratorService } from '../bauen/konfigurator/konfigurator.service';
 
 @Component({
   selector: 'app-kontakt',
@@ -30,6 +30,7 @@ export class KontaktComponent implements OnInit, AfterViewInit {
 
       // Individuell Bauen
       individuellerBau: [false],
+      bauweise: [''],
       bauform: [''],
       groesse: [''],
       keller: [''],

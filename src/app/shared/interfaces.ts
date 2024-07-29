@@ -25,6 +25,7 @@ export interface CleverBauen {
 
 export interface IndividuellBauen {
   individuellerBau: string;
+  bauweise: string,
   bauform: string;
   groesse: string;
   keller: string;
