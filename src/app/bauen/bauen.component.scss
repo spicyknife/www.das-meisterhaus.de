@@ -39,6 +39,57 @@
     margin-left: 1em;
   }
 }
+
+
+/*************************/
+/* SMALL */
+@media (max-width: 767px) {
+  .logo-bauen {
+    width: 13em;
+    margin-bottom: 1em;
+  }
+
+  .logo-holz {
+    width: 8em;
+    margin-bottom: 1em;
+  }
+
+  .logo-massiv {
+    width: 8em;
+    margin-bottom: 1em;
+  }
+  .number {
+    width: 2.25em;
+    height: 2.25em;
+  }
+  section {
+    padding: 0 1em;
+  }
+  .arrow-wrapper {
+    margin: 1.5em 0 1em 0;
+    svg {
+      fill: #a2a2a2;
+    }
+  }
+  .bauweise-info-wrapper {
+    display: block;
+    justify-content: center;
+    margin-top: 2em;
+    .holz-wrapper {
+      max-width: 80%;
+      margin: 0 auto 2em auto;
+    }
+    .massiv-wrapper {
+      max-width: 80%;
+      margin: 0 auto;
+    }
+  }
+
+}
+
+
+
+
 // Variables
 // ---------
 $animation-timing-function: cubic-bezier(.4,0,.2,1);
