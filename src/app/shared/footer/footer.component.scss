@@ -20,7 +20,10 @@
             }
         }
         .signet {
-          width: 7em;
+          width: 8.5em;
+          &.jahre {
+            width: 4.5em;
+          }
         }
       }
       .footer-logo {
@@ -43,7 +46,7 @@
   .col.text-align-right {
     text-align: center;
   }
-  .signet {
-    display: none;
-  }
+  // .signet {
+  //   display: none;
+  // }
 }

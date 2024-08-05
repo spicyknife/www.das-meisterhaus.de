@@ -17,17 +17,17 @@ export class BauenComponent implements OnInit {
 
   // ********** SUB-NAVIGATION ********** //
   // ITEM-1
-  subNavItem1Headline = 'Individuell bauen';
+  subNavItem1Headline = 'Referenzen';
   subNavItem1Subline = '';
-  subNavItem1Url = '/individuell-bauen';
+  subNavItem1Url = '/referenzen';
   subNavItem1Size = 'col-6';
-  subNavItem1Id = 'individuell-bauen';
+  subNavItem1Id = 'referenzen';
   // ITEM-2
-  subNavItem2Headline = 'Konfigurator';
+  subNavItem2Headline = 'Über uns';
   subNavItem2Subline = '';
-  subNavItem2Url = '/starte-konfigurator';
+  subNavItem2Url = '/ueber-uns';
   subNavItem2Size = 'col-6';
-  subNavItem2Id = 'clever-bauen';
+  subNavItem2Id = 'unternehmen';
   // ITEM-3
   subNavItem3Headline = 'Finanzierungsrechner';
   subNavItem3Subline = '';
