@@ -30,9 +30,25 @@
   display: flex;
   justify-content: center;
   margin-top: 2em;
+  .holz-wrapper,
+  .massiv-wrapper {
+    p {
+      margin-bottom: 2em;
+    }
+    .list-wrapper {
+      text-align: left;
+      display: flex;
+      justify-content: center;
+      img {
+        margin-right: 0.5em;
+      }
+    }
+
+  }
   .holz-wrapper {
     max-width: 30em;
     margin-right: 1em;
+
   }
   .massiv-wrapper {
     max-width: 30em;
