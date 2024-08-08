@@ -55,7 +55,19 @@
     margin-left: 1em;
   }
 }
-
+.individuell-konfig-info-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+  .individuell-wrapper {
+    max-width: 30em;
+    margin-left: 1em;
+  }
+  .konfig-wrapper {
+    max-width: 30em;
+    margin-left: 1em;
+  }
+}
 
 /*************************/
 /* SMALL */
