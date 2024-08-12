@@ -1,0 +1,158 @@
+<!-- HEAD / NAVIGATION -->
+<app-navigation></app-navigation>
+<div class="page-wrapper">
+  <!-- SLIDER -->
+  <!-- <app-slider
+    [slide1ImageSrc]="slide1ImageSrc"
+    [slide1Headline]="slide1Headline"
+    [slide1Subline]="slide1Subline"
+    [slide1Url]="slide1Url"
+  ></app-slider> -->
+  <!-- CONTENT -->
+  <div class="container content text-align-center">
+    <section>
+      <h1>Kaufen</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+        voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+        amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+        ipsum dolor sit amet.
+      </p>
+      <div
+        class="arrow-wrapper"
+        data-animation="slideInDown"
+        data-animation-delay="200ms"
+      >
+        <svg class="icon-arrow-down" viewBox="0 0 306 306">
+          <polygon
+            points="306 94.35 270.3 58.65 153 175.95 35.7 58.65 0 94.35 153 247.35 306 94.35"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <!-- *********************************** -->
+    <!-- REFERENZ-VIEW -->
+    <div class="reference-views-wrapper">
+      <!-- REFERENZ-SLIDER -->
+      <div class="reference-slider-wrapper">
+        <div id="reference-slider" class="carousel slide" data-ride="carousel">
+          <div class="carousel-item active">
+            <img
+              class="d-block w-100"
+              src="../../assets/img/referenzen/attikadach/referenz-attikadach-01/slide-01.jpg"
+              alt="Test"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="../../assets/img/referenzen/attikadach/referenz-attikadach-01/slide-02.jpg"
+              alt="Test"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="../../assets/img/referenzen/attikadach/referenz-attikadach-01/slide-03.jpg"
+              alt="Test"
+            />
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#reference-slider"
+            role="button"
+            data-slide="prev"
+          >
+            <div class="slide-prev-control-wrapper">
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+            </div>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#reference-slider"
+            role="button"
+            data-slide="next"
+          >
+            <div class="slide-next-control-wrapper">
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- REFERENZ-DETAILS -->
+      <div class="reference-details-wrapper">
+        <h1>Details</h1>
+        <div class="reference-details">
+          <!-- STANDORT -->
+          <div class="detail">
+            <strong class="detail-label">Standort:</strong>
+            <span class="detail-attribute">Lorem Ipsum</span>
+          </div>
+          <!-- BAUJAHR -->
+          <div class="detail">
+            <strong class="detail-label">Baujahr:</strong>
+            <span class="detail-attribute">Lorem Ipsum</span>
+          </div>
+          <!-- HAUSTYP -->
+          <div class="detail">
+            <strong class="detail-label">Haustyp:</strong>
+            <span class="detail-attribute">Lorem Ipsum</span>
+          </div>
+          <!-- DACHFORM -->
+          <div class="detail">
+            <strong class="detail-label">Dachform:</strong>
+            <span class="detail-attribute">Lorem Ipsum</span>
+          </div>
+          <!-- WOHNFLÄCHE -->
+          <div class="detail">
+            <strong class="detail-label">Wohnfläche in m²:</strong>
+            <span class="detail-attribute">Lorem Ipsum</span>
+          </div>
+          <!-- WOHNGESCHOSSE -->
+          <div class="detail">
+            <strong class="detail-label">Wohngeschosse:</strong>
+            <span class="detail-attribute">Lorem Ipsum</span>
+          </div>
+          <!-- AKTIONSHAUS -->
+          <div class="detail">
+            <strong class="detail-label">Aktionshaus:</strong>
+            <span class="detail-attribute">Lorem Ipsum</span>
+          </div>
+        </div>
+
+        <div class="button-wrapper">
+          <a href="/kontakt" class="btn btn-primary">Jetzt anfragen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUB-NAVIGATION -->
+  <app-sub-navigation
+    [subNavItem1Headline]="subNavItem1Headline"
+    [subNavItem1Subline]="subNavItem1Subline"
+    [subNavItem1Url]="subNavItem1Url"
+    [subNavItem1Size]="subNavItem1Size"
+    [subNavItem1Id]="subNavItem1Id"
+    [subNavItem2Headline]="subNavItem2Headline"
+    [subNavItem2Subline]="subNavItem2Subline"
+    [subNavItem2Url]="subNavItem2Url"
+    [subNavItem2Size]="subNavItem2Size"
+    [subNavItem2Id]="subNavItem2Id"
+  ></app-sub-navigation>
+</div>
+<!-- FOOTER -->
+<app-footer></app-footer>

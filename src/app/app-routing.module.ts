@@ -24,6 +24,7 @@ import { StepSchornstein } from './bauen/konfigurator/step-schornstein/step-scho
 import { StepAusstattung } from './bauen/konfigurator/step-ausstattung/step-ausstattung.component';
 import { KonfigStartComponent } from './bauen/konfigurator/start/start.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
+import { KaufenComponent } from './kaufen/kaufen.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
@@ -43,6 +44,7 @@ const routes: Routes = [
   { path: 'finanzierungsanfrage', component: FinanzierungsanfrageComponent},
   { path: 'starte-konfigurator', component: KonfigStartComponent},
   { path: 'konfigurator', component: KonfiguratorComponent},
+  { path: 'kaufen', component: KaufenComponent},
   { path: 'kontakt', component: KontaktComponent },
 ];
 
@@ -75,4 +77,5 @@ export const routingComponents = [
   StepFensterfarbe,
   StepSchornstein,
   StepAusstattung,
+  KaufenComponent
 ];

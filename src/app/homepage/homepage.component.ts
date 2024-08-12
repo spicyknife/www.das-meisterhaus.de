@@ -47,7 +47,7 @@ export class HomepageComponent implements OnInit {
   // ITEM-4
   subNavItem4Headline = 'Kaufen';
   subNavItem4Subline = '';
-  subNavItem4Url = '/ueber-uns';
+  subNavItem4Url = '/kaufen';
   subNavItem4Size = 'col-3';
   subNavItem4Id = 'unternehmen';
   // ITEM-5

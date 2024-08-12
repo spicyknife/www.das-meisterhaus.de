@@ -41,6 +41,7 @@ import { StepDachfarbe } from './bauen/konfigurator/step-dachfarbe/step-dachfarb
 import { StepFensterfarbe } from './bauen/konfigurator/step-fensterfarbe/step-fensterfarbe.component';
 import { StepSchornstein } from './bauen/konfigurator/step-schornstein/step-schornstein.component';
 import { StepAusstattung } from './bauen/konfigurator/step-ausstattung/step-ausstattung.component';
+import { KaufenComponent } from './kaufen/kaufen.component';
 
 
 @NgModule({
@@ -83,6 +84,7 @@ import { StepAusstattung } from './bauen/konfigurator/step-ausstattung/step-auss
     StepFensterfarbe,
     StepSchornstein,
     StepAusstattung,
+    KaufenComponent,
   ],
   imports: [
     BrowserModule,
