@@ -21,9 +21,12 @@
 /*************************/
 /* REFERENCE-VIEW */
 .reference-slider-wrapper {
-  max-width: 80em;
+  max-width: 70em;
   overflow: hidden;
   width: 100%;
+  display: flex;
+  align-items: center;
+  order: 2;
 }
 #reference-slider {
   display: flex;
@@ -51,14 +54,16 @@
   z-index: 990;
   width: 100%;
   height: 100%;
-  max-width: 30em;
+  max-width: 25em;
   text-align: left;
-  padding: 1.5em 1.5em 0 1.5em;
+  padding: 1.5em 1.5em 1.5em 1.5em;
+  order: 1;
   .button-wrapper {
     margin-top: 2em;
     a {
       display: block;
       width: 100%;
+      font-size: 1.1em;
     }
   }
   h1 {
