@@ -99,11 +99,11 @@
           <!-- STANDORT -->
           <div class="detail">
             <strong class="detail-label">Standort:</strong>
-            <span class="detail-attribute">Lorem Ipsum</span>
+            <span class="detail-attribute">Neustadt a.d. Aisch</span>
           </div>
           <!-- BAUJAHR -->
           <div class="detail">
-            <strong class="detail-label">Baujahr:</strong>
+            <strong class="detail-label">Gepl. Baubeginn:</strong>
             <span class="detail-attribute">Lorem Ipsum</span>
           </div>
           <!-- HAUSTYP -->
@@ -134,7 +134,11 @@
         </div>
 
         <div class="button-wrapper">
-          <a href="/kontakt" class="btn btn-primary">Jetzt anfragen</a>
+          <a
+            (click)="kaufenService.waehleBauvorhaben('projektABC')"
+            class="btn btn-primary"
+            >Jetzt anfragen</a
+          >
         </div>
       </div>
     </div>

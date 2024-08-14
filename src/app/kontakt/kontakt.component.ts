@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { KontaktService } from './kontakt.service';
 import { ContactForm } from '../shared/interfaces';
 import { Bauweise, KonfiguratorService } from '../bauen/konfigurator/konfigurator.service';
+import { KaufenService } from '../kaufen/kaufen.service';
 
 @Component({
   selector: 'app-kontakt',
@@ -13,7 +14,7 @@ export class KontaktComponent implements OnInit, AfterViewInit {
   form: FormGroup;
   show = false;
 
-  constructor(fb: FormBuilder, private kontaktService: KontaktService, public konfiguratorService:KonfiguratorService) {
+  constructor(fb: FormBuilder, private kontaktService: KontaktService, public konfiguratorService:KonfiguratorService, public kaufenService: KaufenService,) {
     this.form = fb.group({
       // Base Data
       anrede: [''],
@@ -24,6 +25,9 @@ export class KontaktComponent implements OnInit, AfterViewInit {
       ort: [''],
       email: ['', [Validators.required]],
       telefon: ['', [Validators.required]],
+
+      // Kaufen
+      kaufen : kaufenService.formular,
 
       // Konfigurator
       konfigurator: konfiguratorService.formular,

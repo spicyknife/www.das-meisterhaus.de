@@ -256,8 +256,51 @@
         <!-- ********************************************** -->
         <!-- ********************************************** -->
         <!-- ********************************************** -->
+        <!-- KAUFEN -->
+        <div
+          *ngIf="
+            !konfiguratorService.abgeschlossen &&
+            kaufenService.bauvorhabenGewaehlt
+          "
+          class="baudetails-2"
+        >
+          <div class="input-wrapper col-12">
+            <a href="/kaufen" class="headline"> Kaufen </a>
+          </div>
+          <div class="input-wrapper col-12" formGroupName="kaufen">
+            <label for="individuellerBau" class="col-3"
+              >Gewähltes Bauvorhaben:</label
+            >
+            <select
+              formControlName="bauvorhaben"
+              id="kaufen"
+              name="kaufen"
+              class="form-control col-6"
+            >
+              <option value="">Bitte wählen</option>
+              <option value="projektABC">Projekt ABC</option>
+            </select>
+          </div>
+          <div class="input-wrapper col-12">
+            <label for="" class="col-3"></label>
+            <a
+              (click)="kaufenService.setzeZurueck()"
+              class="btn btn-secondary col-6 zuruecksetzen-button"
+              >Doch individuell anfragen? Hier klicken</a
+            >
+          </div>
+        </div>
+        <!-- ********************************************** -->
+        <!-- ********************************************** -->
+        <!-- ********************************************** -->
         <!-- INDIVIDUELL BAUEN -->
-        <div *ngIf="!konfiguratorService.abgeschlossen" class="baudetails-2">
+        <div
+          *ngIf="
+            !konfiguratorService.abgeschlossen &&
+            !kaufenService.bauvorhabenGewaehlt
+          "
+          class="baudetails-2"
+        >
           <div class="input-wrapper col-12">
             <a href="/individuell-bauen" class="headline">
               Individuell bauen
@@ -371,7 +414,7 @@
         </div>
         <!-- ********************************************** -->
         <!-- BAUPLATZ-->
-        <div id="bauplatz-form">
+        <div id="bauplatz-form" *ngIf="!kaufenService.bauvorhabenGewaehlt">
           <div class="input-wrapper col-12">
             <label for="bauplatz" class="col-3"
               >Haben Sie einen Bauplatz?</label
@@ -403,7 +446,10 @@
         </div>
         <!-- ********************************************** -->
         <!-- EINZUGSTERMIN -->
-        <div class="input-wrapper col-12">
+        <div
+          class="input-wrapper col-12"
+          *ngIf="!kaufenService.bauvorhabenGewaehlt"
+        >
           <label for="einzugstermin" class="col-3"
             >Geplanter Einzugstermin:</label
           >

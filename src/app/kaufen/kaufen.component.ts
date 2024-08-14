@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { KaufenService } from './kaufen.service';
 
 @Component({
   selector: 'app-kaufen',
@@ -7,14 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KaufenComponent implements OnInit {
 
-  constructor() {}
-
-  // ********** SLIDER ********** //
-  // ITEM-1
-  // slide1ImageSrc = '../../assets/img/slider/bauen.jpg';
-  // slide1Headline = 'Bauen Sie meisterhaft';
-  // slide1Subline = 'Ihr Traum vom eigenen Haus wird Wirklichkeit!';
-  // slide1Url = '/bauen';
+  constructor(public kaufenService : KaufenService) {}
 
   // ********** SUB-NAVIGATION ********** //
   // ITEM-1
