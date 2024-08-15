@@ -11,7 +11,7 @@
 /*************************/
 /*************************/
 /* SMALL */
-@media (max-width: 860px) {
+@media (max-width: 920px) {
   .reference-views-wrapper {
     display: block;
     margin-top: 4.25em;
@@ -30,6 +30,25 @@
 }
 #reference-slider {
   display: flex;
+  position: relative;
+  .object-name {
+    position: absolute;
+
+    // right: 0;
+    // bottom: 0;
+    top: 0;
+    left: 0;
+
+    text-transform: uppercase;
+    font-family: open-sans-condensed, sans-serif;
+    font-weight: 700;
+    font-size: 1.8em;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    color: #fff;
+    padding: 0.65em;
+    font-size: 1.2em;
+  }
 }
 /*************************/
 /* SLIDER */
@@ -52,14 +71,18 @@
   background-color: #f1f1f1;
   position: relative;
   z-index: 990;
-  width: 100%;
+  // width: 100%;
   height: 100%;
-  max-width: 25em;
+
   text-align: left;
   padding: 1.5em 1.5em 1.5em 1.5em;
   order: 1;
+  .details-container {
+    max-width: 25em;
+  }
   .button-wrapper {
     margin-top: 2em;
+    max-width: 25em;
     a {
       display: block;
       width: 100%;
@@ -93,8 +116,11 @@
 @media (max-width: 920px) {
   .reference-details-wrapper {
     background-color: #f1f1f1;
-    width: 15em;
+    width: 100%;
     padding: 1em;
+    .details-container {
+      max-width: 25em;
+    }
     .reference-details {
       // display: flex;
       // flex-wrap: wrap;
@@ -115,6 +141,10 @@
           width: 100%;
         }
       }
+    }
+    .button-wrapper {
+      width: 100%;
+      max-width: 100%;
     }
   }
 }
