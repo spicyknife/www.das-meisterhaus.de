@@ -68,6 +68,17 @@
     margin-left: 1em;
   }
 }
+#direktanfragen {
+  .list-wrapper {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    margin: 1em 0 2em 0;
+    img {
+      margin-right: 0.5em;
+    }
+  }
+}
 
 /*************************/
 /* SMALL */
