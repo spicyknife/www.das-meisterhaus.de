@@ -41,14 +41,16 @@
       <div class="reference-slider-wrapper">
         <div id="reference-slider" class="carousel slide" data-ride="carousel">
           <div class="carousel-item active">
-            <div class="object-name">Objektname</div>
+            <div class="object-name">
+              Mehrfamilienhaus | Neustadt a.d. Aisch
+            </div>
             <img
               class="d-block w-100"
               src="../../assets/img/kaufen/mfh-schlesienstrasse.jpg"
               alt="Test"
             />
           </div>
-          <a
+          <!-- <a
             class="carousel-control-prev"
             href="#reference-slider"
             role="button"
@@ -60,8 +62,8 @@
                 aria-hidden="true"
               ></span>
             </div>
-          </a>
-          <a
+          </a> -->
+          <!-- <a
             class="carousel-control-next"
             href="#reference-slider"
             role="button"
@@ -73,7 +75,7 @@
                 aria-hidden="true"
               ></span>
             </div>
-          </a>
+          </a> -->
         </div>
       </div>
 
@@ -99,7 +101,7 @@
             </div>
             <!-- DACHFORM -->
             <div class="detail">
-              <strong class="detail-label">Wohneinheuten:</strong>
+              <strong class="detail-label">Wohneinheiten:</strong>
               <span class="detail-attribute">9</span>
             </div>
             <!-- WOHNFLÄCHE -->
@@ -127,7 +129,119 @@
 
         <div class="button-wrapper">
           <a
-            (click)="kaufenService.waehleBauvorhaben('ObjektA')"
+            (click)="kaufenService.waehleBauvorhaben('Objekt_NEA-1')"
+            class="btn btn-primary"
+            >Jetzt anfragen</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="reference-views-wrapper">
+      <!-- REFERENZ-SLIDER -->
+      <div class="reference-slider-wrapper">
+        <div
+          id="reference-slider-2"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <div class="carousel-item active">
+            <div class="object-name">Doppelhaushälfte | Schwaig</div>
+            <img
+              class="d-block w-100"
+              src="../../assets/img/kaufen/schwaig-1.png"
+              alt="Test"
+            />
+          </div>
+          <div class="carousel-item">
+            <div class="object-name">Doppelhaushälfte | Schwaig</div>
+            <img
+              class="d-block w-100"
+              src="../../assets/img/kaufen/schwaig-2.png"
+              alt="Test"
+            />
+          </div>
+          <div class="carousel-item">
+            <div class="object-name">Doppelhaushälfte| Schwaig</div>
+            <img
+              class="d-block w-100"
+              src="../../assets/img/kaufen/schwaig-3.png"
+              alt="Test"
+            />
+          </div>
+          <div class="carousel-item">
+            <div class="object-name">Reihenhaus | Schwaig</div>
+            <img
+              class="d-block w-100"
+              src="../../assets/img/kaufen/schwaig-4.png"
+              alt="Test"
+            />
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#reference-slider-2"
+            role="button"
+            data-slide="prev"
+          >
+            <div class="slide-prev-control-wrapper">
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+            </div>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#reference-slider-2"
+            role="button"
+            data-slide="next"
+          >
+            <div class="slide-next-control-wrapper">
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- REFERENZ-DETAILS -->
+      <div class="reference-details-wrapper">
+        <div class="details-container">
+          <h1>Details</h1>
+          <div class="reference-details">
+            <!-- STANDORT -->
+            <div class="detail">
+              <strong class="detail-label">Standort:</strong>
+              <span class="detail-attribute">Schwaig bei Nürnberg</span>
+            </div>
+            <!-- HAUSTYP -->
+            <div class="detail">
+              <strong class="detail-label">Haustyp:</strong>
+              <span class="detail-attribute">Reihenhaus, DHH</span>
+            </div>
+            <!-- DACHFORM -->
+            <div class="detail">
+              <strong class="detail-label">Wohneinheiten:</strong>
+              <span class="detail-attribute">5</span>
+            </div>
+            <!-- WOHNFLÄCHE -->
+            <div class="detail">
+              <strong class="detail-label">Wohnfläche:</strong>
+              <span class="detail-attribute">153,08 m² - 199,47m²</span>
+            </div>
+            <!-- WOHNGESCHOSSE -->
+            <div class="detail">
+              <strong class="detail-label">Geschosse:</strong>
+              <span class="detail-attribute">2 </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="button-wrapper">
+          <a
+            (click)="kaufenService.waehleBauvorhaben('Objekt_Schwaig-1')"
             class="btn btn-primary"
             >Jetzt anfragen</a
           >
