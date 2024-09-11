@@ -279,26 +279,6 @@ export class ViewsComponent implements OnInit {
       this.view = this.views[+id - 1];
     }
   }
-  // ********* TESTIMONIALS ********* //
-  // ITEM-1
-  testimonial1Text =
-    'Tolle Beratung, kompetentes Team. Der Geschäftsführer Uwe Hassler hat sich persönlich sehr viel Zeit genommenen. Das Team geht auf alle Wünsche ein und gab uns von Anfang an bis zur Fertigstellung ein super Gefühl. Hat alles wie versprochen funktioniert. klare Empfehlung!';
-  testimonial1Author = 'Frank von Feilitzsch';
-  // ITEM-2
-  testimonial2Text =
-    'Herrn Haßler kenne ich als soliden Partner auf Augenhöhe. Für seine Kunden hat er immer ein offenes Ohr. Von der Bauvorbereitung bis hin zur Ausführung wurde man freundschaftlich begleitet. Unser Wohnhaus wurde fristgerecht und qualitativ hochwertig erstellt. Kleinere Problemchen werden schnell geklärt. Diese Firma kann ich gerne weiterempfehlen.';
-  testimonial2Author = 'Alexander Girsig';
-  // ITEM-3
-  testimonial3Text =
-    'Top Adresse für alle, die mit einem kompetenten Partner bauen wollen. Die halten was andere versprechen.  Haben schon ganz andere Erfahrungen machen müssen. Tolles Team, vom Geschäftsführer bis zum Bauleiter.  Wir waren immer zufrieden. Nur zum empfehlen.';
-  testimonial3Author = 'Jörg Böhrer';
-  // ITEM-4
-  testimonial4Text =
-    'Sehr gute Erfahrungen mit der Fa. Astori. Herr Hassler ist kompetent und ehrlich. Probleme werden nicht verschoben, sondern sofort aus der Welt geschafft. Ich habe bereits 2 Häuser mit Astori gebaut und würde mich jederzeit wieder dafür entscheiden.';
-  testimonial4Author = 'Uli Petschler';
-  // ITEM-5
-  testimonial5Text =
-    'Sehr gute Erfahrung gemacht. Hat immer alles geklappt und es wurde alles  eingehalten wie vereinbart. Würde ich jedem sofort weiterempfehlen. Top Adresse!';
-  testimonial5Author = 'Wolfgang Stark';
+
   ngOnInit() {}
 }
