@@ -1,22 +1,23 @@
 <!-- HEAD / NAVIGATION -->
 <app-navigation></app-navigation>
+<div class="page-wrapper">
+  <!-- *********************************** -->
+  <!-- REFERENZ-VIEW -->
+  <div class="reference-views-wrapper">
+    <!-- REFERENZ-SLIDER -->
+    <app-referenz-slider [slides]="view.images"></app-referenz-slider>
+    <!-- REFERENZ-DETAILS -->
+    <app-referenz-details
+      [referenceDetails]="view.details"
+    ></app-referenz-details>
+  </div>
 
-<!-- *********************************** -->
-<!-- REFERENZ-VIEW -->
-<div class="reference-views-wrapper">
-  <!-- REFERENZ-SLIDER -->
-  <app-referenz-slider [slides]="view.images"></app-referenz-slider>
-  <!-- REFERENZ-DETAILS -->
-  <app-referenz-details
-    [referenceDetails]="view.details"
-  ></app-referenz-details>
+  <!-- *********************************** -->
+  <!-- CTA-CONTACT-->
+  <app-cta-contact></app-cta-contact>
+  <!-- TESTIMONIAL-SLIDER -->
+  <app-testimonial-slider></app-testimonial-slider>
 </div>
-
-<!-- *********************************** -->
-<!-- CTA-CONTACT-->
-<app-cta-contact></app-cta-contact>
-<!-- TESTIMONIAL-SLIDER -->
-<app-testimonial-slider></app-testimonial-slider>
 
 <!-- FOOTER -->
 <app-footer></app-footer>
