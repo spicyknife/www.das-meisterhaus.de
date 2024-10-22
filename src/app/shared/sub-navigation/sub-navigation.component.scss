@@ -138,6 +138,13 @@ a.sub-nav-item:hover {
         flex: 0 0 100% !important;
         max-width: 100% !important;
       }
+      .col-3 {
+        padding-right: 0;
+        padding-left: 0;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        margin-right: 0;
+      }
     }
   }
   a.sub-nav-item {

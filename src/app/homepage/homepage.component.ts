@@ -31,7 +31,7 @@ export class HomepageComponent implements OnInit {
   subNavItem1Subline = '';
   subNavItem1Url = '/bauen';
   subNavItem1Size = 'col-6';
-  subNavItem1Id = 'bauen';
+  subNavItem1Id = 'individuell-bauen';
   // ITEM-2
   subNavItem2Headline = 'Konfigurator';
   subNavItem2Subline = '';
@@ -49,7 +49,7 @@ export class HomepageComponent implements OnInit {
   subNavItem4Subline = '';
   subNavItem4Url = '/kaufen';
   subNavItem4Size = 'col-3';
-  subNavItem4Id = 'unternehmen';
+  subNavItem4Id = 'bauen';
   // ITEM-5
   subNavItem5Headline = 'Über uns';
   subNavItem5Subline = '';
