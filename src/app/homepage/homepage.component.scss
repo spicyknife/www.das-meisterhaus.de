@@ -39,12 +39,12 @@
 @media (max-width: 760px) {
   #modal-banner {
     width: 80%;
-    background-color: #fff;
-    img {
-      width: 100%;
-      -webkit-box-shadow: 6px 14px 29px 5px rgba(0,0,0,0.59);
+    -webkit-box-shadow: 6px 14px 29px 5px rgba(0,0,0,0.59);
       -moz-box-shadow: 6px 14px 29px 5px rgba(0,0,0,0.59);
       box-shadow: 6px 14px 29px 5px rgba(0,0,0,0.59);
+    img {
+      width: 102.25%;
+      box-shadow: none !important;
     }
   }
   .show-desktop {
