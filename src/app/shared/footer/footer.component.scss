@@ -37,8 +37,11 @@
 /*************************/
 /* SMALL */
 @media (max-width: 767px) {
-  .col.footer-adress {
+  .col.footer-adress.tel {
     display: none;
+  }
+  .col.footer-adress {
+    font-size: 0.7em;
   }
   .col.footer-logo {
     display: none;
