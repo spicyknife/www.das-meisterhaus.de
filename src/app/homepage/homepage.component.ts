@@ -58,4 +58,16 @@ export class HomepageComponent implements OnInit {
   subNavItem5Id = 'unternehmen';
 
   ngOnInit() {}
+
+  toggleContrastMode() {
+    let bodyelement = document.querySelector('body');
+    if (!bodyelement){
+      return
+    }
+    if (bodyelement.className === 'accessibility-mode') {
+      bodyelement.className = '';
+    } else {
+      bodyelement.className = 'accessibility-mode';
+    }
+  }
 }

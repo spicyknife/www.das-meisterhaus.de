@@ -42,6 +42,7 @@ import { StepFensterfarbe } from './bauen/konfigurator/step-fensterfarbe/step-fe
 import { StepSchornstein } from './bauen/konfigurator/step-schornstein/step-schornstein.component';
 import { StepAusstattung } from './bauen/konfigurator/step-ausstattung/step-ausstattung.component';
 import { KaufenComponent } from './kaufen/kaufen.component';
+import { AccessibilitySettingsComponent } from './shared/accessibility-settings/accessibility-settings.component';
 
 
 @NgModule({

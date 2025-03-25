@@ -8,6 +8,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { AccessibilitySettingsComponent } from './accessibility-settings/accessibility-settings.component';
 
 @NgModule({
   declarations: [
@@ -16,10 +17,11 @@ import { RouterModule } from '@angular/router';
     SliderComponent,
     FooterComponent,
     CtaContactComponent,
-    NavigationComponent
+    NavigationComponent,
+    AccessibilitySettingsComponent
   ],
   imports: [BrowserModule, CommonModule, RouterModule],
-  exports: [TestimonialSliderComponent, SubNavigationComponent, SliderComponent, FooterComponent, CtaContactComponent, NavigationComponent, RouterModule],
+  exports: [TestimonialSliderComponent, SubNavigationComponent, SliderComponent, FooterComponent, CtaContactComponent, NavigationComponent, RouterModule, AccessibilitySettingsComponent],
   providers: [],
   bootstrap: []
 })
