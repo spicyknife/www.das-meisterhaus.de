@@ -388,20 +388,20 @@ export enum Ausstattung {
 
 export const Preise = {
   bauweise: {
-    [Bauweise.holz]: 343900,
+    [Bauweise.holz]: 319900,
     [Bauweise.massiv]: 319900
   },
   dachform: {
     [Dachform.satteldach]: {
-      [Bauweise.holz]: 343900,
+      [Bauweise.holz]: 319900,
       [Bauweise.massiv]: 319900
     },
     [Dachform.erker]: {
-      [Bauweise.holz]: 355690,
+      [Bauweise.holz]: 328690,
       [Bauweise.massiv]: 328690
     },
     [Dachform.vollgeschoss]: {
-      [Bauweise.holz]: 359740,
+      [Bauweise.holz]: 330890,
       [Bauweise.massiv]: 330890,
     }
   },
