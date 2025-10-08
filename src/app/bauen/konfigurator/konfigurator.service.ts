@@ -397,11 +397,11 @@ export const Preise = {
       [Bauweise.massiv]: 319900
     },
     [Dachform.erker]: {
-      [Bauweise.holz]: 328690,
+      [Bauweise.holz]: 331690,
       [Bauweise.massiv]: 328690
     },
     [Dachform.vollgeschoss]: {
-      [Bauweise.holz]: 330890,
+      [Bauweise.holz]: 334840,
       [Bauweise.massiv]: 330890,
     }
   },
