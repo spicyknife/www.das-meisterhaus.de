@@ -122,50 +122,36 @@
     </script>
 
     <!-- Meta Pixel Code -->
-    <script>
-      !(function (f, b, e, v, n, t, s) {
-        if (f.fbq) return;
-        n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
-        };
 
-        if (!f._fbq) f._fbq = n;
-        n.push = n;
-        n.loaded = !0;
-        n.version = "2.0";
+<script>
 
-        n.queue = [];
-        t = b.createElement(e);
-        t.async = !0;
+!function(f,b,e,v,n,t,s)
 
-        t.src = v;
-        s = b.getElementsByTagName(e)[0];
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 
-        s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        "script",
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 
-        "https://connect.facebook.net/en_US/fbevents.js"
-      );
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 
-      fbq("init", "1560304021264636");
+n.queue=[];t=b.createElement(e);t.async=!0;
 
-      fbq("track", "PageView");
-    </script>
+t.src=v;s=b.getElementsByTagName(e)[0];
 
-    <noscript
-      ><img
-        height="1"
-        width="1"
-        style="display: none"
-        src="https://www.facebook.com/tr?id=1560304021264636&ev=PageView&noscript=1"
-    /></noscript>
+s.parentNode.insertBefore(t,s)}(window, document,'script',
 
-    <!-- End Meta Pixel Code -->
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1344838410385799');
+
+fbq('track', 'PageView');
+
+</script>
+
+<noscript><img height="1" width="1" style="display:none"
+
+src="https://www.facebook.com/tr?id=1344838410385799&ev=PageView&noscript=1"
+
+/></noscript>
 
     <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17419811408"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-17419811408'); </script>
 
