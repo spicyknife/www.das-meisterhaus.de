@@ -151,6 +151,20 @@ a.headline {
   width: 0;
   z-index: -1;
 }
+/* VALIDATION */
+form {
+  &.ng-invalid {
+    &.ng-submitted {
+      textarea,
+      input {
+        &.ng-invalid {
+          border: 1px solid #dc3545;
+            background-color: #f9eaec;
+        }
+      }
+    }
+  }
+}
 /*************************/
 /* GOOGLE-MAPS (iFrame) */
 .google-maps {
