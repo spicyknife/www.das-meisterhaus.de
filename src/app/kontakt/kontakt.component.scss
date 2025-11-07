@@ -1,6 +1,9 @@
 /*************************/
 /* CONTACT */
 /*************************/
+.modal-positioner {
+  margin-top: 7em;
+}
 .contact-section {
   margin-top: 9em;
 }
@@ -229,10 +232,14 @@ form {
   .konfigurator-summary-wrapper {
     width: 100%;
   }
+    .modal-positioner {
+  margin-top: 4em;
+}
 }
 /*************************/
 /* SMALL */
 @media (max-width: 767px) {
+
   .contact-section {
     margin-top: 6.2em;
   }
