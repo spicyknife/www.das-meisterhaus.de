@@ -32,6 +32,17 @@
 #reference-slider-2 {
   display: flex;
   position: relative;
+  width: 100%;
+  // Feste Höhe (16:9) für alle Slides, zu hohe Bilder mittig auf Grau
+  .carousel-item {
+    aspect-ratio: 16 / 9;
+    background-color: #d9d9d9;
+    img {
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
   .object-name {
     position: absolute;
 
